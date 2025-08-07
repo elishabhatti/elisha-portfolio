@@ -2,6 +2,9 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+body {
+  font-family: var(--font-jetbrainsMono);
+}
 
 @theme inline {
   --color-background: var(--background);
