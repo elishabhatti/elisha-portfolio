@@ -5,12 +5,11 @@
 body {
   font-family: var(--font-jetbrainsMono);
   background-color: var(--color-primary);
-
 }
 
 :root {
   --color-primary: #1c1c22;
-  --color-accent: #00ff99;
+  --accent: #00ff99;
   --color-accent-hover: #00e18f;
 }
 
