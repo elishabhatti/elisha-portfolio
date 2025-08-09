@@ -4,19 +4,29 @@ import { usePathname } from "next/navigation";
 
 const PageTransition = ({ children }) => {
   const pathname = usePathname();
+
   return (
-    <AnimatePresence>
-      <div key={pathname}>
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={pathname}
+        className="relative"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, transition: { duration: 0.4 } }}
+      >
         <motion.div
           className="h-screen w-full fixed bg-primary top-0 pointer-events-none"
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={{
             opacity: 0,
-            transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
+            transition: { delay: 0.5, duration: 0.4, ease: "easeInOut" },
           }}
-        ></motion.div>
+          exit={{
+            opacity: 1,
+            transition: { duration: 0.4, ease: "easeInOut" },
+          }}
+        />
         {children}
-      </div>
+      </motion.div>
     </AnimatePresence>
   );
 };
