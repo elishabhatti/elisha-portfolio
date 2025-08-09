@@ -26,11 +26,7 @@ const Stairs = () => {
             ease: "easeInOut",
             delay: reverseIndex(index) * 0.1,
           }}
-          className="h-full flex-1 bg-white absolute"
-          style={{
-            left: `${(100 / 6) * index}%`,
-            width: `${100 / 6}%`,
-          }}
+          className="h-full flex-1 bg-white relative"
         />
       ))}
     </div>
