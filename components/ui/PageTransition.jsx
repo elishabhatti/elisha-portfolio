@@ -7,12 +7,7 @@ const PageTransition = ({ children }) => {
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div
-        key={pathname}
-        className="relative"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, transition: { duration: 0.4 } }}
-      >
+      <div key={pathname}>
         <motion.div
           className="h-screen w-full fixed bg-primary top-0 pointer-events-none"
           initial={{ opacity: 1 }}
@@ -26,7 +21,7 @@ const PageTransition = ({ children }) => {
           }}
         />
         {children}
-      </motion.div>
+      </div>
     </AnimatePresence>
   );
 };
