@@ -9,7 +9,7 @@ const page = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center xl:items-center justify-center gap-10 xl:pt-12 pb-24">
           {/* text */}
-          <div className="text-center xl:text-left flex flex-col items-center xl:items-start gap-6">
+          <div className="text-center xl:text-left flex flex-col items-center xl:items-start gap-6 order-2 xl:order-none">
             <span className="text-xl">Web Developer</span>
             <h1 className="h1">
               Hello I&apos;m <br />
@@ -36,7 +36,7 @@ const page = () => {
             </div>
           </div>
           {/* photo */}
-          <div className="flex justify-center xl:justify-end w-full xl:w-auto">
+          <div className="order-1 xl:order-none mb-4 xl:mb-0">
             <Photo />
           </div>
         </div>
