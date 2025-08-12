@@ -1,3 +1,4 @@
+import Social from "@/components/Social";
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 
@@ -28,7 +29,7 @@ const page = () => {
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:mb-0">
-                <Socials/>
+                <Social/>
               </div>
             </div>
           </div>
