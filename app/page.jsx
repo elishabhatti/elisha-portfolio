@@ -5,40 +5,38 @@ import { FiDownload } from "react-icons/fi";
 
 const page = () => {
   return (
-    <section className="w-full p-5">
+    <section className="w-full">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 pb-24">
+        <div className="flex flex-col xl:flex-row items-center xl:items-center justify-center gap-10 xl:pt-12 pb-24">
           {/* text */}
-          <div className="text-center xl:text-left">
+          <div className="text-center xl:text-left flex flex-col items-center xl:items-start gap-6">
             <span className="text-xl">Web Developer</span>
             <h1 className="h1">
-              Hello I,m <br />{" "}
+              Hello I&apos;m <br />
               <span className="text-green-300">Elisha Jameel</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
-              I excel crafting elegant digital experience and i am proficient in
-              various programming languages and technologies
+            <p className="max-w-[500px] mb-4 text-white/80 leading-relaxed">
+              I excel crafting elegant digital experiences and I am proficient
+              in various programming languages and technologies.
             </p>
             {/* btn and socials */}
-            <div className="flex flex-col xl:flex-row items-center gap-8">
+            <div className="flex flex-col xl:flex-row items-center gap-6">
               <Button
                 variant="outline"
                 size="lg"
-                className="uppercase flex items-center gap-2"
+                className="uppercase hover:text-[#1C1C22]  flex items-center gap-2"
               >
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
-              <div className="mb-8 xl:mb-0">
-                <Social
-                  containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-green-300 rounded-full flex justify-center items-center text-green-300 text-base hover:bg-green-600 hover:text-primary hover:transition-all duration-500"
-                />
-              </div>
+              <Social
+                containerStyles="flex gap-6"
+                iconStyles="w-9 h-9 border border-green-300 rounded-full flex justify-center items-center text-green-300 text-base hover:bg-green-600 hover:text-primary hover:transition-all duration-500"
+              />
             </div>
           </div>
           {/* photo */}
-          <div>
+          <div className="flex justify-center xl:justify-end w-full xl:w-auto">
             <Photo />
           </div>
         </div>
