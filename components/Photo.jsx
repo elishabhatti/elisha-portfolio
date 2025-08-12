@@ -5,21 +5,23 @@ import { motion } from "framer-motion";
 
 const Photo = () => {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
           transition: { delay: 2, duration: 0.4, ease: "easeIn" },
         }}
+        className="relative"
       >
+        {/* Image */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:[498px] xl:h-[498px] mix-blend-lighten "
+          className="w-[300px] h-[300px] xl:w-[500px] xl:h-[500px] mix-blend-lighten absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         >
           <Image
             src="/images/photo.png"
@@ -30,6 +32,33 @@ const Photo = () => {
             className="object-contain"
           />
         </motion.div>
+
+        {/* Circle */}
+        <motion.svg
+          className="w-[300px] xl:w-[500px] h-[300px] xl:h-[500px]"
+          fill="transparent"
+          viewBox="0 0 506 506"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <motion.circle
+            cx="253"
+            cy="253"
+            r="250"
+            stroke="#00ff99"
+            strokeWidth="4"
+            strokeLinejoin="round"
+            initial={{ strokeDasharray: "24 10 0 0" }}
+            animate={{
+              strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
+              rotate: [120, 360],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          />
+        </motion.svg>
       </motion.div>
     </div>
   );
