@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { FiDownLoad } from "react-icons/fi";
+import { FiDownload } from "react-icons/fi";
 
 const page = () => {
   return (
-    <section className="w-full container">
+    <section className="w-full p-5">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 pb-24">
           {/* text */}
@@ -17,6 +17,20 @@ const page = () => {
               I excel crafting elegant digital experience and i am proficient in
               various programming languages and technologies
             </p>
+            {/* btn and socials */}
+            <div className="flex flex-col xl:flex-row items-center gap-8">
+              <Button
+                variant="outline"
+                size="lg"
+                className="uppercase flex items-center gap-2"
+              >
+                <span>Download CV</span>
+                <FiDownload className="text-xl" />
+              </Button>
+              <div className="mb-8 xl:mb-0">
+                <Socials/>
+              </div>
+            </div>
           </div>
           {/* photo */}
           <div>photo</div>
