@@ -7,7 +7,7 @@ const page = () => {
   return (
     <section className="w-full">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center xl:items-center justify-center gap-10 xl:pt-12 pb-24">
+        <div className="flex flex-col xl:flex-row items-center xl:items-center justify-center gap-6 pt-6  xl:gap-24 xl:pt-6 pb-14">
           {/* text */}
           <div className="text-center xl:text-left flex flex-col items-center xl:items-start gap-6 order-2 xl:order-none">
             <span className="text-xl">Web Developer</span>
