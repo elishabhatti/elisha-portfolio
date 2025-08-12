@@ -45,7 +45,9 @@ const page = () => {
           </div>
         </div>
       </div>
-      <Stats />
+      <div className="w-full justify-center flex items-center">
+        <Stats />
+      </div>
     </section>
   );
 };
