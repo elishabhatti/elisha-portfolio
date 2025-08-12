@@ -21,21 +21,21 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[300px] h-[300px] xl:w-[500px] xl:h-[500px] mix-blend-lighten absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="w-[300px] h-[300px] xl:w-[400px] xl:h-[400px] mix-blend-lighten absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         >
           <Image
             src="/images/photo.png"
             priority
             quality={100}
             fill
-            alt=""
+            alt="Profile Photo"
             className="object-contain"
           />
-        </motion.div>
+        </motion.div> 
 
         {/* Circle */}
         <motion.svg
-          className="w-[300px] xl:w-[500px] h-[300px] xl:h-[500px]"
+          className="w-[300px] xl:w-[400px] h-[300px] xl:h-[400px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"

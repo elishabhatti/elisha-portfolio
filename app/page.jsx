@@ -6,7 +6,7 @@ import { FiDownload } from "react-icons/fi";
 
 const page = () => {
   return (
-    <section className="w-full">
+    <section className="w-full ">
       <div className="container mx-auto h-full">
         <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center gap-6 pt-6 lg:gap-24 lg:pt-6 pb-14">
           {/* text */}
