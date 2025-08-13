@@ -14,7 +14,7 @@ const page = () => {
             <span className="text-xl">Web Developer</span>
             <h1 className="h1">
               Hello I&apos;m <br />
-              <span className="text-green-300">Elisha Jameel</span>
+              <span className="text-[#00ff99]">Elisha Jameel</span>
             </h1>
             <p className="max-w-[500px] mb-4 text-white/80 leading-relaxed">
               I excel crafting elegant digital experiences and I am proficient
