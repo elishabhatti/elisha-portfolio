@@ -9,35 +9,35 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur  dolor sit, Eaque tenetur",
     href: "",
   },
   {
     num: "02",
     title: "UI/UX Design",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur dolor sit, Eaque tenetur",
     href: "",
   },
   {
     num: "03",
     title: "Logo Design",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur dolor sit, Eaque tenetur",
     href: "",
   },
   {
     num: "04",
     title: "SEO",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur",
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur dolor sit, Eaque tenetur",
     href: "",
   },
 ];
 
 const Services = () => {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-8">
+    <section className="min-h-[80vh] flex flex-col justify-center p-4 xl:p-12">
       <div className="container mx-auto">
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
@@ -60,7 +60,7 @@ const Services = () => {
                   </div>
                   <Link href={service.href}>
                     <BsArrowDownRight />
-                </Link>
+                  </Link>
                 </div>
                 {/* heading */}
                 <h2>{service.title}</h2>
