@@ -24,6 +24,10 @@ const about = {
     { fieldName: "Languages", fieldValue: "English, Urdu" },
   ],
 };
+// experience data
+const experience = {
+  icon: ''
+}
 
 const Resume = () => {
   return <div></div>;
