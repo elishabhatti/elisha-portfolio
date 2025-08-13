@@ -26,8 +26,43 @@ const about = {
 };
 // experience data
 const experience = {
-  icon: ''
-}
+  icon: "./assets/resume/badge.svg",
+  title: "My Experience",
+  description:
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam aliquam deleniti magnam quam officiis sint reprehenderit fugiat.",
+  items: [
+    {
+      company: "Tech Solutions Inc.",
+      position: "Full Stack Developer",
+      duration: "2022 - Present",
+    },
+    {
+      company: "Web Design Studio",
+      position: "Front-End Developer Intern",
+      duration: "Summer 2021",
+    },
+    {
+      company: "E-commerce Startup",
+      position: "Freelance Web Developer",
+      duration: "2020 - 2021",
+    },
+    {
+      company: "Tech Academy",
+      position: "Teaching Assistant",
+      duration: "2019 - 2020",
+    },
+    {
+      company: "Digital Academy",
+      position: "UI/UX Designer",
+      duration: "2018 - 2019",
+    },
+    {
+      company: "Software Development",
+      position: "Junior Developer",
+      duration: "2017 - 2018",
+    },
+  ],
+};
 
 const Resume = () => {
   return <div></div>;
