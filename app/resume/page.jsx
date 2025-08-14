@@ -63,9 +63,37 @@ const experience = {
     },
   ],
 };
+// education
+
+const education = {
+  icon: "./assets/resume/cap.svg",
+  title: "My Education",
+  description:
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam aliquam deleniti magnam quam officiis sint reprehenderit fugiat.",
+  items: [
+    {
+      institution: "St Mary's English High School.",
+      position: "Student",
+      duration: "2021 - 2023 ",
+    },
+    {
+      institution: "Aptech DHA.",
+      position: "Student",
+      duration: "2023 - 2026 ",
+    },
+    {
+      institution: "Rhombix Technologies.",
+      position: "Intern",
+      duration: "2024 - 2025",
+    },
+  ],
+};
+
 
 const Resume = () => {
-  return <div></div>;
+  return (
+    <div>resume page</div>
+  )
 };
 
 export default Resume;
