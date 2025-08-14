@@ -7,6 +7,7 @@ import {
   FaFigma,
   FaNodeJs,
 } from "react-icons/fa";
+import { FiFigma } from "react-icons/fi";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 // about data
@@ -89,11 +90,53 @@ const education = {
   ],
 };
 
+// skills
+const skills = {
+  title: "My Skills",
+  description:
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam aliquam deleniti magnam quam officiis sint reprehenderit fugiat.",
+  skillList: [
+    {
+      icon: <FaHtml5 />,
+      name: "html",
+    },
+    {
+      icon: <FaCss3 />,
+      name: "css",
+    },
+    {
+      icon: <FaJs />,
+      name: "javascript",
+    },
+    {
+      icon: <FaReact />,
+      name: "react.js",
+    },
+    {
+      icon: <SiNextdotjs />,
+      name: "next.js",
+    },
+    {
+      icon: <SiTailwindcss />,
+      name: "tailwind.css",
+    },
+    {
+      icon: <FaNodeJs />,
+      name: "node.js",
+    },
+    {
+      icon: <FiFigma />,
+      name: "figma",
+    },
+    {
+      icon: <FiFigma />,
+      name: "figma",
+    },
+  ],
+};
 
 const Resume = () => {
-  return (
-    <div>resume page</div>
-  )
+  return <div>resume page</div>;
 };
 
 export default Resume;
