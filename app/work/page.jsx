@@ -83,6 +83,25 @@ const Work = () => {
                   );
                 })}
               </ul>
+              {/* border */}
+              <div className="border border-white/20"></div>
+              {/* button */}
+              <div>
+                {/* live project button */}
+                <Link href={project.live}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                        <BsArrowUpRight className="text-white text-3xl group-hover:text-[#00ff99]" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Live Project</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+                
+              </div>
             </div>
           </div>
           <div className="w-full xl:w-[50%]">slider</div>
