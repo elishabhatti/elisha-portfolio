@@ -115,7 +115,17 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%]">slider</div>
+          <div className="w-full xl:w-[50%]">
+            <Swiper spaceBetween={30} slidesPerView={1} className="xl:h-[520px] mb-12" onSlideChange={handleSlideChange}>
+              {projects.map((project, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    slide
+                  </SwiperSlide>
+                )
+              })}
+            </Swiper>
+          </div>
         </div>
       </div>
     </motion.section>
