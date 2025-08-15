@@ -44,7 +44,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/assets/work/thumb2.png",
+    image: "/assets/assets/work/thumb3.png",
     live: "",
     github: "",
   },
@@ -57,12 +57,12 @@ const Work = () => {
     const currentIndex = swiper.activeIndex;
     setProject(projects[currentIndex]);
   };
-  
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="min-h-[80vh] flex flex-col mt-6 justify-center px-6 py-12 xl:px-10"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
@@ -130,7 +130,23 @@ const Work = () => {
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => {
-                return <SwiperSlide key={index}>slide</SwiperSlide>;
+                return (
+                  <SwiperSlide className="w-full" key={index}>
+                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                      {/* overlay */}
+                      <div></div>
+                      {/* image */}
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={project.image}
+                          fill
+                          className="object-cover"
+                          alt={project.num}
+                        />
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
               })}
             </Swiper>
           </div>
