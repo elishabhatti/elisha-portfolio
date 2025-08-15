@@ -77,7 +77,8 @@ const Work = () => {
                   return (
                     <li key={index} className="text-xl text-[#00ff99]">
                       {item.name}
-                      
+                      {/* remove the last coma */}
+                      {index !== project.stack.length - 1 && ","}
                     </li>
                   );
                 })}
