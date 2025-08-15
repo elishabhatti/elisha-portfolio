@@ -71,13 +71,13 @@ const Work = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="group flex flex-col gap-[30px] h-[50%]">
+            <div className="group flex flex-col xl:gap-[30px] gap-[10px] h-[50%]">
               {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+              <div className="xl:text-8xl text-4xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
               </div>
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-[#00ff99] transition-all duration-500 capitalize">
+              <h2 className="xl:text-[42px] text-[22px] font-bold leading-none text-white group-hover:text-[#00ff99] transition-all duration-500 capitalize">
                 {project.category} projects
               </h2>
               {/* project description */}
@@ -86,7 +86,7 @@ const Work = () => {
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-[#00ff99]">
+                    <li key={index} className="xl:text-xl text-md text-[#00ff99]">
                       {item.name}
                       {/* remove the last coma */}
                       {index !== project.stack.length - 1 && ","}
