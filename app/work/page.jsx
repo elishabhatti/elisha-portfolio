@@ -53,7 +53,7 @@ const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper) => {
-    // get current slide index
+    // get current s lide index
     const currentIndex = swiper.activeIndex;
     setProject(projects[currentIndex]);
   };
@@ -61,7 +61,10 @@ const Work = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
+      }}
       className="min-h-[80vh] flex flex-col mt-6 justify-center px-6 py-12 xl:px-10"
     >
       <div className="container mx-auto">
