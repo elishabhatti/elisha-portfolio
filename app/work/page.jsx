@@ -26,6 +26,28 @@ const projects = [
     live: "",
     github: "",
   },
+  {
+    num: "02",
+    category: "fullstack",
+    title: "project 2",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+    image: "/assets/assets/work/thumb2.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "03",
+    category: "frontend",
+    title: "project 3",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
+    image: "/assets/assets/work/thumb2.png",
+    live: "",
+    github: "",
+  },
 ];
 const Work = () => {
   return <div>Work</div>;
