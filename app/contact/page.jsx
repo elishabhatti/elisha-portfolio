@@ -56,7 +56,7 @@ const Contact = () => {
                 vel! Facere voluptatum optio ad!
               </p>
               {/* input */}
-              <div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input type="firstname" placeholder="Firstname" />
                 <Input type="lastname" placeholder="lastname" />
                 <Input type="email" placeholder="Email address" />
