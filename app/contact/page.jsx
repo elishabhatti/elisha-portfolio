@@ -45,7 +45,7 @@ const Contact = () => {
       }}
       className="py-6"
     >
-      <div className="container px-10 mx-auto">
+      <div className="container mx-auto xl:px-30">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
