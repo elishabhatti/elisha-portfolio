@@ -49,7 +49,20 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:h-[54%] order-2 xl:order-none">
-            <form>form</form>
+            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+              <h3 className="text-4xl text-[#00ff99]">Let's work together</h3>
+              <p className="text-white/60">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi,
+                vel! Facere voluptatum optio ad!
+              </p>
+              {/* input */}
+              <div>
+                <Input type="firstname" placeholder="Firstname" />
+                <Input type="lastname" placeholder="lastname" />
+                <Input type="email" placeholder="Email address" />
+                <Input type="phone" placeholder="Phone number" />
+              </div>
+            </form>
           </div>
           {/* info */}
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
