@@ -13,9 +13,25 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
-
+const info = [
+  {
+    icon: <FaPhoneAlt />,
+    title: "Phone",
+    description: "(+92) 309 2772847",
+  },
+  {
+    icon: <FaEnvelope />,
+    title: "Email",
+    description: "elishajameel270@gmail.com",
+  },
+  {
+    icon: <FaMapMarkerAlt />,
+    title: "Address",
+    description: "KDA TP-2 Mehmoodabad Karachi Street 7",
+  },
+];
 
 const Contact = () => {
   return <div>Contact</div>;
