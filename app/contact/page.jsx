@@ -82,7 +82,7 @@ const Contact = () => {
                 placeholder="Type your message here."
               />
               {/* btn */}
-              <Button>
+              <Button size="md" className="max-w-40 py-3">
                 Send Message
               </Button>
             </form>
