@@ -33,8 +33,29 @@ const info = [
   },
 ];
 
+import { motion } from "framer-motion";
+
 const Contact = () => {
-  return <div>Contact</div>;
+  return (
+    <motion.section 
+    initial={{ opacity: 0 }}
+    animate={{
+      opacity: 1,
+      transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
+    }}
+    className="py-6"
+    >
+      <div className="container mx-auto">
+        <div>
+          {/* form */}
+          <div>
+            <form>form</form>
+          </div>
+          {/* info */}
+        </div>
+      </div>
+    </motion.section>
+  ) 
 };
 
 export default Contact;
