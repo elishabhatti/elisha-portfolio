@@ -98,9 +98,9 @@ const Contact = () => {
               {info.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center gap-4"
+                  className="flex items-center xl:flex-row md:flex-col sm:flex-row gap-4"
                 >
-                  <div className="w-[52px] h-[52px] bg-[#27272c] text-[#00ff99] flex rounded-lg items-center justify-center shadow-md">
+                  <div className="xl:w-[52px] xl:h-[52px] h-[44px] w-[44px] bg-[#27272c] text-[#00ff99] flex rounded-lg items-center justify-center shadow-md">
                     <div className="text-[24px]">{item.icon}</div>
                   </div>
                   <div>
