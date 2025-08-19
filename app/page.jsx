@@ -22,7 +22,7 @@ const page = () => {
             </p>
 
             {/* btn and socials */}
-            <div className="flex flex-col lg:flex-row items-center gap-6">
+            <div className="flex cursor-pointer flex-col lg:flex-row items-center gap-6">
               <Button
                 variant="outline"
                 size="lg"
