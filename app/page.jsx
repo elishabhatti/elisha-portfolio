@@ -30,7 +30,7 @@ const page = () => {
               >
                 <a href="/Elisha-Jameel.docx" download>
                 <span>Download CV</span>
-                <FiDownload className="text-xl" />
+                <FiDownload className="text-xl ml-2 inline" />
                 </a>
               </Button>
 
