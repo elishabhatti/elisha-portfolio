@@ -45,7 +45,7 @@ const Contact = () => {
       className="py-12 px-4 md:px-8 lg:px-16"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-10 items-start">
           {/* form */}
           <div className="w-full lg:w-2/3">
             <form className="flex flex-col gap-6 p-8 md:p-10 bg-[#27272c] rounded-2xl shadow-lg">
