@@ -53,7 +53,8 @@ const Contact = () => {
                 Let's work together
               </h3>
               <p className="text-white/60 text-sm md:text-base leading-relaxed">
-                Feel free to reach out with your project details or inquiries. I'll get back to you as soon as possible!
+                Feel free to reach out with your project details or inquiries.
+                I'll get back to you as soon as possible!
               </p>
 
               {/* input */}
@@ -98,14 +99,19 @@ const Contact = () => {
               {info.map((item, index) => (
                 <li
                   key={index}
-                  className="flex items-center xl:flex-row md:flex-col sm:flex-row gap-4"
+                  className="flex flex-col sm:flex-row sm:items-center gap-4 text-center sm:text-left"
                 >
-                  <div className="xl:w-[52px] xl:h-[52px] h-[44px] w-[44px] bg-[#27272c] text-[#00ff99] flex rounded-lg items-center justify-center shadow-md">
-                    <div className="text-[24px]">{item.icon}</div>
+                  {/* icon box */}
+                  <div className="w-[44px] h-[44px] sm:w-[52px] sm:h-[52px] bg-[#27272c] text-[#00ff99] flex rounded-lg items-center justify-center shadow-md mx-auto sm:mx-0">
+                    <div className="text-[22px] sm:text-[24px]">
+                      {item.icon}
+                    </div>
                   </div>
+
+                  {/* text */}
                   <div>
                     <p className="text-white/60 text-sm">{item.title}</p>
-                    <h3 className="text-lg md:text-xl font-semibold">
+                    <h3 className="text-base sm:text-lg md:text-xl font-semibold">
                       {item.description}
                     </h3>
                   </div>
