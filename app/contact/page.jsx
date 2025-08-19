@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/select";
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const info = [
   {
@@ -33,35 +34,36 @@ const info = [
   },
 ];
 
-import { motion } from "framer-motion";
-
 const Contact = () => {
   return (
     <motion.section
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 0.6, duration: 0.5, ease: "easeInOut" },
       }}
-      className="py-6"
+      className="py-12 px-4 md:px-8 lg:px-16"
     >
-      <div className="container mx-auto xl:px-30">
-        <div className="flex flex-col xl:flex-row gap-[30px]">
+      <div className="container mx-auto">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
           {/* form */}
-          <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-[#00ff99]">Let's work together</h3>
-              <p className="text-white/60">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi,
-                vel! Facere voluptatum optio ad!
+          <div className="w-full lg:w-2/3">
+            <form className="flex flex-col gap-6 p-8 md:p-10 bg-[#27272c] rounded-2xl shadow-lg">
+              <h3 className="text-3xl md:text-4xl font-semibold text-[#00ff99]">
+                Let's work together
+              </h3>
+              <p className="text-white/60 text-sm md:text-base leading-relaxed">
+                Feel free to reach out with your project details or inquiries. I'll get back to you as soon as possible!
               </p>
+
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="lastname" />
+                <Input type="text" placeholder="First name" />
+                <Input type="text" placeholder="Last name" />
                 <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input type="tel" placeholder="Phone number" />
               </div>
+
               {/* select */}
               <Select>
                 <SelectTrigger className="w-full">
@@ -69,43 +71,46 @@ const Contact = () => {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UI/Ux Design</SelectItem>
-                    <SelectItem value="mst">Logo Design</SelectItem>
+                    <SelectLabel>Services</SelectLabel>
+                    <SelectItem value="web">Web Development</SelectItem>
+                    <SelectItem value="uiux">UI/UX Design</SelectItem>
+                    <SelectItem value="logo">Logo Design</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
+
               {/* textarea */}
               <Textarea
-                className="h-[200px]"
-                placeholder="Type your message here."
+                className="h-[180px] md:h-[200px]"
+                placeholder="Type your message here..."
               />
-              {/* btn */}
-              <Button size="md" className="max-w-40 py-3">
+
+              {/* button */}
+              <Button size="lg" className="w-full md:w-40 py-3 font-medium">
                 Send Message
               </Button>
             </form>
           </div>
+
           {/* info */}
-          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
-            <ul>
-              {info.map((item, index) => {
-                return (
-                  <li
-                    key={index}
-                    className="flex items-center xl:justify-end order-1 gap-3 xl:order-none mb-8 xl:mb-0"
-                  >
-                    <div className="w-[52px] h-[52px] bg-[#27272c] text-[#00ff99] flex rounded-md items-center justify-center">
-                      <div className="text-[28px]">{item.icon}</div>
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-white/60">{item.title}</p>
-                      <h3 className="text-xl">{item.description}</h3>
-                    </div>
-                  </li>
-                );
-              })}
+          <div className="w-full lg:w-1/3 flex flex-col gap-8">
+            <ul className="space-y-6">
+              {info.map((item, index) => (
+                <li
+                  key={index}
+                  className="flex items-center gap-4"
+                >
+                  <div className="w-[52px] h-[52px] bg-[#27272c] text-[#00ff99] flex rounded-lg items-center justify-center shadow-md">
+                    <div className="text-[24px]">{item.icon}</div>
+                  </div>
+                  <div>
+                    <p className="text-white/60 text-sm">{item.title}</p>
+                    <h3 className="text-lg md:text-xl font-semibold">
+                      {item.description}
+                    </h3>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
