@@ -10,7 +10,7 @@ const Header = () => {
         {/* Logo */}
         <Link href="/">
           <h1 className="text-3xl font-semibold">
-            Elisha<span className="text-[#00ff99]">.</span>
+            Elisha<span className="primary-text-color">.</span>
           </h1>
         </Link>
         {/* desktop nav */}
