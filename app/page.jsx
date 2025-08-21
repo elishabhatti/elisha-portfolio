@@ -36,7 +36,7 @@ const page = () => {
 
               <Social
                 containerStyles="flex gap-6"
-                iconStyles="w-10 h-10 border border-[#00ff99] rounded-full flex justify-center items-center primary-text-color text-base hover:bg-[#00ff99] hover:text-primary hover:transition-all duration-500"
+                iconStyles="w-10 h-10 border border-[#7F39C3] rounded-full flex justify-center items-center primary-text-color text-base hover:bg-[#7F39C3] hover:text-primary hover:transition-all duration-500"
               />
             </div>
           </div>
