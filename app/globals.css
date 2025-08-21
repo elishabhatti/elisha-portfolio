@@ -8,7 +8,7 @@ body {
 }
 
 :root {
-  --color-primary: #1c1c22;
+  --color-primary: black;
   --color-accent-hover: #00e18f;
 }
 .primary-text-color {
