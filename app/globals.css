@@ -12,7 +12,7 @@ body {
   --color-accent-hover: #00e18f;
 }
 .primary-text-color {
-  color: #9E2DF5;
+  color: #a238ff;
 }
 
 @theme inline {
@@ -133,7 +133,7 @@ body {
   }
   .h2 {
     @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
-}
+  }
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
