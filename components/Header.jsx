@@ -16,7 +16,11 @@ const Header = () => {
         {/* desktop nav */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href="/contact">
+          <Link
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=your@email.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button>Hire me</Button>
           </Link>
         </div>
