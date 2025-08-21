@@ -187,7 +187,7 @@ const Resume = () => {
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-[#00ff99]"></span>
+                            <span className="w-[6px] h-[6px] rounded-full bg-[#a238ff]"></span>
                             <p className="text-white/60">{item.company}</p>
                           </div>
                         </li>
@@ -220,7 +220,7 @@ const Resume = () => {
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-[#00ff99]"></span>
+                            <span className="w-[6px] h-[6px] rounded-full bg-[#a238ff]"></span>
                             <p className="text-white/60">{item.institution}</p>
                           </div>
                         </li>

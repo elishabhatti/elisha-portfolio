@@ -86,7 +86,10 @@ const Work = () => {
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="xl:text-xl text-md primary-text-color">
+                    <li
+                      key={index}
+                      className="xl:text-xl text-md primary-text-color"
+                    >
                       {item.name}
                       {/* remove the last coma */}
                       {index !== project.stack.length - 1 && ","}
@@ -154,7 +157,7 @@ const Work = () => {
               })}
               {/* slider buttons */}
               <WorkSliderBtns
-                btnStyles="bg-[#00ff99] rounded-md hover:bg-[#00e18f] text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                btnStyles="bg-[#a238ff] rounded-md  text-white text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
               />
             </Swiper>

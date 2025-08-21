@@ -126,7 +126,7 @@ body {
 
 @layer base {
   body {
-    @apply bg-background font-[#1c1c22] text-white leading-loose;
+    @apply bg-background font-[#a238ff] text-white leading-loose;
   }
   .h1 {
     @apply text-[48px] xl:text-[68px] leading-[1.1] font-semibold;
@@ -138,6 +138,6 @@ body {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
   .text-outline {
-    -webkit-text-stroke: 1px #00ff99;
+    -webkit-text-stroke: 1px #a238ff;
   }
 }
