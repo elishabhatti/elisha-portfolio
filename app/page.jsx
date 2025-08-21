@@ -29,14 +29,14 @@ const page = () => {
                 className="uppercase hover:text-white flex items-center gap-2"
               >
                 <a href="/Elisha-Jameel.docx" download>
-                <span>Download CV</span>
-                <FiDownload className="text-xl ml-2 inline" />
+                  <span>Download CV</span>
+                  <FiDownload className="text-xl ml-2 inline" />
                 </a>
               </Button>
 
               <Social
                 containerStyles="flex gap-6"
-                iconStyles="w-10 h-10 border border-[#7F39C3] rounded-full flex justify-center items-center primary-text-color text-base hover:bg-[#7F39C3] hover:text-primary hover:transition-all duration-500"
+                iconStyles="w-10 h-10 border-2 border-[#a238ff] rounded-full flex justify-center items-center text-[#a238ff] text-base hover:bg-[#a238ff] hover:text-white hover:transition-all duration-500"
               />
             </div>
           </div>
