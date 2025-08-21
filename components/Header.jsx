@@ -17,7 +17,7 @@ const Header = () => {
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
           <Link
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=your@email.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=elishajameel270@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
