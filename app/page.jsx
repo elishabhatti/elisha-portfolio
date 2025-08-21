@@ -26,7 +26,7 @@ const page = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="uppercase hover:text-[#1C1C22] flex items-center gap-2"
+                className="uppercase hover:text-white flex items-center gap-2"
               >
                 <a href="/Elisha-Jameel.docx" download>
                 <span>Download CV</span>
