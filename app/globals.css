@@ -9,8 +9,10 @@ body {
 
 :root {
   --color-primary: #1c1c22;
-  --accent: #00ff99;
   --color-accent-hover: #00e18f;
+}
+.primary-text-color {
+  color: #00ff99;
 }
 
 @theme inline {
