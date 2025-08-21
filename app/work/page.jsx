@@ -77,7 +77,7 @@ const Work = () => {
                 {project.num}
               </div>
               {/* project category */}
-              <h2 className="xl:text-[42px] text-[22px] font-bold leading-none text-white group-hover:text-[#00ff99] transition-all duration-500 capitalize">
+              <h2 className="xl:text-[42px] text-[22px] font-bold leading-none text-white group-hover:primary-text-color transition-all duration-500 capitalize">
                 {project.category} projects
               </h2>
               {/* project description */}
@@ -86,7 +86,7 @@ const Work = () => {
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="xl:text-xl text-md text-[#00ff99]">
+                    <li key={index} className="xl:text-xl text-md primary-text-color">
                       {item.name}
                       {/* remove the last coma */}
                       {index !== project.stack.length - 1 && ","}
@@ -103,7 +103,7 @@ const Work = () => {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="xl:w-[60px] xl:h-[60px] w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-[#00ff99]" />
+                        <BsArrowUpRight className="text-white text-3xl group-hover:primary-text-color" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Live Project</p>
@@ -115,7 +115,7 @@ const Work = () => {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="xl:w-[60px] xl:h-[60px] w-[50px] h-[50px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-[#00ff99]" />
+                        <BsGithub className="text-white text-3xl group-hover:primary-text-color" />
                       </TooltipTrigger>
                       <TooltipContent>
                         <p>Github repository</p>
