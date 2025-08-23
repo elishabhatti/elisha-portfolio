@@ -99,9 +99,10 @@ const education = {
 
 // skills
 const skills = {
-  title: "My Skills",
-  description:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam aliquam deleniti magnam quam officiis sint reprehenderit fugiat.",
+title: "My Skills",
+description:
+  "Skilled in modern web development, UI/UX design, and building responsive applications. Proficient with JavaScript, React, Node.js, and familiar with tools like Git, Tailwind CSS, and MongoDB.",
+
   skillList: [
     {
       icon: <FaHtml5 />,
