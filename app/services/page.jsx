@@ -51,8 +51,8 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className="flex-1 flex flex-col justify-center gap-6 group"
-              > 
+                className="flex-1 flex flex-col justify-center gap-6"
+              >
                 {/* to */}
                 <div className="w-full flex justify-between items-center">
                   <div className="xl:text-5xl text-4xl font-extrabold text-outline text-transparent transition-all duration-500">
@@ -60,9 +60,9 @@ const Services = () => {
                   </div>
                   <Link
                     href={service.href}
-                    className="xl:w-[60px] xl:h-[60px] w-[40px] h-[40px] rounded-full bg-white hover:bg-[#a238ff] transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                    className="xl:w-[60px] xl:h-[60px] w-[40px] h-[40px] rounded-full bg-white group hover:bg-[#a238ff]  transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                   >
-                    <BsArrowDownRight className="text-primary xl:text-3xl text-2xl " />
+                    <BsArrowDownRight className="text-primary transition-all xl:text-3xl text-2xl group-hover:text-white" />
                   </Link>
                 </div>
                 {/* heading */}

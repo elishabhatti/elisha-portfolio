@@ -30,7 +30,7 @@ const info = [
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "KDA TP-2 Mehmoodabad Karachi Street 7",
+    description: "KDA TP-2 Mehmoodabad No.2 Karachi Street 7",
   },
 ];
 
@@ -42,10 +42,10 @@ const Contact = () => {
         opacity: 1,
         transition: { delay: 0.6, duration: 0.5, ease: "easeInOut" },
       }}
-      className="py-12 px-4 md:px-8 lg:px-16"
+      className="py-12 px-4 md:px-8 xl:px-16"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-10 lg:gap-10 items-start">
+        <div className="flex flex-col lg:flex-row gap-7 lg:gap-7 items-start">
           {/* form */}
           <div className="w-full lg:w-2/3">
             <form className="flex flex-col gap-6 p-8 md:p-10 bg-[#27272c] rounded-2xl shadow-lg">
@@ -87,7 +87,7 @@ const Contact = () => {
               />
 
               {/* button */}
-              <Button size="lg" className="w-full md:w-40 py-3 font-medium">
+              <Button size="lg" className="max-w-[250px] font-medium">
                 Send Message
               </Button>
             </form>
@@ -110,7 +110,7 @@ const Contact = () => {
 
                   {/* text */}
                   <div>
-                    <p className="text-white/60 text-sm">{item.title}</p>
+                    <p className="text-white/60 mb-3 text-sm">{item.title}</p>
                     <h3 className="text-base sm:text-lg md:text-xl font-semibold">
                       {item.description}
                     </h3>

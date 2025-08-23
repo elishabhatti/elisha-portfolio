@@ -23,20 +23,23 @@ const page = () => {
 
             {/* btn and socials */}
             <div className="flex cursor-pointer flex-col lg:flex-row items-center gap-6">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase hover:text-white flex items-center gap-2"
-              >
-                <a href="/Elisha-Jameel.docx" download>
-                  <span>Download CV</span>
-                  <FiDownload className="text-xl ml-2 inline" />
-                </a>
-              </Button>
-
+              <div className="group">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase border-2 group-hover:transition-all duration-300 group-hover:bg-[#a238ff] flex items-center gap-2"
+                >
+                  <a href="/Elisha-Jameel.docx" download>
+                    <span className="hover:transition-all duration-300 group-hover:text-white">
+                      Download CV
+                    </span>
+                    <FiDownload className="hover:transition-all duration-300 group-hover:text-white text-xl ml-2 inline" />
+                  </a>
+                </Button>
+              </div>
               <Social
                 containerStyles="flex gap-6"
-                iconStyles="w-10 h-10 border-2 border-[#a238ff] rounded-full flex justify-center items-center text-[#a238ff] text-base hover:bg-[#a238ff] hover:text-white hover:transition-all duration-500"
+                iconStyles="w-13 h-13 text-xl border-2 border-[#a238ff] rounded-full hover:transition-all duration-300 flex justify-center items-center text-[#a238ff] hover:bg-[#a238ff] text-base hover:text-white"
               />
             </div>
           </div>
