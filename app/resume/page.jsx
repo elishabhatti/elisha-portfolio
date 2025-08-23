@@ -33,9 +33,9 @@ import { Button } from "@/components/ui/button";
 
 // about data
 const about = {
-  title: "About me",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga esse autem, delectus incidunt debitis doloribus quam libero.",
+title: "About me",
+description:
+  "I am a passionate web developer with 2+ years of experience in building modern, responsive, and user-friendly applications. I enjoy turning ideas into real-world digital solutions and constantly improving my skills in web technologies. I am always eager to take on new challenges and deliver high-quality results.",
   info: [
     { fieldName: "Name", fieldValue: "Elisha Jameel" },
     { fieldName: "Phone", fieldValue: "(+92) 309 2772847" },
