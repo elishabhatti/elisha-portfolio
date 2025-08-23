@@ -9,31 +9,32 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur  dolor sit, Eaque tenetur",
+      "I build fast, responsive, and scalable websites using modern technologies. From simple landing pages to full-stack web applications, I turn ideas into functional digital products.",
     href: "",
   },
   {
     num: "02",
     title: "UI/UX Design",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur dolor sit, Eaque tenetur",
+      "I design clean and user-friendly interfaces that provide smooth experiences. My focus is on blending creativity with usability to make designs that users love.",
     href: "",
   },
   {
     num: "03",
     title: "Logo Design",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur dolor sit, Eaque tenetur",
+      "I create unique and professional logos that reflect your brand identity. My goal is to design something simple, memorable, and impactful.",
     href: "",
   },
   {
     num: "04",
     title: "SEO",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque tenetur dolor sit, Eaque tenetur",
+      "I help improve your website’s visibility on search engines through SEO best practices, ensuring your content reaches the right audience and ranks higher.",
     href: "",
   },
 ];
+
 
 const Services = () => {
   return (
