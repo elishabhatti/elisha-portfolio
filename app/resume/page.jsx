@@ -77,7 +77,7 @@ const education = {
   icon: "./assets/resume/cap.svg",
   title: "My Education",
   description:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam aliquam deleniti magnam quam officiis sint reprehenderit fugiat.",
+    "Completed my Bachelor's in Computer Science, where I built a strong foundation in programming, web development, and software engineering. I also worked on academic projects that strengthened my problem-solving and teamwork skills.",
   items: [
     {
       institution: "St Mary's English High School.",
@@ -182,7 +182,10 @@ const Resume = () => {
                       </button>
                     </DialogTrigger>
 
-                    <DialogContent showCloseButton={false} className="max-w-lg bg-black">
+                    <DialogContent
+                      showCloseButton={false}
+                      className="max-w-lg bg-black"
+                    >
                       <DialogHeader>
                         <DialogTitle>{experience.title}</DialogTitle>
                         <DialogDescription className="text-md leading-7 mt-3">
