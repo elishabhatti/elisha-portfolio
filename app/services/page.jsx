@@ -72,7 +72,7 @@ const Services = () => {
                 </h2>
                 {/* description */}
                 <p className="text-white/60 xl:text-lg text-md leading-7">
-                  {service.description}
+                  {service.description.length >= 30 ? service.description.slice(0, 100) + "..."  : service.description }
                 </p>
                 {/* border */}
                 <div className="border-b border-white/20 w-full"></div>
