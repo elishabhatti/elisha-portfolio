@@ -33,9 +33,9 @@ import { Button } from "@/components/ui/button";
 
 // about data
 const about = {
-title: "About me",
-description:
-  "I am a passionate web developer with 2+ years of experience in building modern, responsive, and user-friendly applications. I enjoy turning ideas into real-world digital solutions and constantly improving my skills in web technologies. I am always eager to take on new challenges and deliver high-quality results.",
+  title: "About me",
+  description:
+    "I am a passionate web developer with 2+ years of experience in building modern, responsive, and user-friendly applications. I enjoy turning ideas into real-world digital solutions and constantly improving my skills in web technologies. I am always eager to take on new challenges and deliver high-quality results.",
   info: [
     { fieldName: "Name", fieldValue: "Elisha Jameel" },
     { fieldName: "Phone", fieldValue: "(+92) 309 2772847" },
@@ -99,9 +99,9 @@ const education = {
 
 // skills
 const skills = {
-title: "My Skills",
-description:
-  "Skilled in modern web development, UI/UX design, and building responsive applications. Proficient with JavaScript, React, Node.js, and familiar with tools like Git, Tailwind CSS, and MongoDB.",
+  title: "My Skills",
+  description:
+    "Skilled in modern web development, UI/UX design, and building responsive applications. Proficient with JavaScript, React, Node.js, and familiar with tools like Git, Tailwind CSS, and MongoDB.",
 
   skillList: [
     {
@@ -327,9 +327,55 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold ">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {about.description}
-                </p>
+                {/* Short description + Dialog trigger */}
+                <div className="flex items-start gap-4">
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {about.description.length >= 100
+                      ? about.description.slice(0, 120) + "..."
+                      : about.description}
+                  </p>
+
+                  {/* Dialog Button */}
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-purple-500 transition">
+                        <ArrowRight className="w-5 h-5 text-black hover:text-white" />
+                      </button>
+                    </DialogTrigger>
+
+                    <DialogContent className="max-w-lg bg-black text-white">
+                      <DialogHeader>
+                        <DialogTitle>{about.title}</DialogTitle>
+                        <DialogDescription className="text-md leading-7 mt-3 text-white/80">
+                          {about.description}
+                        </DialogDescription>
+                      </DialogHeader>
+
+                      {/* Show info fields */}
+                      <div className="mt-6 space-y-2">
+                        {about.info.map((item, index) => (
+                          <div
+                            key={index}
+                            className="flex justify-between text-sm"
+                          >
+                            <span className="text-white/60">
+                              {item.fieldName}:
+                            </span>
+                            <span className="font-medium">
+                              {item.fieldValue}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <DialogFooter className="mt-4">
+                        <DialogClose asChild>
+                          <Button variant="outline">Close</Button>
+                        </DialogClose>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
+                </div>
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-3 xl:gap-y-6 xl:gap-x-16 xl:w-[820px] w-full mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
