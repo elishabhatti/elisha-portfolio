@@ -18,6 +18,18 @@ import {
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogTrigger,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 // about data
 const about = {
@@ -154,9 +166,37 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 max-auto xl:mx-0">
-                  {experience.description.length >= 100 ? experience.description.slice(0, 120) + "..." : experience.description }
-                </p>
+                {/* Short description + Dialog trigger */}
+                <div className="flex items-start gap-4">
+                  <p className="max-w-[600px] text-white/60 xl:mx-0">
+                    {experience.description.length >= 100
+                      ? experience.description.slice(0, 120) + "..."
+                      : experience.description}
+                  </p>
+
+                  {/* Dialog Button */}
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-purple-500 transition">
+                        <ArrowRight className="w-5 h-5 text-black hover:text-white" />
+                      </button>
+                    </DialogTrigger>
+
+                    <DialogContent showCloseButton={false} className="max-w-lg bg-black">
+                      <DialogHeader>
+                        <DialogTitle>{experience.title}</DialogTitle>
+                        <DialogDescription className="text-md leading-7 mt-3">
+                          {experience.description}
+                        </DialogDescription>
+                      </DialogHeader>
+                      <DialogFooter>
+                        <DialogClose asChild>
+                          <Button variant="outline">Cancel</Button>
+                        </DialogClose>
+                      </DialogFooter>
+                    </DialogContent>
+                  </Dialog>
+                </div>
                 <ScrollArea className="h-[350px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experience.items.map((item, index) => {
