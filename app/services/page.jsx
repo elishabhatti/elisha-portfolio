@@ -77,10 +77,10 @@ const Services = () => {
                     className="max-w-lg bg-black"
                   >
                     <DialogHeader>
-                      <DialogTitle className="text-xl font-bold">
+                      <DialogTitle className="xl:text-xl text-lg font-bold">
                         {service.title}
                       </DialogTitle>
-                      <DialogDescription className="text-base leading-7 text-white/80">
+                      <DialogDescription className="xl:text-lg text-md text-base xl:leading-7 leading-6 text-white/80">
                         {service.description}
                       </DialogDescription>
                     </DialogHeader>
