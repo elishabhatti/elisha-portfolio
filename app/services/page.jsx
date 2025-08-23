@@ -9,7 +9,10 @@ import {
   DialogTitle,
   DialogDescription,
   DialogTrigger,
+  DialogFooter,
 } from "@/components/ui/dialog";
+import { DialogClose } from "@radix-ui/react-dialog";
+import { Button } from "@/components/ui/button";
 
 const services = [
   {
@@ -69,15 +72,23 @@ const Services = () => {
                     </button>
                   </DialogTrigger>
 
-                  <DialogContent className="max-w-lg">
+                  <DialogContent
+                    showCloseButton={false}
+                    className="max-w-lg bg-black"
+                  >
                     <DialogHeader>
                       <DialogTitle className="text-xl font-bold">
                         {service.title}
                       </DialogTitle>
-                      <DialogDescription className="text-base leading-7 text-gray-600">
+                      <DialogDescription className="text-base leading-7 text-white/80">
                         {service.description}
                       </DialogDescription>
                     </DialogHeader>
+                    <DialogFooter>
+                      <DialogClose asChild>
+                        <Button variant="outline">Cancel</Button>
+                      </DialogClose>
+                    </DialogFooter>
                   </DialogContent>
                 </Dialog>
               </div>
