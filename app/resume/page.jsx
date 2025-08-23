@@ -39,37 +39,23 @@ const experience = {
   icon: "./assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam aliquam deleniti magnam quam officiis sint reprehenderit fugiat.",
+    "I have worked on freelance and academic projects, specializing in web development and UI/UX design. My focus has been on creating responsive websites, intuitive interfaces, and scalable applications while continuously improving my skills in modern web technologies.",
+
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
+      company: "Rhombix Technologies.",
+      position: "Frontend Developer Intern",
+      duration: "2024 - 2025",
     },
     {
-      company: "Web Design Studio",
-      position: "Front-End Developer Intern",
-      duration: "Summer 2021",
+      company: "Aptech",
+      position: "Backend Developer php",
+      duration: "2023",
     },
     {
       company: "E-commerce Startup",
-      position: "Freelance Web Developer",
-      duration: "2020 - 2021",
-    },
-    {
-      company: "Tech Academy",
-      position: "Teaching Assistant",
-      duration: "2019 - 2020",
-    },
-    {
-      company: "Digital Academy",
-      position: "UI/UX Designer",
-      duration: "2018 - 2019",
-    },
-    {
-      company: "Software Development",
-      position: "Junior Developer",
-      duration: "2017 - 2018",
+      position: "Web Developer",
+      duration: "2024 - 2025",
     },
   ],
 };
