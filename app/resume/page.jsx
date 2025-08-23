@@ -343,7 +343,10 @@ const Resume = () => {
                       </button>
                     </DialogTrigger>
 
-                    <DialogContent className="max-w-lg bg-black text-white">
+                    <DialogContent
+                      showCloseButton={false}
+                      className="max-w-lg bg-black text-white"
+                    >
                       <DialogHeader>
                         <DialogTitle>{about.title}</DialogTitle>
                         <DialogDescription className="text-md leading-7 mt-3 text-white/80">
