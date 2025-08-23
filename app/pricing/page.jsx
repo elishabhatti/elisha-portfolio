@@ -2,6 +2,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const pricingPlans = [
   {
@@ -60,7 +62,14 @@ const pricingPlans = [
 
 export default function PricingPlans() {
   return (
-    <section className="py-20 bg-gray-900 text-white">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 0.6, duration: 0.5, ease: "easeInOut" },
+      }}
+      className="mt-3 text-white"
+    >
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
           Pricing Plans
@@ -70,7 +79,7 @@ export default function PricingPlans() {
           {pricingPlans.map((plan) => (
             <Card
               key={plan.num}
-              className="bg-gray-800 text-white border-gray-700 hover:shadow-xl transition-all duration-300"
+              className="bg-black text-white border-gray-700 hover:shadow-xl transition-all duration-300"
             >
               <CardHeader>
                 <CardTitle className="text-xl">{plan.title}</CardTitle>
@@ -86,14 +95,16 @@ export default function PricingPlans() {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                  Get Started
-                </Button>
+                <Link href="/contact">
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                    Get Started
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
