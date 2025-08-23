@@ -8,7 +8,7 @@ import {
   FaNodeJs,
 } from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiMongodb, SiTypescript } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
@@ -135,6 +135,14 @@ const skills = {
     {
       icon: <FiFigma />,
       name: "figma",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "mongodb",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "typescript",
     },
   ],
 };
@@ -299,7 +307,7 @@ const Resume = () => {
                   {skills.description}
                 </p>
               </div>
-              <ul className="grid mt-5 gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-4">
+              <ul className="grid mt-5 gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:gap-4">
                 {skills.skillList.map((skill, index) => {
                   return (
                     <li key={index}>
