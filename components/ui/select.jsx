@@ -24,7 +24,7 @@ function SelectTrigger({ className, size = "default", children, ...props }) {
       data-slot="select-trigger"
       data-size={size}
       className={cn(
-        "flex h-[48px] w-full items-center justify-between rounded-md border border-white/10 bg-[#1C1C22] px-4 py-5 text-base text-white/60 placeholder:text-white/10 focus:border-[#00ff99] outline-none",
+        "flex h-[48px] w-full items-center justify-between rounded-md border border-white/10 bg-[#1C1C22] px-4 py-5 text-base text-white/60 placeholder:text-white/10 focus:border-[#a238ff] outline-none",
         className
       )}
       {...props}
@@ -82,7 +82,7 @@ function SelectItem({ className, children, ...props }) {
     <SelectPrimitive.Item
       data-slot="select-item"
       className={cn(
-        "focus:bg-[#00ff99] focus:text-black/60 [&_svg:not([class*='text-'])]:text-muted-foreground relative flex w-full cursor-default items-center gap-2 rounded-sm py-1.5 pr-8 pl-2 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
+        "focus:bg-[#a238ff] focus:text-black/60 [&_svg:not([class*='text-'])]:text-muted-foreground relative flex w-full cursor-default items-center gap-2 rounded-sm py-1.5 pr-8 pl-2 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 *:[span]:last:flex *:[span]:last:items-center *:[span]:last:gap-2",
         className
       )}
       {...props}
