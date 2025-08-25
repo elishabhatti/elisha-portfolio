@@ -18,14 +18,22 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "MERN Stack",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/assets/work/photo-blog-app.png",
+      "🚀 MERN E-commerce App with Tailwind CSS UI, Framer Motion animations & GSAP scroll effects.",
+    stack: [
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "React.js" },
+      { name: "Tailwind.css" },
+      { name: "MongoDb" },
+      { name: "Oauth" },
+      { name: "Jwt" },
+    ],
+    image: "/assets/assets/work/photo-e-commerce-store.png",
     live: "",
-    github: "",
+    github: "https://github.com/elishabhatti/e-commerce-with-mern.git",
   },
   {
     num: "02",
@@ -37,7 +45,7 @@ const projects = [
       { name: "Node.js" },
       { name: "Express.js" },
       { name: "React.js" },
-      { name: "React.js" },
+      { name: "Tailwind.css" },
       { name: "MongoDb" },
       { name: "Oauth" },
       { name: "Jwt" },
@@ -48,14 +56,21 @@ const projects = [
   },
   {
     num: "03",
-    category: "frontend",
+    category: "Backend",
     title: "project 3",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
+      "Built a full-featured URL shortener application with a robust backend and secure authentication system.",
+    stack: [
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "ejs" },
+      { name: "Mysql" },
+      { name: "Express.js" },
+      { name: "Oauth" },
+    ],
     image: "/assets/assets/work/photo-url-shortener.png",
     live: "",
-    github: "",
+    github: "https://github.com/elishabhatti/url-shortener.git",
   },
   {
     num: "04",
