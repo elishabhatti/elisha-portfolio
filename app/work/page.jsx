@@ -18,14 +18,22 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "Full Stack",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+      "Developed a robust backend using Node.js and Express.js, implementing secure RESTful APIs to handle blog post CRUD operations, user authentication, and data validation with integration to a MongoDB database.",
+    stack: [
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "React.js" },
+      { name: "React.js" },
+      { name: "MongoDb" },
+      { name: "Oauth" },
+      { name: "Jwt" },
+    ],
     image: "/assets/assets/work/photo-blog-app.png",
     live: "",
-    github: "",
+    github: "https://github.com/elishabhatti/server-of-the-blog-app.git",
   },
   {
     num: "02",
