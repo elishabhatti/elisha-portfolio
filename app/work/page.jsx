@@ -138,7 +138,12 @@ const Work = () => {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live */}
-                <Link href={project.live || "#"} target="_blank">
+
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={project.live}
+                >
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-12 h-12 sm:w-[60px] sm:h-[60px] rounded-full bg-white/5 flex justify-center items-center group transition hover:bg-white/10">
@@ -149,7 +154,7 @@ const Work = () => {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </a>
 
                 {/* github */}
                 <Link href={project.github || "#"} target="_blank">
