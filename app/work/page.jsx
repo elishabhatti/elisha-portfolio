@@ -207,7 +207,7 @@ const Work = () => {
 
               {/* custom buttons */}
               <WorkSliderBtns
-                btnStyles="bg-[#a238ff] rounded-md text-white text-[20px] sm:text-[22px] w-10 h-10 sm:w-11 sm:h-11 flex justify-center items-center transition-all hover:scale-105"
+                btnStyles="bg-[#a238ff] rounded-md text-white xl:text-[20px] sm:text-[22px] xl:w-10 xl:h-10 sm:w-11 sm:h-11 w-7 h-7 flex justify-center items-center transition-all hover:scale-105"
                 containerStyles="flex gap-2 absolute right-2 bottom-2 sm:bottom-4 z-20 w-auto"
               />
             </Swiper>
