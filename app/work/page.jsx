@@ -74,14 +74,13 @@ const projects = [
   },
   {
     num: "04",
-    category: "frontend",
+    category: "Frontend",
     title: "project 4",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
+    description: "Created a Task Management App with Redux Toolkit",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
     image: "/assets/assets/work/photo-todo-horizon.png",
-    live: "",
-    github: "",
+    live: "https://redux-toolkit-todo-silk.vercel.app/",
+    github: "https://github.com/elishabhatti/redux-toolkit-todo.git",
   },
 ];
 
