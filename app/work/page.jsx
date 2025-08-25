@@ -77,7 +77,11 @@ const projects = [
     category: "Frontend",
     title: "project 4",
     description: "Created a Task Management App with Redux Toolkit",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
+    stack: [
+      { name: "React.js" },
+      { name: "Tailwind.css" },
+      { name: "Redux Toolkit" },
+    ],
     image: "/assets/assets/work/photo-todo-horizon.png",
     live: "https://redux-toolkit-todo-silk.vercel.app/",
     github: "https://github.com/elishabhatti/redux-toolkit-todo.git",
