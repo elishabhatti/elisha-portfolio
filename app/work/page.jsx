@@ -18,6 +18,17 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
+    category: "frontend",
+    title: "project 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+    image: "/assets/assets/work/photo-blog-app.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "02",
     category: "Full Stack",
     title: "project 1",
     description:
@@ -34,17 +45,6 @@ const projects = [
     image: "/assets/assets/work/photo-blog-app.png",
     live: "",
     github: "https://github.com/elishabhatti/server-of-the-blog-app.git",
-  },
-  {
-    num: "02",
-    category: "fullstack",
-    title: "project 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/assets/work/photo-e-commerce-store.png",
-    live: "",
-    github: "",
   },
   {
     num: "03",
