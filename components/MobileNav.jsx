@@ -1,30 +1,15 @@
 "use client";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "./ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 
 const links = [
-  {
-    name: "home",
-    path: "/",
-  },
-  {
-    name: "services",
-    path: "/services",
-  },
-  {
-    name: "resume",
-    path: "/resume",
-  },
-  {
-    name: "work",
-    path: "/work",
-  },
-  {
-    name: "contact",
-    path: "/contact",
-  },
+  { name: "home", path: "/" },
+  { name: "services", path: "/services" },
+  { name: "resume", path: "/resume" },
+  { name: "work", path: "/work" },
+  { name: "contact", path: "/contact" },
 ];
 
 const MobileNav = () => {
@@ -35,6 +20,9 @@ const MobileNav = () => {
         <CiMenuFries className="xl:text-[32px] text-xl text-white" />
       </SheetTrigger>
       <SheetContent className="flex flex-col p-5">
+        {/* Required for accessibility */}
+        <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
+
         <div className="mt-32 text-center text-2xl">
           <Link href="/">
             <h1>
@@ -43,20 +31,18 @@ const MobileNav = () => {
           </Link>
         </div>
         <nav className="flex flex-col justify-center items-center gap-4">
-          {links.map((link, index) => {
-            return (
-              <Link
-                href={link.path}
-                className={` ${
-                  link.path === pathname &&
-                  "text-[#a238ff] border-b-2 border-[#a238ff]"
-                } text-md capitalize transition-all`}
-                key={index}
-              >
-                {link.name}
-              </Link>
-            );
-          })}
+          {links.map((link, index) => (
+            <Link
+              href={link.path}
+              className={` ${
+                link.path === pathname &&
+                "text-[#a238ff] border-b-2 border-[#a238ff]"
+              } text-md capitalize transition-all`}
+              key={index}
+            >
+              {link.name}
+            </Link>
+          ))}
         </nav>
       </SheetContent>
     </Sheet>
