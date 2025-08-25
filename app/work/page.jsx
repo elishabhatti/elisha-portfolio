@@ -23,7 +23,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/assets/work/thumb1.png",
+    image: "/assets/assets/work/photo-blog-app.png",
     live: "",
     github: "",
   },
@@ -34,7 +34,7 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/assets/work/thumb2.png",
+    image: "/assets/assets/work/photo-e-commerce-store.png",
     live: "",
     github: "",
   },
@@ -45,7 +45,18 @@ const projects = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/assets/work/thumb3.png",
+    image: "/assets/assets/work/photo-url-shortener.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "frontend",
+    title: "project 3",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi explicabo modi odio neque esse eius expedita officiis?",
+    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
+    image: "/assets/assets/work/photo-todo-horizon.png",
     live: "",
     github: "",
   },
