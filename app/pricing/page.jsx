@@ -5,13 +5,12 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const pricingPlans = [
+const pricingPlansPKR = [
   {
     num: "01",
     title: "Web Development",
-    description:
-      "I build fast, responsive, and scalable websites using modern technologies. From simple landing pages to full-stack web applications, I turn ideas into functional digital products.",
-    price: "$499",
+    description: "Modern, responsive websites — from simple to full-stack.",
+    price: "PKR 75,000",
     features: [
       "Responsive Design",
       "Frontend + Backend",
@@ -22,9 +21,8 @@ const pricingPlans = [
   {
     num: "02",
     title: "UI/UX Design",
-    description:
-      "I design clean and user-friendly interfaces that provide smooth experiences. My focus is on blending creativity with usability to make designs that users love.",
-    price: "$299",
+    description: "Clean, intuitive interfaces focusing on usability.",
+    price: "PKR 50,000",
     features: [
       "Wireframes & Mockups",
       "High-Fidelity Design",
@@ -35,9 +33,8 @@ const pricingPlans = [
   {
     num: "03",
     title: "Logo Design",
-    description:
-      "I create unique and professional logos that reflect your brand identity. My goal is to design something simple, memorable, and impactful.",
-    price: "$99",
+    description: "Unique, memorable logos representing your brand.",
+    price: "PKR 20,000",
     features: [
       "3 Initial Concepts",
       "Unlimited Revisions",
@@ -47,13 +44,12 @@ const pricingPlans = [
   },
   {
     num: "04",
-    title: "SEO",
-    description:
-      "I help improve your website’s visibility on search engines through SEO best practices, ensuring your content reaches the right audience and ranks higher.",
-    price: "$199",
+    title: "SEO Services",
+    description: "Boost your visibility with best-practice SEO.",
+    price: "PKR 40,000/month",
     features: [
       "Keyword Research",
-      "On-page SEO",
+      "On-Page SEO",
       "Technical SEO",
       "Monthly Reports",
     ],
@@ -76,7 +72,7 @@ export default function PricingPlans() {
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {pricingPlans.map((plan) => (
+          {pricingPlansPKR.map((plan) => (
             <Card
               key={plan.num}
               className="bg-black text-white border-gray-700 hover:shadow-xl transition-all duration-300"
