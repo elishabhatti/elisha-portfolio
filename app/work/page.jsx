@@ -143,22 +143,24 @@ const Work = () => {
               <div className="flex items-center gap-4">
                 {/* live */}
 
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={project.live}
-                >
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-12 h-12 sm:w-[60px] sm:h-[60px] rounded-full bg-white/5 flex justify-center items-center group transition hover:bg-white/10">
-                        <BsArrowUpRight className="text-white text-2xl sm:text-3xl group-hover:primary-text-color transition-colors" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </a>
+                {project.live && project.live.length > 0 && (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={project.live}
+                  >
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-12 h-12 sm:w-[60px] sm:h-[60px] rounded-full bg-white/5 flex justify-center items-center group transition hover:bg-white/10">
+                          <BsArrowUpRight className="text-white text-2xl sm:text-3xl group-hover:primary-text-color transition-colors" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Live Project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </a>
+                )}
 
                 {/* github */}
                 <Link href={project.github || "#"} target="_blank">
