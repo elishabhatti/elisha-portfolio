@@ -102,7 +102,7 @@ const Contact = () => {
           <div className="w-full lg:w-2/3">
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col border border-gray-800 gap-6 p-8 md:p-10 bg-black rounded-2xl shadow-lg"
+              className="flex flex-col border-2 border-white/30 gap-6 p-8 md:p-10 bg-black rounded-2xl shadow-lg"
             >
               <h3 className="text-3xl md:text-4xl font-semibold primary-text-color">
                 Let's work together
@@ -202,7 +202,7 @@ const Contact = () => {
                   className="flex flex-col sm:flex-row sm:items-center gap-4 text-center sm:text-left"
                 >
                   {/* icon box */}
-                  <div className="w-[44px] h-[44px] sm:w-[52px] sm:h-[52px] bg-[#27272c] primary-text-color flex rounded-lg items-center justify-center shadow-md mx-auto sm:mx-0">
+                  <div className="w-[44px] h-[44px] sm:w-[52px] sm:h-[52px] bg-black border-2 border-white/30 primary-text-color flex rounded-lg items-center justify-center shadow-md mx-auto sm:mx-0">
                     <div className="text-[22px] sm:text-[24px]">
                       {item.icon}
                     </div>
