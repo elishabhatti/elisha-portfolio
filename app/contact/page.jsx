@@ -37,6 +37,9 @@ const info = [
 ];
 
 const Contact = () => {
+  const [responseMessage, setResponseMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
   // state for form values
   const [formData, setFormData] = useState({
     firstName: "",
@@ -58,8 +61,30 @@ const Contact = () => {
   // handle submit
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await axios.post("/api/submit", {...formData})
-    console.log("response:", response);
+    setResponseMessage("");
+    setErrorMessage("");
+
+    try {
+      const response = await axios.post("/api/submit", formData);
+      console.log(response);
+
+      if (response.data.status === 201) {
+        setResponseMessage(response.data.message);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      if (response.data.status === 500) {
+        console.error("Submit failed:", error);
+        setErrorMessage("Something went wrong. Please try again later.");
+      }
+    }
   };
 
   return (
@@ -122,7 +147,9 @@ const Contact = () => {
               {/* select */}
               <Select
                 value={formData.service}
-                onValueChange={(val) => setFormData({ ...formData, service: val })}
+                onValueChange={(val) =>
+                  setFormData({ ...formData, service: val })
+                }
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
@@ -147,8 +174,20 @@ const Contact = () => {
                 onChange={handleChange}
               />
 
+              {/* messages */}
+              {responseMessage && (
+                <p className="text-green-500 text-sm">Hey{responseMessage}</p>
+              )}
+              {errorMessage && (
+                <p className="text-red-500 text-sm">{errorMessage}</p>
+              )}
+
               {/* button */}
-              <Button type="submit" size="lg" className="max-w-[250px] font-medium">
+              <Button
+                type="submit"
+                size="lg"
+                className="max-w-[250px] font-medium"
+              >
                 Send Message
               </Button>
             </form>
