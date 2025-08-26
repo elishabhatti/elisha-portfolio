@@ -79,11 +79,11 @@ const Contact = () => {
           message: "",
         });
       }
-    } catch (error) {
       if (response.data.status === 500) {
-        console.error("Submit failed:", error);
         setErrorMessage("Something went wrong. Please try again later.");
       }
+    } catch (error) {
+      console.error("Submit failed:", error);
     }
   };
 
