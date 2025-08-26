@@ -102,7 +102,7 @@ const Contact = () => {
           <div className="w-full lg:w-2/3">
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col gap-6 p-8 md:p-10 bg-[#27272c] rounded-2xl shadow-lg"
+              className="flex flex-col border border-gray-800 gap-6 p-8 md:p-10 bg-black rounded-2xl shadow-lg"
             >
               <h3 className="text-3xl md:text-4xl font-semibold primary-text-color">
                 Let's work together
