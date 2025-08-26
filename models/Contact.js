@@ -4,10 +4,10 @@ const contactSchema = new mongoose.Schema(
   {
     firstName: { type: String },
     lastName: { type: String },
-    email: { type: String, required: true, unique: true },
-    phone: { type: String },
+    email: { type: String, required: true },
+    phone: { type: String, required: true },
     service: { type: String, enum: ["web", "uiux", "logo", "seo"] },
-    message: { type: String },
+    message: { type: String, required: true },
   },
   { timestamps: true }
 );
