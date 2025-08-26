@@ -55,9 +55,10 @@ const Contact = () => {
   };
 
   // handle submit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", formData);
+    const response = await axios.post("/api/submit", {...formData})
+    console.log("response:", response);
   };
 
   return (
