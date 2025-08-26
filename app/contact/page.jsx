@@ -176,7 +176,7 @@ const Contact = () => {
 
               {/* messages */}
               {responseMessage && (
-                <p className="text-green-500 text-sm">Hey{responseMessage}</p>
+                <p className="text-green-400 text-sm">{responseMessage}</p>
               )}
               {errorMessage && (
                 <p className="text-red-500 text-sm">{errorMessage}</p>

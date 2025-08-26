@@ -16,7 +16,10 @@ export async function POST(request) {
       message,
     });
     await newContact.save();
-    return NextResponse.json({ message: "Contact Submitted", status: 201 });
+    return NextResponse.json({
+      message: "Contact Submitted Will You contact you soon as possible",
+      status: 201,
+    });
   } catch (error) {
     return NextResponse.json({ error: "Error in Server", status: 500 });
   }
