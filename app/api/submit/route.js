@@ -17,7 +17,7 @@ export async function POST(request) {
     });
     await newContact.save();
     return NextResponse.json({
-      message: "Contact Submitted Will You contact you soon as possible",
+      message: "Contact submitted. We will contact you as soon as possible.",
       status: 201,
     });
   } catch (error) {
