@@ -7,7 +7,7 @@ export async function POST(request) {
     await connectToDatabase();
     const { firstName, lastName, email, phone, service, message } =
       await request.json();
-    const newContact = new Contact.create({
+    const newContact = new Contact({
       firstName,
       lastName,
       email,
