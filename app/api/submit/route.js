@@ -1,0 +1,22 @@
+import Contact from "@/models/Contact";
+import connectToDatabase from "@/lib/db";
+import { NextResponse } from "next/server";
+
+export async function POST(request) {
+  try {
+    const { firstName, lastName, email, phone, service, message } =
+      await request.json();
+    const newContact = new Contact({
+      firstName,
+      lastName,
+      email,
+      phone,
+      service,
+      message,
+    });
+    await newUser.save();
+    return NextResponse.json({ message: "Contact Submitted", status: 201 });
+  } catch (error) {
+    return NextResponse.json({ error: "Error in Server", status: 500 });
+  }
+}
