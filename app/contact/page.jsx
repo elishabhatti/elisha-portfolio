@@ -54,7 +54,6 @@ const Contact = () => {
       [e.target.name]: e.target.value,
     });
   };
-
   // handle submit
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -64,10 +63,7 @@ const Contact = () => {
       console.log(response);
 
       if (response.data.status === 201) {
-        toast.success(response.data.message || "Message sent successfully!", {
-          description: new Date().toLocaleString(),
-        });
-
+        toast.success(response.data.message);
         // reset form
         setFormData({
           firstName: "",
