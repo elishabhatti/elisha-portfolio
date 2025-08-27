@@ -92,7 +92,7 @@ export default function PricingPlans() {
                   {plan.features.map((feature, index) => (
                     <li
                       key={index}
-                      className="flex xl:text-md sm:text-md items-center gap-1"
+                      className="text-sm sm:text-base md:text-md lg:text-lg xl:text-1xl"
                     >
                       ✅ {feature}
                     </li>
