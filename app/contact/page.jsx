@@ -212,14 +212,14 @@ const Contact = () => {
               {info.map((item, index) => (
                 <li
                   key={index}
-                  className="flex justify-start items-center gap-5"
+                  className="flex  gap-5"
                 >
-                  <div className="text-lg border-2 border-white/50 p-3 rounded-lg primary-text-color">
+                  <div className="text-lg w-[45px] h-[45px] border-2 border-white/50 p-3 rounded-lg primary-text-color">
                     {item.icon}
                   </div>
                   <div className="flex flex-col">
-                    <p className="text-white/70">{item.title}</p>
-                    <h3 className="font-bold">{item.description}</h3>
+                    <p className="text-md text-white/70">{item.title}</p>
+                    <h3 className="xl:text-lg text-sm font-bold">{item.description}</h3>
                   </div>
                 </li>
               ))}
