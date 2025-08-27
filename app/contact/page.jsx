@@ -74,15 +74,11 @@ const Contact = () => {
           message: "",
         });
       } else {
-        toast.error("Something went wrong. Please try again later.", {
-          description: new Date().toLocaleString(),
-        });
+        toast.error("Something went wrong. Please try again later.");
       }
     } catch (error) {
       console.error("Submit failed:", error);
-      toast.error("Failed to send message.", {
-        description: error.message,
-      });
+      toast.error("Failed to send message.");
     }
   };
 
@@ -96,17 +92,17 @@ const Contact = () => {
       className="py-12 px-4 md:px-8 xl:px-16"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-7 lg:gap-7 items-start">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-start">
           {/* form */}
           <div className="w-full lg:w-2/3">
             <form
               onSubmit={handleSubmit}
               className="flex flex-col border-2 border-white/30 gap-6 p-8 md:p-10 bg-black rounded-2xl shadow-lg"
             >
-              <h3 className="text-3xl md:text-4xl font-semibold primary-text-color">
+              <h3 className="text-3xl md:text-4xl font-semibold primary-text-color text-center">
                 Let's work together
               </h3>
-              <p className="text-white/60 text-sm md:text-base leading-relaxed">
+              <p className="text-white/60 text-sm md:text-base leading-relaxed text-center">
                 Feel free to reach out with your project details or inquiries.
                 I'll get back to you as soon as possible!
               </p>
@@ -174,37 +170,56 @@ const Contact = () => {
               />
 
               {/* button */}
-              <Button
-                type="submit"
-                size="lg"
-                className="max-w-[250px] font-medium"
-              >
-                Send Message
-              </Button>
+              <div className="flex justify-center">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full sm:max-w-[250px] font-medium"
+                >
+                  Send Message
+                </Button>
+              </div>
             </form>
           </div>
 
           {/* info */}
-          <div className="w-full lg:w-1/3 flex flex-col gap-8">
-            <ul className="space-y-6">
+          {/* <div className="w-full lg:w-1/3 flex flex-col gap-6"> */}
+          {/* <ul className="space-y-6"> */}
+          {/* {info.map((item, index) => ( */}
+          {/* <li */}
+          {/* key={index} */}
+          {/* className="flex items-center justify-start gap-3" */}
+          {/* > */}
+          {/* icon box */}
+          {/* <div className="w-[50px] h-[50px] bg-black border-2 border-white/30 primary-text-color flex rounded-lg items-center justify-center shadow-md mx-auto sm:mx-0 flex-shrink-0"> */}
+          {/* <div className="text-[24px]">{item.icon}</div> */}
+          {/* </div> */}
+
+          {/* text */}
+          {/* <div className="flex flex-col items-center sm:items-start text-center sm:text-left"> */}
+          {/* <p className="text-white/60 mb-1 text-sm">{item.title}</p> */}
+          {/* <h3 className="text-base sm:text-lg font-semibold whitespace-nowrap overflow-hidden text-ellipsis max-w-full"> */}
+          {/* {item.description} */}
+          {/* </h3> */}
+          {/* </div> */}
+          {/* </li> */}
+          {/* ))} */}
+          {/* </ul> */}
+          {/* </div> */}
+
+          <div className="w-full xl:w-1/3">
+            <ul className="flex flex-col gap-3">
               {info.map((item, index) => (
                 <li
                   key={index}
-                  className="flex flex-col sm:flex-row sm:items-center gap-4 text-center sm:text-left"
+                  className="flex justify-start items-center gap-5"
                 >
-                  {/* icon box */}
-                  <div className="w-[44px] h-[44px] sm:w-[52px] sm:h-[52px] bg-black border-2 border-white/30 primary-text-color flex rounded-lg items-center justify-center shadow-md mx-auto sm:mx-0">
-                    <div className="text-[22px] sm:text-[24px]">
-                      {item.icon}
-                    </div>
+                  <div className="text-lg border-2 border-white/50 p-3 rounded-lg primary-text-color">
+                    {item.icon}
                   </div>
-
-                  {/* text */}
-                  <div>
-                    <p className="text-white/60 mb-3 text-sm">{item.title}</p>
-                    <h3 className="text-base sm:text-lg md:text-xl font-semibold">
-                      {item.description}
-                    </h3>
+                  <div className="flex flex-col">
+                    <p className="text-white/70">{item.title}</p>
+                    <h3 className="font-bold">{item.description}</h3>
                   </div>
                 </li>
               ))}
