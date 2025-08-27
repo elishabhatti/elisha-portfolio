@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <StairTransition />
-        <Toaster />
+        <Toaster position="top-center"  />
         <PageTransition>{children}</PageTransition>
       </body>
     </html>
