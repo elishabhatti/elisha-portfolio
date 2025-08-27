@@ -181,45 +181,19 @@ const Contact = () => {
               </div>
             </form>
           </div>
-
-          {/* info */}
-          {/* <div className="w-full lg:w-1/3 flex flex-col gap-6"> */}
-          {/* <ul className="space-y-6"> */}
-          {/* {info.map((item, index) => ( */}
-          {/* <li */}
-          {/* key={index} */}
-          {/* className="flex items-center justify-start gap-3" */}
-          {/* > */}
-          {/* icon box */}
-          {/* <div className="w-[50px] h-[50px] bg-black border-2 border-white/30 primary-text-color flex rounded-lg items-center justify-center shadow-md mx-auto sm:mx-0 flex-shrink-0"> */}
-          {/* <div className="text-[24px]">{item.icon}</div> */}
-          {/* </div> */}
-
-          {/* text */}
-          {/* <div className="flex flex-col items-center sm:items-start text-center sm:text-left"> */}
-          {/* <p className="text-white/60 mb-1 text-sm">{item.title}</p> */}
-          {/* <h3 className="text-base sm:text-lg font-semibold whitespace-nowrap overflow-hidden text-ellipsis max-w-full"> */}
-          {/* {item.description} */}
-          {/* </h3> */}
-          {/* </div> */}
-          {/* </li> */}
-          {/* ))} */}
-          {/* </ul> */}
-          {/* </div> */}
-
+          
           <div className="w-full xl:w-1/3">
             <ul className="flex flex-col gap-3">
               {info.map((item, index) => (
-                <li
-                  key={index}
-                  className="flex  gap-5"
-                >
+                <li key={index} className="flex  gap-5">
                   <div className="text-lg w-[45px] h-[45px] border-2 border-white/50 p-3 rounded-lg primary-text-color">
                     {item.icon}
                   </div>
                   <div className="flex flex-col">
                     <p className="text-md text-white/70">{item.title}</p>
-                    <h3 className="xl:text-lg text-sm font-bold">{item.description}</h3>
+                    <h3 className="xl:text-lg text-sm font-bold">
+                      {item.description}
+                    </h3>
                   </div>
                 </li>
               ))}
