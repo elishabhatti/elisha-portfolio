@@ -78,15 +78,22 @@ export default function PricingPlans() {
               className="bg-black text-white border-gray-700 hover:shadow-xl transition-all duration-300"
             >
               <CardHeader>
-                <CardTitle className="text-xl">{plan.title}</CardTitle>
+                <CardTitle className="xl:text-xl text-lg">
+                  {plan.title}
+                </CardTitle>
                 <p className="text-gray-400 text-sm">{plan.description}</p>
               </CardHeader>
 
               <CardContent>
-                <p className="text-3xl font-bold mb-4">{plan.price}</p>
+                <p className="xl:text-3xl text-xl font-bold mb-4">
+                  {plan.price}
+                </p>
                 <ul className="space-y-2 mb-6">
                   {plan.features.map((feature, index) => (
-                    <li key={index} className="flex items-center gap-2">
+                    <li
+                      key={index}
+                      className="flex xl:text-md sm:text-md items-center gap-1"
+                    >
                       ✅ {feature}
                     </li>
                   ))}
