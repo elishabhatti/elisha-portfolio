@@ -6,7 +6,7 @@ const stats = [
   { num: 2, text: "Years of Experience" },
   { num: 71, text: "Project Completed" },
   { num: 8, text: "Technologies mastered" },
-  { num: 1083, text: "Code commits" },
+  { num: 1309, text: "Code commits" },
 ];
 
 const Stats = () => {
