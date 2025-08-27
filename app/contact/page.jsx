@@ -181,14 +181,16 @@ const Contact = () => {
               </div>
             </form>
           </div>
-          
+          {/* info   */}
           <div className="w-full xl:w-1/3">
             <ul className="flex flex-col gap-3">
               {info.map((item, index) => (
                 <li key={index} className="flex  gap-5">
+                  {/* icon */}
                   <div className="text-lg w-[45px] h-[45px] border-2 border-white/50 p-3 rounded-lg primary-text-color">
                     {item.icon}
                   </div>
+                  {/* text */}
                   <div className="flex flex-col">
                     <p className="text-md text-white/70">{item.title}</p>
                     <h3 className="xl:text-lg text-sm font-bold">
