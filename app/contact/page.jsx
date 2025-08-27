@@ -17,6 +17,7 @@ import {
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import axios from "axios";
+import { toast } from "sonner";
 
 const info = [
   {
@@ -37,10 +38,6 @@ const info = [
 ];
 
 const Contact = () => {
-  const [responseMessage, setResponseMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-
-  // state for form values
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -61,15 +58,17 @@ const Contact = () => {
   // handle submit
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setResponseMessage("");
-    setErrorMessage("");
 
     try {
       const response = await axios.post("/api/submit", formData);
       console.log(response);
 
       if (response.data.status === 201) {
-        setResponseMessage(response.data.message);
+        toast.success(response.data.message || "Message sent successfully!", {
+          description: new Date().toLocaleString(),
+        });
+
+        // reset form
         setFormData({
           firstName: "",
           lastName: "",
@@ -78,12 +77,16 @@ const Contact = () => {
           service: "",
           message: "",
         });
-      }
-      if (response.data.status === 500) {
-        setErrorMessage("Something went wrong. Please try again later.");
+      } else {
+        toast.error("Something went wrong. Please try again later.", {
+          description: new Date().toLocaleString(),
+        });
       }
     } catch (error) {
       console.error("Submit failed:", error);
+      toast.error("Failed to send message.", {
+        description: error.message,
+      });
     }
   };
 
@@ -173,14 +176,6 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
               />
-
-              {/* messages */}
-              {responseMessage && (
-                <p className="text-green-400 text-sm">{responseMessage}</p>
-              )}
-              {errorMessage && (
-                <p className="text-red-500 text-sm">{errorMessage}</p>
-              )}
 
               {/* button */}
               <Button
