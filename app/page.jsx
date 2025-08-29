@@ -9,15 +9,19 @@ const page = () => {
     <section className="w-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center gap-6 pt-6 lg:gap-24 lg:pt-6 pb-14">
-          {/* text */}
-          <div className="text-center lg:text-left flex flex-col items-center lg:items-start gap-6 order-2 lg:order-none">
-            <span className="text-xl">Web Developer</span>
-            <h1 className="h1">
-              Hello I&apos;m <br />
-              <span className="primary-text-color">Elisha Jameel</span>
+         {/* Text */}
+          <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-2 xl:order-none max-w-2xl">
+            <span className="text-xl font-medium text-purple-400 animate-fade-in-up">
+              Web Developer
+            </span>
+            <h1 className="h1 mt-2 mb-4 animate-fade-in-up delay-100">
+              Hello I'm <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                Elisha Jameel
+              </span>
             </h1>
-            <p className="max-w-[500px] mb-4 text-white/80 leading-relaxed">
-              I excel crafting elegant digital experiences and I am proficient
+            <p className="max-w-[500px] text-white/80 leading-relaxed mb-6 animate-fade-in-up delay-200">
+              I excel at crafting elegant digital experiences, and I am proficient
               in various programming languages and technologies.
             </p>
 
