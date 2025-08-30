@@ -59,13 +59,13 @@ const pricingPlansPKR = [
 export default function Pricing() {
   return (
     <motion.section
-        initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
       className="text-white"
     >
-      <div className="min-h-screen container mx-auto px-6">
+      <div className="min-h-screen flex justify-center items-center flex-col container mx-auto px-6">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
           Pricing Plans
         </h2>
