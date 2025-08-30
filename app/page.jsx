@@ -65,7 +65,7 @@ const page = () => {
               </motion.div>
               <Social
                 containerStyles="flex gap-6"
-                iconStyles="w-13 h-13 text-xl border-2 border-[#a238ff] rounded-full hover:transition-all duration-300 flex justify-center items-center text-[#a238ff] hover:bg-[#a238ff] text-base hover:text-white"
+                iconStyles="w-13 h-13 text-xl border-2 border-white rounded-full hover:transition-all duration-300 flex justify-center items-center text-white hover:bg-[#a238ff] text-base hover:text-white"
               />
             </div>
           </div>

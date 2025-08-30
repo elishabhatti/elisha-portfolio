@@ -1,6 +1,6 @@
-"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 const links = [
   {
     name: "home",
@@ -30,7 +30,12 @@ const links = [
 const Nav = () => {
   const pathname = usePathname();
   return (
-    <nav className="flex gap-4">
+    <motion.nav
+      initial={{ x: -100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1, delay: 0.2 }}
+      transition={{ duration: 0.69 }}
+      className="flex gap-4"
+    >
       {links.map((link, index) => {
         return (
           <Link
@@ -46,7 +51,7 @@ const Nav = () => {
           </Link>
         );
       })}
-    </nav>
+    </motion.nav>
   );
 };
 

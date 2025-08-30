@@ -26,7 +26,7 @@ const Stats = () => {
                   className="text-4xl xl:text-3xl font-extrabold"
                 />
                 <motion.p
-                  initial={{ y: 100, opacity: 0 }}
+                  initial={{ y: 50, opacity: 0 }}
                   animate={{ y: 0, opacity: 1, delay: 0.2 }}
                   transition={{ duration: 0.69 }}
                   className={`${
