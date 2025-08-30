@@ -1,8 +1,6 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import StairTransition from "@/components/StairTransition";
-import PageTransition from "@/components/PageTransition";
 import { Toaster } from "@/components/ui/sonner";
 
 const Jetbrains_mono = JetBrains_Mono({
@@ -25,11 +23,10 @@ export default function RootLayout({ children }) {
         className={`${Jetbrains_mono.variable} antialiased`}
       >
         <Header />
-        <StairTransition />
         <Toaster
          position="top-center"
          />
-        <PageTransition>{children}</PageTransition>
+        <div>{children}</div>
       </body>
     </html>
   );
