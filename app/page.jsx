@@ -1,4 +1,5 @@
 import { Globe } from "@/components/magicui/globe";
+import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
@@ -21,7 +22,6 @@ const page = () => {
                 Elisha Jameel
               </span>
             </h1>
-            <Globe/>
             <p className="max-w-[500px] text-white/80 leading-relaxed mb-6 animate-fade-in-up delay-200">
               I excel at crafting elegant digital experiences, and I am proficient
               in various programming languages and technologies.
@@ -30,18 +30,14 @@ const page = () => {
             {/* btn and socials */}
             <div className="flex cursor-pointer flex-col lg:flex-row items-center gap-6">
               <div className="group">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="uppercase border-2 group-hover:transition-all duration-300 group-hover:bg-[#a238ff] flex items-center gap-2"
-                >
+                  <InteractiveHoverButton>
                   <a href="/Elisha-Jameel.docx" download>
-                    <span className="hover:transition-all duration-300 group-hover:text-white">
+                    <span className="text-black group-hover:text-white">
                       Download CV
                     </span>
                     <FiDownload className="hover:transition-all duration-300 group-hover:text-white text-xl ml-2 inline" />
                   </a>
-                </Button>
+                  </InteractiveHoverButton>
               </div>
               <Social
                 containerStyles="flex gap-6"
