@@ -1,3 +1,4 @@
+import { Globe } from "@/components/magicui/globe";
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import Stats from "@/components/Stats";
@@ -20,6 +21,7 @@ const page = () => {
                 Elisha Jameel
               </span>
             </h1>
+            <Globe/>
             <p className="max-w-[500px] text-white/80 leading-relaxed mb-6 animate-fade-in-up delay-200">
               I excel at crafting elegant digital experiences, and I am proficient
               in various programming languages and technologies.
