@@ -1,6 +1,5 @@
-"use client";
-
 import CountUp from "react-countup";
+import { motion } from "framer-motion";
 
 const stats = [
   { num: 2, text: "Years of Experience" },
@@ -26,13 +25,16 @@ const Stats = () => {
                   delay={1}
                   className="text-4xl xl:text-3xl font-extrabold"
                 />
-                <p
+                <motion.p
+                  initial={{ y: 100, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1, delay: 0.2 }}
+                  transition={{ duration: 0.69 }}
                   className={`${
                     item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
                   } leading-snug text-white/80`}
                 >
                   {item.text}
-                </p>
+                </motion.p>
               </div>
             );
           })}

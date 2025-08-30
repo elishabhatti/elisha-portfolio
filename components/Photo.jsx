@@ -7,19 +7,18 @@ const Photo = () => {
   return (
     <div className="w-full h-full relative flex items-center justify-center">
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 2, duration: 0.4, ease: "easeIn" },
-        }}
+        initial={{ x: 100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1, delay: 0.2 }}
+        transition={{ duration: 0.69 }}
         className="relative"
       >
         {/* Image */}
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ x: -100, opacity: 0 }}
           animate={{
+            x: 0,
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
+            transition: { delay: 0.7, duration: 0.4, ease: "easeInOut" },
           }}
           className="w-[300px] h-[300px] xl:w-[400px] xl:h-[400px] mix-blend-lighten absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         >
@@ -31,7 +30,7 @@ const Photo = () => {
             alt="Profile Photo"
             className="object-contain p-5 rounded-full"
           />
-        </motion.div> 
+        </motion.div>
 
         {/* Circle */}
         <motion.svg
