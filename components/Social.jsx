@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const socials = [
   { icon: <FaGithub />, path: "https://github.com/elishabhatti" },
@@ -7,7 +8,12 @@ const socials = [
 ];
 const Social = ({ containerStyles, iconStyles }) => {
   return (
-    <div className={containerStyles}>
+    <motion.div
+      initial={{ x: -100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1, delay: 0.2 }}
+      transition={{ duration: 0.69 }}
+      className={containerStyles}
+    >
       {socials.map((item, index) => {
         return (
           <Link
@@ -20,7 +26,7 @@ const Social = ({ containerStyles, iconStyles }) => {
           </Link>
         );
       })}
-    </div>
+    </motion.div>
   );
 };
 
