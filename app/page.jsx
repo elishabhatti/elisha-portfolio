@@ -10,12 +10,24 @@ import Work from "@/components/pages/Work";
 const page = () => {
   return (
     <section>
-      <Home />
-      <Services />
-      <Resume />
-      <Work />
-      <Contact />
-      <Pricing />
+      <section id="home" className="min-h-screen pt-30">
+        <Home />
+      </section>
+      <section id="services" className="min-h-screen">
+        <Services />
+      </section>
+      <section id="resume" className="min-h-screen ">
+        <Resume />
+      </section>
+      <section id="work" className="min-h-screen ">
+        <Work />
+      </section>
+      <section id="contact" className="min-h-screen ">
+        <Contact />
+      </section>
+      <section id="pricing" className="min-h-screen ">
+        <Pricing />
+      </section>
     </section>
   );
 };

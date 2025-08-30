@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <header className="py-4 px-6 xl:py-8 xl:px-24 text-white">
+    <header className="fixed w-full py-4 px-6 xl:py-8 xl:px-24 text-white">
       <div className="mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">

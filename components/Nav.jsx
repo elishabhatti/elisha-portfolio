@@ -1,34 +1,16 @@
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+"use client";
 import { motion } from "framer-motion";
+
 const links = [
-  {
-    name: "home",
-    path: "/",
-  },
-  {
-    name: "services",
-    path: "/services",
-  },
-  {
-    name: "resume",
-    path: "/resume",
-  },
-  {
-    name: "work",
-    path: "/work",
-  },
-  {
-    name: "contact",
-    path: "/contact",
-  },
-  {
-    name: "pricing",
-    path: "/pricing",
-  },
+  { name: "home", path: "#home" },
+  { name: "services", path: "#services" },
+  { name: "resume", path: "#resume" },
+  { name: "work", path: "#work" },
+  { name: "contact", path: "#contact" },
+  { name: "pricing", path: "#pricing" },
 ];
+
 const Nav = () => {
-  const pathname = usePathname();
   return (
     <motion.nav
       initial={{ x: -100, opacity: 0 }}
@@ -36,21 +18,15 @@ const Nav = () => {
       transition={{ duration: 0.69 }}
       className="flex gap-4"
     >
-      {links.map((link, index) => {
-        return (
-          <Link
-            className={`capitalize font-medium transition-all hover:text-accent ${
-              link.path === pathname
-                ? "primary-text-color border-b-2 border-[#9630F2]"
-                : ""
-            }`}
-            href={link.path}
-            key={index}
-          >
-            {link.name}
-          </Link>
-        );
-      })}
+      {links.map((link, index) => (
+        <a
+          key={index}
+          href={link.path}
+          className="capitalize font-medium transition-all hover:text-accent"
+        >
+          {link.name}
+        </a>
+      ))}
     </motion.nav>
   );
 };
