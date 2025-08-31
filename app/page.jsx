@@ -10,22 +10,22 @@ import Work from "@/components/pages/Work";
 const page = () => {
   return (
     <section>
-      <section id="home" className="min-h-screen pt-30">
+      <section id="home" className="pt-30">
         <Home />
       </section>
-      <section id="services" className="min-h-screen">
+      <section id="services">
         <Services />
       </section>
-      <section id="resume" className="min-h-screen ">
+      <section id="resume">
         <Resume />
       </section>
-      <section id="work" className="min-h-screen ">
+      <section id="work">
         <Work />
       </section>
-      <section id="contact" className="min-h-screen ">
+      <section id="contact">
         <Contact />
       </section>
-      <section id="pricing" className="min-h-screen ">
+      <section id="pricing">
         <Pricing />
       </section>
     </section>
