@@ -159,10 +159,13 @@ const Resume = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="flex items-center justify-center p-6 xl:p-12 xl:py-6"
+      className="flex items-center justify-center xl:p-15 p-5"
     >
       <div className="container mx-auto">
-         <h2 id="resume" className="text-3xl md:text-5xl font-bold text-center mb-12">
+        <h2
+          id="resume"
+          className="text-3xl md:text-5xl font-bold text-center mb-12"
+        >
           Resume
         </h2>
         <Tabs
