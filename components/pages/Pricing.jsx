@@ -65,7 +65,7 @@ export default function Pricing() {
       viewport={{ once: true, amount: 0.2 }}
       className="text-white"
     >
-      <div className="min-h-screen flex justify-center items-center flex-col container mx-auto px-6">
+      <div className="flex justify-center items-center flex-col container mx-auto px-6">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
           Pricing Plans
         </h2>

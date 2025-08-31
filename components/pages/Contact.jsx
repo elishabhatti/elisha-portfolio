@@ -87,7 +87,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.2 }}
-      className="min-h-screen py-12 px-4 md:px-8 xl:px-16"
+      className="py-12 px-4 md:px-8 xl:px-16"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-start">

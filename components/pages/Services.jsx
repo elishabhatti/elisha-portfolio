@@ -43,7 +43,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="min-h-[75vh] flex flex-col justify-center  xl:px-16 xl:py-10">
+    <section className="flex flex-col justify-center  xl:px-16 xl:py-10">
       <h1 className="h1 flex justify-center items-center mb-12">Services</h1>
       <div className="container mx-auto">
         <motion.div

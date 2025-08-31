@@ -101,7 +101,7 @@ const Work = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.2 }}
-      className="min-h-screen flex flex-col mt-6 justify-center px-4 sm:px-6 lg:px-10 py-10"
+      className="flex flex-col mt-6 justify-center px-4 sm:px-6 lg:px-10 py-10"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-10">
