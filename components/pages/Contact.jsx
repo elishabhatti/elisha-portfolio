@@ -83,13 +83,16 @@ const Contact = () => {
 
   return (
     <motion.section
-         initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
       className="py-12 px-4 md:px-8 xl:px-16"
     >
       <div className="container mx-auto">
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
+          Contact
+        </h2>
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-start">
           {/* form */}
           <div className="w-full lg:w-2/3">
@@ -205,4 +208,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;

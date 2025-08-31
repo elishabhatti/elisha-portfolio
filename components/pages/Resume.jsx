@@ -162,6 +162,9 @@ const Resume = () => {
       className="flex items-center justify-center p-6 xl:p-12 xl:py-6"
     >
       <div className="container mx-auto">
+         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
+          Resume
+        </h2>
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[30px]"
