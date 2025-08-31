@@ -89,10 +89,13 @@ const Contact = () => {
       viewport={{ once: true, amount: 0.2 }}
       className="py-12 px-4 md:px-8 xl:px-16"
     >
+      <h2
+        id="contact"
+        className="text-3xl md:text-5xl font-bold text-center mb-12"
+      >
+        Contact
+      </h2>
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
-          Contact
-        </h2>
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-start">
           {/* form */}
           <div className="w-full lg:w-2/3">

@@ -104,7 +104,10 @@ const Work = () => {
       className="flex flex-col mt-6 justify-center px-4 sm:px-6 lg:px-10 py-10"
     >
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
+        <h2
+          id="work"
+          className="text-3xl md:text-5xl font-bold text-center mb-12"
+        >
           Work
         </h2>
         <div className="flex flex-col xl:flex-row gap-10">
