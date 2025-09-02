@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import { motion } from "framer-motion";
+import { InteractiveHoverButton } from "./magicui/interactive-hover-button";
 
 const Header = () => {
   return (
@@ -28,7 +29,9 @@ const Header = () => {
               animate={{ y: 0, opacity: 1, delay: 0.2 }}
               transition={{ duration: 0.69 }}
             >
-              <Button>Hire me</Button>
+              <InteractiveHoverButton className="text-black hover:border-2 hover:border-white">
+                Hire me
+              </InteractiveHoverButton>
             </motion.div>
           </Link>
         </div>

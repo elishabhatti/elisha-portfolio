@@ -1,14 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  SiReact,
-  SiNodedotjs,
-  SiFigma,
-  SiGithub,
-  SiTailwindcss,
-  SiMongodb,
-} from "react-icons/si";
 
 const Photo = () => {
   return (
