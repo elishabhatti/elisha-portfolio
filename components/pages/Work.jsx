@@ -14,14 +14,13 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
-
-
+import work from "../../json/work.json";
 
 const Work = () => {
-  const [project, setProject] = useState(projects[0]);
+  const [project, setProject] = useState(work[0]);
 
   const handleSlideChange = (swiper) => {
-    setProject(projects[swiper.activeIndex]);
+    setProject(work[swiper.activeIndex]);
   };
 
   return (
@@ -40,25 +39,18 @@ const Work = () => {
           Work
         </h2>
         <div className="flex flex-col xl:flex-row gap-10">
-          {/* LEFT - Project Info */}
+          {/* LEFT */}
           <div className="w-full xl:w-1/2 flex flex-col justify-between order-2 xl:order-none">
             <div className="group flex flex-col gap-6">
-              {/* outline number */}
               <div className="text-5xl sm:text-7xl xl:text-8xl font-extrabold text-transparent text-outline leading-none">
                 {project.num}
               </div>
-
-              {/* category */}
               <h2 className="text-2xl sm:text-3xl xl:text-[42px] font-bold leading-tight text-white group-hover:primary-text-color transition-colors duration-500 capitalize">
                 {project.category} project
               </h2>
-
-              {/* description */}
               <p className="text-sm sm:text-base text-white/70 leading-relaxed">
                 {project.description}
               </p>
-
-              {/* stack */}
               <ul className="flex flex-wrap gap-2 sm:gap-4">
                 {project.stack.map((item, index) => (
                   <li
@@ -70,13 +62,8 @@ const Work = () => {
                   </li>
                 ))}
               </ul>
-
               <div className="border border-white/20"></div>
-
-              {/* buttons */}
               <div className="flex items-center gap-4">
-                {/* live */}
-
                 {project.live && project.live.length > 0 && (
                   <a
                     target="_blank"
@@ -95,8 +82,6 @@ const Work = () => {
                     </TooltipProvider>
                   </a>
                 )}
-
-                {/* github */}
                 <Link href={project.github || "#"} target="_blank">
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
@@ -113,7 +98,7 @@ const Work = () => {
             </div>
           </div>
 
-          {/* RIGHT - Swiper */}
+          {/* RIGHT */}
           <div className="w-full xl:w-1/2">
             <Swiper
               spaceBetween={20}
@@ -121,13 +106,10 @@ const Work = () => {
               className="w-full"
               onSlideChange={handleSlideChange}
             >
-              {projects.map((p, index) => (
+              {work.map((p, index) => (
                 <SwiperSlide key={index}>
                   <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg group">
-                    {/* overlay */}
                     <div className="absolute inset-0 bg-black/20 z-10 group-hover:bg-black/10 transition"></div>
-
-                    {/* image */}
                     <Image
                       src={p.image}
                       alt={p.num}
@@ -138,8 +120,6 @@ const Work = () => {
                   </div>
                 </SwiperSlide>
               ))}
-
-              {/* custom buttons */}
               <WorkSliderBtns
                 btnStyles="bg-[#a238ff] rounded-md text-white xl:text-[20px] sm:text-[22px] xl:w-10 xl:h-10 sm:w-11 sm:h-11 w-7 h-7 flex justify-center items-center transition-all hover:scale-105"
                 containerStyles="flex gap-2 absolute right-2 bottom-2 sm:bottom-4 z-20 w-auto"
