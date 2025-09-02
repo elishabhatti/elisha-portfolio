@@ -1,0 +1,69 @@
+[
+  {
+    "num": "01",
+    "category": "MERN Stack",
+    "title": "project 1",
+    "description": "🚀 MERN E-commerce App with Tailwind CSS UI, Framer Motion animations & GSAP scroll effects.",
+    "stack": [
+      { "name": "Node.js" },
+      { "name": "Express.js" },
+      { "name": "React.js" },
+      { "name": "Tailwind.css" },
+      { "name": "MongoDb" },
+      { "name": "Oauth" },
+      { "name": "Jwt" }
+    ],
+    "image": "/assets/work/photo-e-commerce-store.png",
+    "live": "",
+    "github": "https://github.com/elishabhatti/e-commerce-with-mern.git"
+  },
+  {
+    "num": "02",
+    "category": "Full Stack",
+    "title": "project 1",
+    "description": "Developed a robust backend using Node.js and Express.js, implementing secure RESTful APIs to handle blog post CRUD operations, user authentication, and data validation with integration to a MongoDB database.",
+    "stack": [
+      { "name": "Node.js" },
+      { "name": "Express.js" },
+      { "name": "React.js" },
+      { "name": "Tailwind.css" },
+      { "name": "MongoDb" },
+      { "name": "Oauth" },
+      { "name": "Jwt" }
+    ],
+    "image": "/assets/work/photo-blog-app.png",
+    "live": "",
+    "github": "https://github.com/elishabhatti/server-of-the-blog-app.git"
+  },
+  {
+    "num": "03",
+    "category": "Backend",
+    "title": "project 3",
+    "description": "Built a full-featured URL shortener application with a robust backend and secure authentication system.",
+    "stack": [
+      { "name": "Node.js" },
+      { "name": "Express.js" },
+      { "name": "ejs" },
+      { "name": "Mysql" },
+      { "name": "Express.js" },
+      { "name": "Oauth" }
+    ],
+    "image": "/assets/work/photo-url-shortener.png",
+    "live": "",
+    "github": "https://github.com/elishabhatti/url-shortener.git"
+  },
+  {
+    "num": "04",
+    "category": "Frontend",
+    "title": "project 4",
+    "description": "Created a Task Management App with Redux Toolkit",
+    "stack": [
+      { "name": "React.js" },
+      { "name": "Tailwind.css" },
+      { "name": "Redux Toolkit" }
+    ],
+    "image": "/assets/work/photo-todo-horizon.png",
+    "live": "https://redux-toolkit-todo-silk.vercel.app/",
+    "github": "https://github.com/elishabhatti/redux-toolkit-todo.git"
+  }
+]
