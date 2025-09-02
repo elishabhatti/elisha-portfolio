@@ -11,7 +11,7 @@ This is where I showcase my **projects, skills, and experience** as a developer.
 
 ## 🖼️ Preview
 
-(Add a screenshot or gif of your portfolio here)  
+
 ![Portfolio Screenshot](./preview.png)
 
 ---
