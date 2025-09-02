@@ -4,57 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import pricing from "../../json/pricing.json"
 
-const pricingPlansPKR = [
-  {
-    num: "01",
-    title: "Web Development",
-    description: "Modern, responsive websites — from simple to full-stack.",
-    price: "PKR 75,000",
-    features: [
-      "Responsive Design",
-      "Frontend + Backend",
-      "1 Month Free Support",
-      "SEO Optimization",
-    ],
-  },
-  {
-    num: "02",
-    title: "UI/UX Design",
-    description: "Clean, intuitive interfaces focusing on usability.",
-    price: "PKR 50,000",
-    features: [
-      "Wireframes & Mockups",
-      "High-Fidelity Design",
-      "Interactive Prototypes",
-      "Custom Revisions",
-    ],
-  },
-  {
-    num: "03",
-    title: "Logo Design",
-    description: "Unique, memorable logos representing your brand.",
-    price: "PKR 20,000",
-    features: [
-      "3 Initial Concepts",
-      "Unlimited Revisions",
-      "High-Resolution Files",
-      "Source Files Included",
-    ],
-  },
-  {
-    num: "04",
-    title: "SEO Services",
-    description: "Boost your visibility with best-practice SEO.",
-    price: "PKR 40,000/month",
-    features: [
-      "Keyword Research",
-      "On-Page SEO",
-      "Technical SEO",
-      "Monthly Reports",
-    ],
-  },
-];
 
 export default function Pricing() {
   return (
@@ -71,7 +22,7 @@ export default function Pricing() {
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {pricingPlansPKR.map((plan) => (
+          {pricing.map((plan) => (
             <Card
               key={plan.num}
               className="bg-black text-white border-gray-700 hover:shadow-xl transition-all duration-300"
