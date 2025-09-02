@@ -13,38 +13,15 @@ import {
 } from "@/components/ui/dialog";
 import { DialogClose } from "@radix-ui/react-dialog";
 import { Button } from "@/components/ui/button";
-
-const services = [
-  {
-    num: "01",
-    title: "Web Development",
-    description:
-      "I build fast, responsive, and scalable websites using modern technologies. From simple landing pages to full-stack web applications, I turn ideas into functional digital products.",
-  },
-  {
-    num: "02",
-    title: "UI/UX Design",
-    description:
-      "I design clean and user-friendly interfaces that provide smooth experiences. My focus is on blending creativity with usability to make designs that users love.",
-  },
-  {
-    num: "03",
-    title: "Logo Design",
-    description:
-      "I create unique and professional logos that reflect your brand identity. My goal is to design something simple, memorable, and impactful.",
-  },
-  {
-    num: "04",
-    title: "SEO",
-    description:
-      "I help improve your website’s visibility on search engines through SEO best practices, ensuring your content reaches the right audience and ranks higher.",
-  },
-];
+import services from "../../json/services.json";
 
 const Services = () => {
   return (
     <section className="flex flex-col justify-center xl:p-15 p-5">
-      <h2 id="services" className="text-3xl md:text-5xl font-bold text-center mb-12">
+      <h2
+        id="services"
+        className="text-3xl md:text-5xl font-bold text-center mb-12"
+      >
         Services
       </h2>
       <div className="container mx-auto">
