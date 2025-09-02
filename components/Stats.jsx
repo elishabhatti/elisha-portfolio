@@ -1,12 +1,6 @@
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
-
-const stats = [
-  { num: 2, text: "Years of Experience" },
-  { num: 71, text: "Project Completed" },
-  { num: 8, text: "Technologies mastered" },
-  { num: 1309, text: "Code commits" },
-];
+import stats from "../json/stats.json";
 
 const Stats = () => {
   return (
