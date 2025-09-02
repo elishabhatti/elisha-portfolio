@@ -31,7 +31,6 @@ const Home = () => {
               animate={{ x: 0, opacity: 1, delay: 0.2 }}
               transition={{ duration: 0.69 }}
             ></motion.span>
-            <FlipWords words={words} />
             <motion.h1
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1, delay: 0.2 }}
@@ -48,6 +47,15 @@ const Home = () => {
                 Elisha Jameel
               </motion.span>
             </motion.h1>
+            <motion.h3 className="h3 mb-5">
+              <motion.span
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1, delay: 0.2 }}
+                transition={{ duration: 0.69 }}
+              >
+                <FlipWords words={words} />
+              </motion.span>
+            </motion.h3>
             <motion.p
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1, delay: 0.2 }}
