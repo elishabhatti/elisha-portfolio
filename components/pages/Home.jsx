@@ -8,7 +8,12 @@ import { motion } from "framer-motion";
 import { FlipWords } from "../ui/flip-words";
 
 const Home = () => {
-  const words = ["Web Developer", "Web Developer", "Logo Designer", "UI/UX"];
+  const words = [
+    "Web Developer",
+    "Web Designer",
+    "Logo Designer",
+    "UI/UX Designer",
+  ];
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -26,7 +31,7 @@ const Home = () => {
               animate={{ x: 0, opacity: 1, delay: 0.2 }}
               transition={{ duration: 0.69 }}
             ></motion.span>
-            <FlipWords words={words} /> 
+            <FlipWords words={words} />
             <motion.h1
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1, delay: 0.2 }}
