@@ -9,7 +9,7 @@ import Work from "@/components/pages/Work";
 
 const page = () => {
   return (
-    <section className="pt-30">
+    <section className="pt-25">
       <section>
         <Home />
       </section>
