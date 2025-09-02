@@ -38,31 +38,7 @@ import { Button } from "@/components/ui/button";
 import about from "../../json/about.json";
 
 
-// education
 
-const education = {
-  icon: "./assets/resume/cap.svg",
-  title: "My Education",
-  description:
-    "Completed my Bachelor's in Computer Science, where I built a strong foundation in programming, web development, and software engineering. I also worked on academic projects that strengthened my problem-solving and teamwork skills.",
-  items: [
-    {
-      institution: "St Mary's English High School.",
-      position: "Student",
-      duration: "2021 - 2023 ",
-    },
-    {
-      institution: "Aptech DHA.",
-      position: "Student",
-      duration: "2023 - 2026 ",
-    },
-    {
-      institution: "Rhombix Technologies.",
-      position: "Intern",
-      duration: "2024 - 2025",
-    },
-  ],
-};
 
 // skills
 const skills = {
