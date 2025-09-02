@@ -1,0 +1,23 @@
+{
+  "icon": "./assets/resume/badge.svg",
+  "title": "My Experience",
+  "description": "I have worked on freelance and academic projects, specializing in web development and UI/UX design. My focus has been on creating responsive websites, intuitive interfaces, and scalable applications while continuously improving my skills in modern web technologies.",
+
+  "items": [
+    {
+      "company": "Rhombix Technologies.",
+      "position": "Frontend Developer Intern",
+      "duration": "2024 - 2025"
+    },
+    {
+      "company": "Aptech",
+      "position": "Backend Developer php",
+      "duration": "2023"
+    },
+    {
+      " company": "E-commerce Startup",
+      "position": "Web Developer",
+      "duration": "2024 - 2025"
+    }
+  ]
+}
