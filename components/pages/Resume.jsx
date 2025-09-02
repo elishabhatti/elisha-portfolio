@@ -36,58 +36,21 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import about from "../../json/about.json";
+import experience from "../../json/experience.json";
+import education from "../../json/education.json";
+import skills from "../../json/skills.json";
 
-
-
-
-// skills
-const skills = {
-  title: "My Skills",
-  description:
-    "Skilled in modern web development, UI/UX design, and building responsive applications. Proficient with JavaScript, React, Node.js, and familiar with tools like Git, Tailwind CSS, and MongoDB.",
-
-  skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: "html",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css",
-    },
-    {
-      icon: <FaJs />,
-      name: "javascript",
-    },
-    {
-      icon: <FaReact />,
-      name: "react.js",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next.js",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js",
-    },
-    {
-      icon: <FiFigma />,
-      name: "figma",
-    },
-    {
-      icon: <SiMongodb />,
-      name: "mongodb",
-    },
-    {
-      icon: <SiTypescript />,
-      name: "typescript",
-    },
-  ],
+const icons = {
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiMongodb,
+  SiTypescript,
+  FiFigma,
 };
 
 const Resume = () => {
@@ -249,7 +212,7 @@ const Resume = () => {
             </TabsContent>
             {/* skills */}
             <TabsContent value="skills" className="w-full h-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+              <div className="flex flex-col ga  p-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{skills.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {skills.description}
@@ -257,13 +220,14 @@ const Resume = () => {
               </div>
               <ul className="grid mt-5 gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:gap-4">
                 {skills.skillList.map((skill, index) => {
+                  const Icon = icons[skill.icon];
                   return (
                     <li key={index}>
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger className="w-full group h-[150px] bg-[#232329] rounded-xl flex justify-center items-center">
                             <div className="text-6xl group-hover:primary-text-color transition-all duration-300">
-                              {skill.icon}
+                              <Icon />
                             </div>
                           </TooltipTrigger>
                           <TooltipContent>

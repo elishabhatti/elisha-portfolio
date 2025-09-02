@@ -1,0 +1,16 @@
+{
+  "title": "My Skills",
+  "description": "Skilled in modern web development, UI/UX design, and building responsive applications. Proficient with JavaScript, React, Node.js, and familiar with tools like Git, Tailwind CSS, and MongoDB.",
+  "skillList": [
+    { "icon": "FaHtml5", "name": "html" },
+    { "icon": "FaCss3", "name": "css" },
+    { "icon": "FaJs", "name": "javascript" },
+    { "icon": "FaReact", "name": "react.js" },
+    { "icon": "SiNextdotjs", "name": "next.js" },
+    { "icon": "SiTailwindcss", "name": "tailwind.css" },
+    { "icon": "FaNodeJs", "name": "node.js" },
+    { "icon": "FiFigma", "name": "figma" },
+    { "icon": "SiMongodb", "name": "mongodb" },
+    { "icon": "SiTypescript", "name": "typescript" }
+  ]
+}
