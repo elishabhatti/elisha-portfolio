@@ -9,8 +9,8 @@ import Work from "@/components/pages/Work";
 
 const page = () => {
   return (
-    <section>
-      <section className="pt-30">
+    <section className="pt-30">
+      <section>
         <Home />
       </section>
       <section>
