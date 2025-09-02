@@ -5,8 +5,10 @@ import Social from "@/components/Social";
 import Stats from "@/components/Stats";
 import { FiDownload } from "react-icons/fi";
 import { motion } from "framer-motion";
+import { FlipWords } from "../ui/flip-words";
 
 const Home = () => {
+  const words = ["Web Developer", "Web Developer", "Logo Designer", "UI/UX"];
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
@@ -23,9 +25,8 @@ const Home = () => {
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1, delay: 0.2 }}
               transition={{ duration: 0.69 }}
-            >
-              Web Developer
-            </motion.span>
+            ></motion.span>
+            <FlipWords words={words} /> 
             <motion.h1
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1, delay: 0.2 }}
@@ -51,7 +52,6 @@ const Home = () => {
               I excel at crafting elegant digital experiences, and I am
               proficient in various programming languages and technologies.
             </motion.p>
-
             {/* btn and socials */}
             <div className="flex cursor-pointer flex-col lg:flex-row items-center gap-6">
               <motion.div
