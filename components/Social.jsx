@@ -6,6 +6,7 @@ const socials = [
   { icon: <FaGithub />, path: "https://github.com/elishabhatti" },
   { icon: <FaLinkedin />, path: "https://www.linkedin.com/in/elisha-jameel/" },
 ];
+
 const Social = ({ containerStyles, iconStyles }) => {
   return (
     <motion.div
