@@ -1,0 +1,14 @@
+{
+  "title": "About me",
+  "description":
+    "I am a passionate web developer with 2+ years of experience in building modern, responsive, and user-friendly applications. I enjoy turning ideas into real-world digital solutions and constantly improving my skills in web technologies. I am always eager to take on new challenges and deliver high-quality results.",
+  "info": [
+    { "fieldName": "Name", "fieldValue": "Elisha Jameel" },
+    { "fieldName": "Phone", "fieldValue": "(+92) 309 2772847" },
+    { "fieldName": "Experience", "fieldValue": "2+ Years" },
+    { "fieldName": "Nationality", "fieldValue": "Pakistani" },
+    { "fieldName": "Email", "fieldValue": "elishajameel270@gmail.com" },
+    { "fieldName": "Freelance", "fieldValue": "Available" },
+    { "fieldName": "Languages", "fieldValue": "English, Urdu" }
+  ]
+}

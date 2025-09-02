@@ -35,47 +35,9 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import about from "../../json/about.json";
 
-// about data
-const about = {
-  title: "About me",
-  description:
-    "I am a passionate web developer with 2+ years of experience in building modern, responsive, and user-friendly applications. I enjoy turning ideas into real-world digital solutions and constantly improving my skills in web technologies. I am always eager to take on new challenges and deliver high-quality results.",
-  info: [
-    { fieldName: "Name", fieldValue: "Elisha Jameel" },
-    { fieldName: "Phone", fieldValue: "(+92) 309 2772847" },
-    { fieldName: "Experience", fieldValue: "2+ Years" },
-    { fieldName: "Nationality", fieldValue: "Pakistani" },
-    { fieldName: "Email", fieldValue: "elishajameel270@gmail.com" },
-    { fieldName: "Freelance", fieldValue: "Available" },
-    { fieldName: "Languages", fieldValue: "English, Urdu" },
-  ],
-};
-// experience data
-const experience = {
-  icon: "./assets/resume/badge.svg",
-  title: "My Experience",
-  description:
-    "I have worked on freelance and academic projects, specializing in web development and UI/UX design. My focus has been on creating responsive websites, intuitive interfaces, and scalable applications while continuously improving my skills in modern web technologies.",
 
-  items: [
-    {
-      company: "Rhombix Technologies.",
-      position: "Frontend Developer Intern",
-      duration: "2024 - 2025",
-    },
-    {
-      company: "Aptech",
-      position: "Backend Developer php",
-      duration: "2023",
-    },
-    {
-      company: "E-commerce Startup",
-      position: "Web Developer",
-      duration: "2024 - 2025",
-    },
-  ],
-};
 // education
 
 const education = {
