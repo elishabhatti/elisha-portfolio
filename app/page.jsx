@@ -1,5 +1,6 @@
 "use client";
 
+import About from "@/components/pages/About";
 import Contact from "@/components/pages/Contact";
 import Home from "@/components/pages/Home";
 import Pricing from "@/components/pages/Pricing";
@@ -12,6 +13,9 @@ const page = () => {
     <section className="pt-25">
       <section>
         <Home />
+      </section>
+      <section>
+        <About />
       </section>
       <section>
         <Services />
