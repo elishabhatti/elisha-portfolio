@@ -8,8 +8,8 @@ const Project = ({ title, description, subDescription, href, image, tags }) => {
     <>
       <div className="py-10 flex-wrap items-center justify-between sm:flex sm:space-y-0">
         <div>
-          <p className="text-2xl">title</p>
-          <div className="flex gap-4 mt-2 text-sand">
+          <p className="text-2xl">{title}</p>
+          <div className="flex gap-4 mt-2 text-[#f4e1c1]">
             {tags.map((tag) => (
               <span key={tag.id}>{tag.name}</span>
             ))}
@@ -24,7 +24,7 @@ const Project = ({ title, description, subDescription, href, image, tags }) => {
         </button>
       </div>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 h-[1px] w-full" />
-      {isHidden &&
+      {isHidden && (
         <ProjectDetails
           title={title}
           description={description}
@@ -34,7 +34,7 @@ const Project = ({ title, description, subDescription, href, image, tags }) => {
           href={href}
           closeModal={() => setIsHidden(false)}
         />
-      }
+      )}
     </>
   );
 };
