@@ -2,11 +2,23 @@ import { MoveRight } from "lucide-react";
 import ProjectDetails from "./ProjectDetails";
 import { useState } from "react";
 
-const Project = ({ title, description, subDescription, href, image, tags }) => {
+const Project = ({
+  title,
+  description,
+  subDescription,
+  href,
+  image,
+  tags,
+  setPreview,
+}) => {
   const [isHidden, setIsHidden] = useState(false);
   return (
     <>
-      <div className="py-10 flex-wrap items-center justify-between sm:flex sm:space-y-0">
+      <div
+        onMouseEnter={() => setPreview(image)}
+        onMouseLeave={() => setPreview(null)}
+        className="py-10 flex-wrap items-center justify-between sm:flex sm:space-y-0"
+      >
         <div>
           <p className="text-2xl">{title}</p>
           <div className="flex gap-4 mt-2 text-[#f4e1c1]">
