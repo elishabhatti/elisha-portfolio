@@ -18,20 +18,16 @@ const page = () => {
         <Services />
       </section>
       <section>
+        <Projects />
+      </section>
+      <section>
         <Resume />
       </section>
-
-      {/* <section> */}
-      {/* <Work /> */}
-      {/* </section> */}
       <section>
         <Contact />
       </section>
       <section>
         <Pricing />
-      </section>
-      <section className="min-h-screen">
-        <Projects />
       </section>
     </section>
   );

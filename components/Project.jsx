@@ -12,30 +12,41 @@ const Project = ({
   setPreview,
 }) => {
   const [isHidden, setIsHidden] = useState(false);
+
   return (
     <>
       <div
         onMouseEnter={() => setPreview(image)}
         onMouseLeave={() => setPreview(null)}
-        className="py-10 flex-wrap items-center justify-between sm:flex sm:space-y-0"
+        className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-8"
       >
+        {/* Project Info */}
         <div>
-          <p className="text-2xl">{title}</p>
-          <div className="flex gap-4 mt-2 text-[#f4e1c1]">
+          <p className="text-xl md:text-2xl font-semibold">{title}</p>
+          <div className="flex flex-wrap gap-2 mt-2 text-sm text-[#f4e1c1]">
             {tags.map((tag) => (
-              <span key={tag.id}>{tag.name}</span>
+              <span
+                key={tag.id}
+                className="px-2 py-1 bg-neutral-800 rounded-md"
+              >
+                {tag.name}
+              </span>
             ))}
           </div>
         </div>
+
+        {/* Read More Button */}
         <button
           onClick={() => setIsHidden(true)}
-          className="flex items-center gap-1 cursor-pointer hover-animation"
+          className="flex items-center gap-1 px-3 py-1 rounded-lg bg-neutral-800 text-white hover:bg-neutral-700 transition"
         >
           Read More
           <MoveRight className="w-5" />
         </button>
       </div>
-      <div className="bg-gradient-to-r from-transparent via-neutral-700 h-[1px] w-full" />
+
+      <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
+
       {isHidden && (
         <ProjectDetails
           title={title}
