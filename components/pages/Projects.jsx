@@ -19,9 +19,12 @@ const Projects = () => {
   return (
     <motion.section
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen px-6 md:px-12 py-20 mb-20"
+      className="relative min-h-screen px-6 md:px-12 py-20"
+      id="project"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-center">My Selected Projects</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center">
+        My Selected Projects
+      </h2>
 
       <div className="mt-12 space-y-10">
         {myProjects.map((project) => (

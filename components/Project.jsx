@@ -18,7 +18,7 @@ const Project = ({
       <div
         onMouseEnter={() => setPreview(image)}
         onMouseLeave={() => setPreview(null)}
-        className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-8"
+        className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-4"
       >
         {/* Project Info */}
         <div>
