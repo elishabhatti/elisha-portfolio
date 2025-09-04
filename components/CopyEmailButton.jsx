@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const CopyEmailButton = () => {
   const [copied, setCopied] = useState(false);
@@ -10,11 +11,12 @@ const CopyEmailButton = () => {
 
     setTimeout(() => {
       setCopied(false);
-    }, 2000);
+    }, 1000);
   };
 
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.05 }}
       onClick={copyToClipboard}
       className="relative px-1 py-4 text-sm text-center rounded-full font-extrabold bg-primary w-[14rem] cursor-pointer overflow-hidden"
     >
@@ -22,15 +24,16 @@ const CopyEmailButton = () => {
         {copied ? (
           <>
             <img src="/assets/copy-done.svg" className="w-5" alt="copied" />
+            <span className="text-white/90">Email Address Copied</span>
           </>
         ) : (
           <>
             <img src="/assets/copy.svg" className="w-5" alt="copy" />
+            <span className="text-white/90">Copy Email Address</span>
           </>
         )}
-        Copy Email Address
       </p>
-    </button>
+    </motion.button>
   );
 };
 

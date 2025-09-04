@@ -3,13 +3,19 @@ import { useRef } from "react";
 import Card from "../Card";
 import { Globe } from "../magicui/globe";
 import CopyEmailButton from "../CopyEmailButton";
+import Frameworks from "../Frameworks";
 
 const About = () => {
   const grid2Container = useRef();
   return (
     <section className="xl:p-15 p-5">
-      <h2 className="text-heading">About Me</h2>
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-4 md:auto-rows-[18rem] mt-12">
+      <h2
+        id="about"
+        className="text-white text-3xl md:text-5xl font-bold text-center mb-12"
+      >
+        About
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-4 auto-rows-[14rem] md:auto-rows-[18rem] mt-12">
         {/* Big left block */}
         <div className="relative flex items-end bg-slate-800 rounded-xl md:col-span-3 md:row-span-2 overflow-hidden">
           <img
@@ -20,7 +26,9 @@ const About = () => {
                        lg:scale-[2.5]"
           />
           <div className="p-5 flex flex-col z-10 gap-2">
-            <p className="text-lg font-bold">Hi, I'm Elisha Jameel</p>
+            <p className="text-white text-lg font-bold">
+              Hi, I'm Elisha Jameel
+            </p>
             <p className="text-white/50 leading-6">
               I excel at crafting elegant digital experiences, and I am
               proficient in various programming languages and technologies.
@@ -72,7 +80,7 @@ const About = () => {
         {/* Middle right block (dark/black) */}
         <div className="overflow-hidden relative bg-neutral-800 rounded-xl md:col-span-3">
           <div className="z-10 w-[50%] flex flex-col gap-3 p-5">
-            <p className="text-lg font-bold">Time Zone</p>
+            <p className="text-white text-lg font-bold">Time Zone</p>
             <p className="text-white/50 leading-6">
               I'm based in Pakistan, and open to remote work worldwide
             </p>
@@ -88,12 +96,23 @@ const About = () => {
             <p className="text-center">
               Do You want to start a project together?
             </p>
-            <CopyEmailButton/>
+            <CopyEmailButton />
           </div>
         </div>
 
         {/* Bottom right block */}
-        <div className="bg-slate-800 rounded-xl md:col-span-4"></div>
+        <div className="relative overflow-hidden bg-slate-800 rounded-xl md:col-span-4">
+          <div className="z-10 w-[50%] p-5">
+            <p className="text-lg font-bold text-white">Tech Stack</p>
+            <p className="text-white/50 leading-6">
+              I specialize in a variety of languages, frameworks and, tools that
+              allow me the build robust and scalable applications
+            </p>
+          </div>
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
+            <Frameworks />
+          </div>
+        </div>
       </div>
     </section>
   );
