@@ -22,7 +22,7 @@ const Project = ({
       >
         {/* Project Info */}
         <div>
-          <p className="text-xl md:text-2xl font-semibold">{title}</p>
+          <p className="text-white text-xl md:text-2xl font-semibold">{title}</p>
           <div className="flex flex-wrap gap-2 mt-2 text-sm text-[#f4e1c1]">
             {tags.map((tag) => (
               <span

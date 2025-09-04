@@ -17,7 +17,7 @@ const Stats = () => {
                   end={item.num}
                   duration={3}
                   delay={1}
-                  className="text-4xl xl:text-3xl font-extrabold"
+                  className="text-white text-4xl xl:text-3xl font-extrabold"
                 />
                 <motion.p
                   initial={{ y: 50, opacity: 0 }}

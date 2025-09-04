@@ -85,7 +85,9 @@ const Resume = () => {
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                <h3 className="text-white text-4xl font-bold">
+                  {experience.title}
+                </h3>
                 {/* Short description + Dialog trigger */}
                 <div className="flex items-start gap-4">
                   <p className="max-w-[600px] text-white/60 xl:mx-0">
@@ -149,7 +151,9 @@ const Resume = () => {
             {/* education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
+                <h3 className="text-4xl font-bold text-white">
+                  {education.title}
+                </h3>
                 {/* Short description + Dialog trigger */}
                 <div className="flex items-start gap-4">
                   <p className="max-w-[600px] text-white/60 xl:mx-0">
@@ -195,7 +199,7 @@ const Resume = () => {
                           <span className="primary-text-color">
                             {item.duration}
                           </span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {" "}
                             {item.position}
                           </h3>
@@ -212,8 +216,10 @@ const Resume = () => {
             </TabsContent>
             {/* skills */}
             <TabsContent value="skills" className="w-full h-full">
-              <div className="flex flex-col ga  p-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{skills.title}</h3>
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold text-white">
+                  {skills.title}
+                </h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {skills.description}
                 </p>
@@ -226,7 +232,7 @@ const Resume = () => {
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger className="w-full group h-[150px] bg-[#232329] rounded-xl flex justify-center items-center">
-                            <div className="text-6xl group-hover:primary-text-color transition-all duration-300">
+                            <div className="text-white text-6xl group-hover:primary-text-color transition-all duration-300">
                               <Icon />
                             </div>
                           </TooltipTrigger>
@@ -246,7 +252,7 @@ const Resume = () => {
               className="w-full text-center xl:text-left"
             >
               <div className="flex flex-col gap-[30px]">
-                <h3 className="text-4xl font-bold ">{about.title}</h3>
+                <h3 className="text-4xl font-bold text-white">{about.title}</h3>
                 {/* Short description + Dialog trigger */}
                 <div className="flex items-start gap-4">
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
@@ -284,7 +290,7 @@ const Resume = () => {
                             <span className="text-white/60">
                               {item.fieldName}:
                             </span>
-                            <span className="font-medium">
+                            <span className="font-medium text-white">
                               {item.fieldValue}
                             </span>
                           </div>
@@ -309,7 +315,7 @@ const Resume = () => {
                         <span className="text-white/60">
                           {item.fieldName}:{" "}
                         </span>
-                        <span className="text-lg">{item.fieldValue}</span>
+                        <span className="text-lg text-white">{item.fieldValue}</span>
                       </li>
                     );
                   })}

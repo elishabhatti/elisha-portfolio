@@ -197,7 +197,7 @@ const Contact = () => {
                   {/* text */}
                   <div className="flex flex-col">
                     <p className="text-md text-white/70">{item.title}</p>
-                    <h3 className="xl:text-lg text-sm font-bold">
+                    <h3 className="xl:text-lg text-sm font-bold text-white">
                       {item.description}
                     </h3>
                   </div>

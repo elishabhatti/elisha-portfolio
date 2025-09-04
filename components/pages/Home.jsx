@@ -35,7 +35,7 @@ const Home = () => {
               initial={{ x: 100, opacity: 0 }}
               animate={{ x: 0, opacity: 1, delay: 0.2 }}
               transition={{ duration: 0.69 }}
-              className="h1 mt-2 mb-4  "
+              className="h1 mt-2 mb-4  text-white"
             >
               Hello I'm <br />
               <motion.span
@@ -53,7 +53,7 @@ const Home = () => {
                 animate={{ x: 0, opacity: 1, delay: 0.2 }}
                 transition={{ duration: 0.69 }}
               >
-                <FlipWords words={words} />
+                <FlipWords className="text-white" words={words} />
               </motion.span>
             </motion.h3>
             <motion.p
