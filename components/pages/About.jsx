@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from "react";
 import Card from "../Card";
+import { Globe } from "../magicui/globe";
 
 const About = () => {
   const grid2Container = useRef();
@@ -68,7 +69,17 @@ const About = () => {
         </div>
 
         {/* Middle right block (dark/black) */}
-        <div className="bg-neutral-800 rounded-xl md:col-span-3"></div>
+        <div className="overflow-hidden relative bg-neutral-800 rounded-xl md:col-span-3">
+          <div className="z-10 w-[50%] flex flex-col gap-3 p-5">
+            <p className="text-lg font-bold">Time Zone</p>
+            <p className="text-white/50 leading-6">
+              I'm based in Pakistan, and open to remote work worldwide
+            </p>
+          </div>
+          <figure className="absolute left-[40%] top-[10%]">
+            <Globe />
+          </figure>
+        </div>
 
         {/* Bottom left purple block */}
         <div className="bg-purple-600 rounded-xl md:col-span-2"></div>
