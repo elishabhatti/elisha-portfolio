@@ -10,12 +10,14 @@ const Card = ({ style, text, image, containerRef }) => {
         style={style}
         drag
         dragConstraints={containerRef}
+        dragElastic={1}
       />
       <motion.div
         drag
         whileHover={{ scale: 1.05 }}
         dragConstraints={containerRef}
         style={style}
+        dragElastic={1}
         className="absolute px-1 py-4 text-xl text-center rounded-full ring ring-gray-700 font-extrabold bg-[#262847] w-[12rem] cursor-grab"
       >
         <p>{text}</p>
