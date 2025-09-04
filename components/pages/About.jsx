@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import Card from "../Card";
 import { Globe } from "../magicui/globe";
+import CopyEmailButton from "../CopyEmailButton";
 
 const About = () => {
   const grid2Container = useRef();
@@ -82,7 +83,14 @@ const About = () => {
         </div>
 
         {/* Bottom left purple block */}
-        <div className="bg-purple-600 rounded-xl md:col-span-2"></div>
+        <div className="bg-purple-600 rounded-xl md:col-span-2">
+          <div className="flex flex-col items-center justify-center gap-4 size-full">
+            <p className="text-center">
+              Do You want to start a project together?
+            </p>
+            <CopyEmailButton/>
+          </div>
+        </div>
 
         {/* Bottom right block */}
         <div className="bg-slate-800 rounded-xl md:col-span-4"></div>
