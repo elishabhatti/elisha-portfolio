@@ -25,7 +25,7 @@ const ProjectDetails = ({
         </button>
 
         {/* Image */}
-        <img src={image} alt={title} className="w-full rounded-t-2xl" />
+        <img src={image} alt={title} className="w-full" />
 
         {/* Content */}
         <div className="p-6">

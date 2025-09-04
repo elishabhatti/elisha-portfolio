@@ -6,12 +6,16 @@ import Pricing from "@/components/pages/Pricing";
 import Projects from "@/components/pages/Projects";
 import Resume from "@/components/pages/Resume";
 import Services from "@/components/pages/Services";
+import About from "@/components/pages/About";
 
 const page = () => {
   return (
-    <section className="pt-25">
+    <section className="pt-25 max-w-8xl">
       <section>
         <Home />
+      </section>
+      <section>
+        <About />
       </section>
       <section>
         <Services />
