@@ -23,7 +23,13 @@ const About = () => {
         </div>
 
         {/* Top right small block */}
-        <div className="bg-slate-800 rounded-xl md:col-span-3"></div>
+        <div className="bg-slate-800 rounded-xl md:col-span-3">
+          <div className="flex items-center justify-center w-full h-full">
+            <p className="flex items-end text-5xl text-gray-500">
+              CODE IS CRAFT
+            </p>
+          </div>
+        </div>
 
         {/* Middle right block (dark/black) */}
         <div className="bg-neutral-800 rounded-xl md:col-span-3"></div>
