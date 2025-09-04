@@ -1,4 +1,9 @@
+"use client";
+import { useRef } from "react";
+import Card from "../Card";
+
 const About = () => {
+  const grid2Container = useRef();
   return (
     <section className="xl:p-15 p-5">
       <h2 className="text-heading">About Me</h2>
@@ -23,11 +28,42 @@ const About = () => {
         </div>
 
         {/* Top right small block */}
-        <div className="bg-slate-800 rounded-xl md:col-span-3">
-          <div className="flex items-center justify-center w-full h-full">
+        <div className="bg-[#262847] relative rounded-xl md:col-span-3">
+          <div
+            ref={grid2Container}
+            className="flex items-center justify-center w-full h-full"
+          >
             <p className="flex items-end text-5xl text-gray-500">
               CODE IS CRAFT
             </p>
+            <Card
+              style={{ rotate: "75deg", top: "30%", left: "20%" }}
+              text="Clean Code"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-30deg", top: "60%", left: "45%" }}
+              text="SOLID"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
+              text="Factory"
+              image="/assets/logos/blazor.svg"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "-45deg", top: "55%", left: "0%" }}
+              text="Observer"
+              image="/assets/logos/dotnet-pink.png"
+              containerRef={grid2Container}
+            />
+            <Card
+              style={{ rotate: "20deg", top: "10%", left: "38%" }}
+              text="TDD"
+              containerRef={grid2Container}
+              image="/assets/logos/csharp-pink.png"
+            />
           </div>
         </div>
 
