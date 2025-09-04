@@ -91,7 +91,7 @@ const Contact = () => {
     >
       <h2
         id="contact"
-        className="text-3xl md:text-5xl font-bold text-center mb-12"
+        className="text-white text-3xl md:text-5xl font-bold text-center mb-12"
       >
         Contact
       </h2>
