@@ -6,7 +6,6 @@ import Pricing from "@/components/pages/Pricing";
 import Projects from "@/components/pages/Projects";
 import Resume from "@/components/pages/Resume";
 import Services from "@/components/pages/Services";
-import Work from "@/components/pages/Work";
 
 const page = () => {
   return (
