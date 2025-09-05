@@ -133,7 +133,7 @@ const Resume = () => {
                           <span className="primary-text-color">
                             {item.duration}
                           </span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {" "}
                             {item.position}
                           </h3>
