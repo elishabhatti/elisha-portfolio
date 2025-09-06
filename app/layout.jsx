@@ -17,14 +17,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html className="dark" lang="en">
+    <html lang="en">
       <body
         cz-shortcut-listen="true"
         className={`${Jetbrains_mono.variable} antialiased`}
       >
         <Header />
         <Toaster position="top-center" />
-          <div>{children}</div>
+        <div>{children}</div>
       </body>
     </html>
   );
