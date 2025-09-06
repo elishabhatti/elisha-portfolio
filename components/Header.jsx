@@ -5,7 +5,6 @@ import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import { motion } from "framer-motion";
 import { InteractiveHoverButton } from "./magicui/interactive-hover-button";
-import { ThemeSwitcher } from "./ThemeSwitcher";
 
 const Header = () => {
   return (
@@ -35,7 +34,6 @@ const Header = () => {
               </InteractiveHoverButton>
             </motion.div>
           </Link>
-          <ThemeSwitcher />
         </div>
 
         {/* Mobile Nav */}

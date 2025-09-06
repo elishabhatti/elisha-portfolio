@@ -2,7 +2,6 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { Toaster } from "@/components/ui/sonner";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const Jetbrains_mono = JetBrains_Mono({
   variable: "--font-jetbrainsMono",
@@ -25,9 +24,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         <Toaster position="top-center" />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div>{children}</div>
-        </ThemeProvider>
       </body>
     </html>
   );
