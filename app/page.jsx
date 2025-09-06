@@ -23,10 +23,10 @@ const page = () => {
         <Resume />
       </section>
       <section>
-        <Contact />
+        <Pricing />
       </section>
       <section>
-        <Pricing />
+        <Contact />
       </section>
     </section>
   );

@@ -9,8 +9,8 @@ const links = [
   { name: "services", path: "#services" },
   { name: "project", path: "#project" },
   { name: "resume", path: "#resume" },
-  { name: "contact", path: "#contact" },
   { name: "pricing", path: "#pricing" },
+  { name: "contact", path: "#contact" },
 ];
 
 const MobileNav = () => {
