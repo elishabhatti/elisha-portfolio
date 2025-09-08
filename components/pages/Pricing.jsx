@@ -53,7 +53,7 @@ export default function Pricing() {
                   ))}
                 </ul>
                 <Link href="#contact">
-                  <InteractiveHoverButton className="text-black text-center">
+                  <InteractiveHoverButton className="w-full text-black text-center">
                     Get Started
                   </InteractiveHoverButton>
                 </Link>
