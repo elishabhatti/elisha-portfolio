@@ -26,7 +26,7 @@ const MobileNav = () => {
 
         <div className="mt-32 text-center text-2xl">
           <Link href="/">
-            <h1>
+            <h1 className="text-white">
               Elisha<span className="text-[#a238ff] text-2xl">.</span>
             </h1>
           </Link>
@@ -35,9 +35,9 @@ const MobileNav = () => {
           {links.map((link, index) => (
             <Link
               href={link.path}
-              className={` ${
+              className={`${
                 link.path === pathname &&
-                "text-[#a238ff] border-b-2 border-[#a238ff]"
+                "text-white border-b-2 border-[#a238ff]"
               } text-md capitalize transition-all`}
               key={index}
             >
