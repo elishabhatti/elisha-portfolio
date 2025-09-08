@@ -2,8 +2,7 @@ export const myProjects = [
   {
     id: 1,
     title: "MERN E-commerce App",
-    description:
-      "🚀 MERN E-commerce App with Tailwind CSS UI, Framer Motion animations & GSAP scroll effects.",
+    description: "🚀 MERN E-commerce App with Tailwind CSS UI, Framer Motion animations & GSAP scroll effects.",
     subDescription: [
       "Developed using MERN stack with TailwindCSS for modern UI design.",
       "Integrated GSAP and Framer Motion for smooth animations and scroll effects.",
@@ -11,17 +10,8 @@ export const myProjects = [
       "Built scalable backend APIs with Node.js and Express.js.",
     ],
     href: "",
-    logo: "",
     image: "/assets/work/photo-e-commerce-store.png",
-    tags: [
-      { id: 1, name: "Node.js", path: "/assets/logos/nodejs.svg" },
-      { id: 2, name: "Express.js", path: "/assets/logos/express.svg" },
-      { id: 3, name: "React.js", path: "/assets/logos/react.svg" },
-      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
-      { id: 5, name: "MongoDB", path: "/assets/logos/mongodb.svg" },
-      { id: 6, name: "OAuth", path: "/assets/logos/oauth.svg" },
-      { id: 7, name: "JWT", path: "/assets/logos/jwt.svg" },
-    ],
+    tags: ["Node.js", "Express.js", "React.js", "TailwindCSS", "MongoDB", "JWT"],
     github: "https://github.com/elishabhatti/e-commerce-with-mern.git",
   },
   {
@@ -36,24 +26,14 @@ export const myProjects = [
       "Built frontend with React.js and TailwindCSS.",
     ],
     href: "",
-    logo: "",
     image: "/assets/work/photo-blog-app.png",
-    tags: [
-      { id: 1, name: "Node.js", path: "/assets/logos/nodejs.svg" },
-      { id: 2, name: "Express.js", path: "/assets/logos/express.svg" },
-      { id: 3, name: "React.js", path: "/assets/logos/react.svg" },
-      { id: 4, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
-      { id: 5, name: "MongoDB", path: "/assets/logos/mongodb.svg" },
-      { id: 6, name: "OAuth", path: "/assets/logos/oauth.svg" },
-      { id: 7, name: "JWT", path: "/assets/logos/jwt.svg" },
-    ],
+    tags: ["Node.js", "Express.js", "React.js", "TailwindCSS", "MongoDB", "OAuth", "JWT"],
     github: "https://github.com/elishabhatti/server-of-the-blog-app.git",
   },
   {
     id: 3,
     title: "URL Shortener",
-    description:
-      "Built a full-featured URL shortener application with a robust backend and secure authentication system.",
+    description: "Built a full-featured URL shortener application with a robust backend and secure authentication system.",
     subDescription: [
       "Developed backend with Node.js and Express.js.",
       "Implemented authentication with OAuth.",
@@ -61,15 +41,8 @@ export const myProjects = [
       "Built frontend with EJS templates for server-side rendering.",
     ],
     href: "",
-    logo: "",
     image: "/assets/work/photo-url-shortener.png",
-    tags: [
-      { id: 1, name: "Node.js", path: "/assets/logos/nodejs.svg" },
-      { id: 2, name: "Express.js", path: "/assets/logos/express.svg" },
-      { id: 3, name: "EJS", path: "/assets/logos/ejs.svg" },
-      { id: 4, name: "MySQL", path: "/assets/logos/mysql.svg" },
-      { id: 5, name: "OAuth", path: "/assets/logos/oauth.svg" },
-    ],
+    tags: ["Node.js", "Express.js", "EJS", "MySQL", "OAuth"],
     github: "https://github.com/elishabhatti/url-shortener.git",
   },
   {
@@ -83,14 +56,8 @@ export const myProjects = [
       "Deployed live on Vercel.",
     ],
     href: "https://redux-toolkit-todo-silk.vercel.app/",
-    logo: "",
     image: "/assets/work/photo-todo-horizon.png",
-    tags: [
-      { id: 1, name: "React.js", path: "/assets/logos/react.svg" },
-      { id: 2, name: "TailwindCSS", path: "/assets/logos/tailwindcss.svg" },
-      { id: 3, name: "Redux Toolkit", path: "/assets/logos/redux.svg" },
-    ],
+    tags: ["React.js", "TailwindCSS", "Redux Toolkit"],
     github: "https://github.com/elishabhatti/redux-toolkit-todo.git",
   },
 ];
-
