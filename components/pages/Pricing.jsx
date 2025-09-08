@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import pricing from "../../json/pricing.json";
 import { Check } from "lucide-react";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 export default function Pricing() {
   return (
@@ -17,7 +18,7 @@ export default function Pricing() {
       className="text-white xl:p-15 p-5"
     >
       <div className="flex justify-center items-center flex-col container mx-auto px-6">
-        <h2 
+        <h2
           id="pricing"
           className="text-white text-3xl md:text-5xl font-bold text-center mb-12"
         >
@@ -52,9 +53,9 @@ export default function Pricing() {
                   ))}
                 </ul>
                 <Link href="#contact">
-                  <Button className="w-full bg-white text-black hover:bg-purple-700">
+                  <InteractiveHoverButton className="text-black text-center">
                     Get Started
-                  </Button>
+                  </InteractiveHoverButton>
                 </Link>
               </CardContent>
             </Card>
