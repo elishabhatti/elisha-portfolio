@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import pricing from "../../json/pricing.json";
-import { Check } from "lucide-react";
+import { Check, MoveRight } from "lucide-react";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 export default function Pricing() {
@@ -54,8 +54,8 @@ export default function Pricing() {
                 </ul>
                 <Link href="#contact">
                   <InteractiveHoverButton className="w-full text-black text-center">
-                    Get Started
-                  </InteractiveHoverButton> 
+                    Get Started <MoveRight className="w-5 h-5 inline" />
+                  </InteractiveHoverButton>
                 </Link>
               </CardContent>
             </Card>
