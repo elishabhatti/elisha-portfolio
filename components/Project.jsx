@@ -29,7 +29,7 @@ const Project = ({
                 key={index}
                 className="px-2 py-1 bg-neutral-800 rounded-md"
               > 
-                {tag.name}
+                {tag}
               </span>
             ))}
           </div>
