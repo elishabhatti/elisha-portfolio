@@ -2,7 +2,8 @@ export const myProjects = [
   {
     id: 1,
     title: "MERN E-commerce App",
-    description: "🚀 MERN E-commerce App with Tailwind CSS UI, Framer Motion animations & GSAP scroll effects.",
+    description:
+      "🚀 MERN E-commerce App with Tailwind CSS UI, Framer Motion animations & GSAP scroll effects.",
     subDescription: [
       "Developed using MERN stack with TailwindCSS for modern UI design.",
       "Integrated GSAP and Framer Motion for smooth animations and scroll effects.",
@@ -11,8 +12,15 @@ export const myProjects = [
     ],
     href: "",
     image: "/assets/work/photo-e-commerce-store.png",
-    tags: ["Node.js", "Express.js", "React.js", "TailwindCSS", "MongoDB", "JWT"],
-    github: "https://github.com/elishabhatti/e-commerce-with-mern.git",
+    tags: [
+      "Node.js",
+      "Express.js",
+      "React.js",
+      "TailwindCSS",
+      "MongoDB",
+      "JWT",
+    ],
+    href: "https://github.com/elishabhatti/e-commerce-with-mern.git",
   },
   {
     id: 2,
@@ -26,13 +34,22 @@ export const myProjects = [
       "Built frontend with React.js and TailwindCSS.",
     ],
     image: "/assets/work/photo-blog-app.png",
-    tags: ["Node.js", "Express.js", "React.js", "TailwindCSS", "MongoDB", "OAuth", "JWT"],
+    tags: [
+      "Node.js",
+      "Express.js",
+      "React.js",
+      "TailwindCSS",
+      "MongoDB",
+      "OAuth",
+      "JWT",
+    ],
     href: "https://github.com/elishabhatti/server-of-the-blog-app.git",
   },
   {
     id: 3,
     title: "URL Shortener",
-    description: "Built a full-featured URL shortener application with a robust backend and secure authentication system.",
+    description:
+      "Built a full-featured URL shortener application with a robust backend and secure authentication system.",
     subDescription: [
       "Developed backend with Node.js and Express.js.",
       "Implemented authentication with OAuth.",
