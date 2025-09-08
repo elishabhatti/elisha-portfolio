@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 
 const ProjectDetails = ({
@@ -41,14 +42,16 @@ const ProjectDetails = ({
           <div className="flex items-center justify-between mt-6">
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
-              {tags.map((tag) => (
-                <img
-                  key={tag.id}
-                  src={tag.path}
-                  alt={tag.name}
-                  className="rounded-md size-10 hover:scale-110 transition"
-                />
-              ))}
+              {tags.map((tag, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="p-2 text-white bg-neutral-800 rounded-md hover:scale-110 transition"
+                  >
+                    {tag}
+                  </div>
+                );
+              })}
             </div>
 
             {/* Link */}
