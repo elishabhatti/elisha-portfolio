@@ -20,7 +20,7 @@ export default function Pricing() {
       <div className="flex justify-center items-center flex-col container mx-auto px-6">
         <h2
           id="pricing"
-          className="text-white text-3xl md:text-5xl font-bold text-center mb-12"
+          className="text-white text-3xl md:text-4xl font-bold text-center mb-12"
         >
           Pricing Plans
         </h2>

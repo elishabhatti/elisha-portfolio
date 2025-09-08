@@ -20,7 +20,7 @@ const Services = () => {
     <section className="flex flex-col justify-center xl:p-15 p-5">
       <h2
         id="services"
-        className="text-white text-3xl md:text-5xl font-bold text-center mb-12"
+        className="text-white text-3xl md:text-4xl font-bold text-center mb-12"
       >
         Services
       </h2>

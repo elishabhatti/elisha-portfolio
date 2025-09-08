@@ -65,7 +65,7 @@ const Resume = () => {
       <div className="container mx-auto">
         <h2
           id="resume"
-          className="text-white text-3xl md:text-5xl font-bold text-center mb-12"
+        className="text-white text-3xl md:text-4xl font-bold text-center mb-12"
         >
           Resume
         </h2>
