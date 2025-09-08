@@ -16,13 +16,13 @@ const Project = ({
 
   return (
     <>
-      <div
-        onMouseEnter={() => setPreview(image)}
-        onMouseLeave={() => setPreview(null)}
-        className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-4"
-      >
-        {/* Project Info */}
-        <div>
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 py-4">
+        {/* LEFT SIDE (hover here only) */}
+        <div
+          className="flex-1"
+          onMouseEnter={() => setPreview(image)}
+          onMouseLeave={() => setPreview(null)}
+        >
           <p className="text-white text-xl md:text-2xl font-semibold">
             {title}
           </p>
@@ -35,16 +35,17 @@ const Project = ({
           </div>
         </div>
 
-        {/* Read More Button */}
-
+        {/* RIGHT SIDE (button area, no preview trigger) */}
         <InteractiveHoverButton onClick={() => setIsHidden(true)}>
           Read More
           <MoveRight className="w-5 inline ml-3" />
         </InteractiveHoverButton>
       </div>
 
+      {/* Divider */}
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
 
+      {/* Modal */}
       {isHidden && (
         <ProjectDetails
           title={title}
