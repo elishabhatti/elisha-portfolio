@@ -67,13 +67,13 @@ const ProjectDetails = ({
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
               {tags.map((tag, index) => {
-                const Icon = iconMap[tag.name];
+                const Icon = iconMap[tag];
                 return (
                   <div
                     key={index}
                     className="p-2 text-white bg-neutral-800 rounded-md hover:scale-110 transition"
                   >
-                    {Icon ? <Icon className="w-6 h-6" /> : tag.name}
+                    {Icon ? <Icon className="w-6 h-6" /> : tag}
                   </div>
                 );
               })}
