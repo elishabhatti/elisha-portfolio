@@ -37,8 +37,8 @@ const MobileNav = () => {
               href={link.path}
               className={`${
                 link.path === pathname &&
-                "text-white border-b-2 border-[#a238ff]"
-              } text-md capitalize transition-all`}
+                "border-b-2 border-[#a238ff]"
+              } text-md text-white capitalize transition-all`}
               key={index}
             >
               {link.name}
