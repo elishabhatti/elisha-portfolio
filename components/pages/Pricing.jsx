@@ -55,7 +55,7 @@ export default function Pricing() {
                 <Link href="#contact">
                   <InteractiveHoverButton className="w-full text-black text-center">
                     Get Started
-                  </InteractiveHoverButton>
+                  </InteractiveHoverButton> 
                 </Link>
               </CardContent>
             </Card>

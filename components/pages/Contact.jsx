@@ -18,6 +18,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { toast } from "sonner";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 const info = [
   {
@@ -175,13 +176,9 @@ const Contact = () => {
 
               {/* button */}
               <div className="flex justify-center">
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full sm:max-w-[250px] font-medium"
-                >
+                <InteractiveHoverButton type="submit">
                   Send Message
-                </Button>
+                </InteractiveHoverButton>
               </div>
             </form>
           </div>
