@@ -1,5 +1,29 @@
 "use client";
 import { motion } from "framer-motion";
+import { FaNodeJs, FaReact } from "react-icons/fa";
+import {
+  SiExpress,
+  SiTailwindcss,
+  SiMongodb,
+  SiJsonwebtokens,
+  SiRedux,
+  SiEjs,
+  SiMysql,
+  SiAuth0,
+} from "react-icons/si";
+
+const iconMap = {
+  "Node.js": FaNodeJs,
+  "React.js": FaReact,
+  "Express.js": SiExpress,
+  TailwindCSS: SiTailwindcss,
+  MongoDB: SiMongodb,
+  JWT: SiJsonwebtokens,
+  "Redux Toolkit": SiRedux,
+  EJS: SiEjs,
+  MySQL: SiMysql,
+  OAuth: SiAuth0,
+};
 
 const ProjectDetails = ({
   title,
@@ -43,12 +67,13 @@ const ProjectDetails = ({
             {/* Tags */}
             <div className="flex flex-wrap gap-2">
               {tags.map((tag, index) => {
+                const Icon = iconMap[tag.name];
                 return (
                   <div
                     key={index}
                     className="p-2 text-white bg-neutral-800 rounded-md hover:scale-110 transition"
                   >
-                    {tag}
+                    {Icon ? <Icon className="w-6 h-6" /> : tag.name}
                   </div>
                 );
               })}

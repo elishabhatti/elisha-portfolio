@@ -24,11 +24,11 @@ const Project = ({
         <div>
           <p className="text-white text-xl md:text-2xl font-semibold">{title}</p>
           <div className="flex flex-wrap gap-2 mt-2 text-sm text-[#f4e1c1]">
-            {tags.map((tag) => (
+            {tags.map((tag, index) => (
               <span
-                key={tag.id}
+                key={index}
                 className="px-2 py-1 bg-neutral-800 rounded-md"
-              >
+              > 
                 {tag.name}
               </span>
             ))}
