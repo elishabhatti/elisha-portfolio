@@ -25,11 +25,13 @@ const Dashboard = () => {
     try {
       const res = await fetch(`/api/contact/${id}`, {
         method: "DELETE",
-      });      
+      });
+
+      console.log(res);
 
       if (res.ok) {
         setContacts((prev) => prev.filter((c) => c._id !== id));
-        toast.success(res.data.message);
+        toast.success("Deleted Successfully!");
       } else {
         console.error("Failed to delete contact");
       }
