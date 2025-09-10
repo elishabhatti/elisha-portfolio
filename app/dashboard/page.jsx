@@ -1,12 +1,26 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 const Dashboard = () => {
   const [contacts, setContacts] = useState([]);
+  const [allowed, setAllowed] = useState(false); // access control
+  const router = useRouter();
+
+  // Check localStorage key for access
+  useEffect(() => {
+    const key = localStorage.getItem("my_secret_key");
+    if (key === "12345") {
+      setAllowed(true);
+    } else {
+      router.replace("/404"); // redirect if not allowed
+    }
+  }, [router]);
 
   // Fetch contacts
   useEffect(() => {
+    if (!allowed) return; // only fetch if allowed
     const fetchContacts = async () => {
       try {
         const res = await fetch("/api/contact");
@@ -16,9 +30,8 @@ const Dashboard = () => {
         console.error("Error fetching contacts:", err);
       }
     };
-
     fetchContacts();
-  }, []);
+  }, [allowed]);
 
   // Delete contact
   const handleDelete = async (id) => {
@@ -26,8 +39,6 @@ const Dashboard = () => {
       const res = await fetch(`/api/contact/${id}`, {
         method: "DELETE",
       });
-
-      console.log(res);
 
       if (res.ok) {
         setContacts((prev) => prev.filter((c) => c._id !== id));
@@ -39,6 +50,9 @@ const Dashboard = () => {
       console.error("Error deleting contact:", err);
     }
   };
+
+  // Show nothing until access is confirmed
+  if (!allowed) return null;
 
   return (
     <div className="pt-30 px-10 pb-20 text-gray-200">
