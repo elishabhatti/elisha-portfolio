@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
 
 const Dashboard = () => {
   const [contacts, setContacts] = useState([]);
@@ -24,10 +25,11 @@ const Dashboard = () => {
     try {
       const res = await fetch(`/api/contact/${id}`, {
         method: "DELETE",
-      });
+      });      
 
       if (res.ok) {
         setContacts((prev) => prev.filter((c) => c._id !== id));
+        toast.success(res.data.message);
       } else {
         console.error("Failed to delete contact");
       }
