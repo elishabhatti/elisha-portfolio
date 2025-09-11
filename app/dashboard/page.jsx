@@ -10,8 +10,10 @@ const Dashboard = () => {
 
   // Check localStorage key for access
   useEffect(() => {
-    const key = localStorage.getItem("my_secret_key");
-    if (key === "12345") {
+    const key = localStorage.getItem("DASHBOARD_KEY");
+    console.log(key);
+    
+    if (key === process.env.NEXT_PUBLIC_DASHBOARD_KEY) {
       setAllowed(true);
     } else {
       router.replace("/404"); // redirect if not allowed

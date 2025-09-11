@@ -14,6 +14,7 @@ const Home = () => {
     "Logo Designer",
     "UI/UX Designer",
   ];
+  
   return (
     <motion.section
       initial={{ opacity: 0, y: 50 }}
