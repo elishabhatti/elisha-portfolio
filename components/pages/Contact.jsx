@@ -175,7 +175,7 @@ const Contact = () => {
               />
 
               {/* button */}
-              <div className="flex justify-center">
+              <div className="flex justify-start">
                 <InteractiveHoverButton type="submit">
                   Send Message
                 </InteractiveHoverButton>
