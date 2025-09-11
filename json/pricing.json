@@ -3,7 +3,8 @@
     "num": "01",
     "title": "Web Development",
     "description": "Modern, responsive websites simple to full-stack.",
-    "price": "PKR 75,000",
+    "pkrPrice": "PKR 75,000",
+    "price": "$270",
     "features": [
       "Responsive Design",
       "Frontend + Backend",
@@ -15,7 +16,8 @@
     "num": "02",
     "title": "UI/UX Design",
     "description": "Clean, intuitive interfaces focusing on usability.",
-    "price": "PKR 50,000",
+    "pkrPrice": "PKR 50,000",
+    "price": "$180",
     "features": [
       "Wireframes & Mockups",
       "High-Fidelity Design",
@@ -27,7 +29,8 @@
     "num": "03",
     "title": "Logo Design",
     "description": "Unique, memorable logos representing your brand.",
-    "price": "PKR 20,000",
+    "pkrPrice": "PKR 20,000",
+    "price": "$72",
     "features": [
       "3 Initial Concepts",
       "Unlimited Revisions",
@@ -39,7 +42,8 @@
     "num": "04",
     "title": "SEO Services",
     "description": "Boost your visibility with best-practice SEO.",
-    "price": "PKR 40,000/month",
+    "pkrPrice": "PKR 40,000/month",
+    "price": "$145/month",
     "features": [
       "Keyword Research",
       "On-Page SEO",
