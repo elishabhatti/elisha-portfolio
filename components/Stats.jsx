@@ -6,7 +6,7 @@ const Stats = () => {
   return (
     <section className="pt-2 pb-6 xl:pt-10 xl:pb-0">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-4 sm:grid-cols-2  gap-6 xl:gap-16 max-w-[80vw] mx-auto xl:max-w-none">
+        <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 xl:gap-16 max-w-[80vw]">
           {stats.map((item, index) => {
             return (
               <div
@@ -25,7 +25,7 @@ const Stats = () => {
                   transition={{ duration: 0.69 }}
                   className={`${
                     item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
-                  } leading-snug text-sm xl:text-lge text-white/80`}
+                  } leading-snug text-sm xl:text-lg text-white/80`}
                 >
                   {item.text}
                 </motion.p>
