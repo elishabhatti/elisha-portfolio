@@ -264,7 +264,7 @@ const Resume = () => {
                   {/* Dialog Button */}
                   <Dialog>
                     <DialogTrigger asChild>
-                      <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-purple-500 transition">
+                      <button className="xl:w-10 h-10 w-full flex items-center justify-center rounded-full bg-white hover:bg-purple-500 transition">
                         <ArrowRight className="w-5 h-5 text-black hover:text-white" />
                       </button>
                     </DialogTrigger>
