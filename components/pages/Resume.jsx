@@ -89,7 +89,7 @@ const Resume = () => {
                   {experience.title}
                 </h3>
                 {/* Short description + Dialog trigger */}
-                <div className="flex items-start gap-4">
+                <div className="flex flex-wrap items-start gap-4">
                   <p className="max-w-[600px] text-white/60 xl:mx-0">
                     {experience.description.length >= 100
                       ? experience.description.slice(0, 120) + "..."
@@ -254,7 +254,7 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold text-white">{about.title}</h3>
                 {/* Short description + Dialog trigger */}
-                <div className="flex items-start gap-4">
+                <div className="flex flex-wrap items-start gap-4">
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                     {about.description.length >= 100
                       ? about.description.slice(0, 120) + "..."
