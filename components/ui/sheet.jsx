@@ -57,7 +57,7 @@ function SheetContent({ className, children, side = "right", ...props }) {
       >
         {children}
         <SheetPrimitive.Close className="absolute right-8 top-8 transition-opacity outline-none">
-          <IoMdClose className="size-4" />
+          <IoMdClose className="size-5 text-white" />
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
       </SheetPrimitive.Content>
