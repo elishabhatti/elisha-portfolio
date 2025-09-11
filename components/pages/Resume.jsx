@@ -155,7 +155,7 @@ const Resume = () => {
                   {education.title}
                 </h3>
                 {/* Short description + Dialog trigger */}
-                <div className="flex items-start gap-4">
+                <div className="flex flex-wrap items-start gap-4">
                   <p className="max-w-[600px] text-white/60 xl:mx-0">
                     {education.description.length >= 100
                       ? education.description.slice(0, 120) + "..."
@@ -165,7 +165,7 @@ const Resume = () => {
                   {/* Dialog Button */}
                   <Dialog>
                     <DialogTrigger asChild>
-                      <button className="w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-purple-500 transition">
+                      <button className="xl:w-10 h-10 w-full flex items-center justify-center rounded-full bg-white hover:bg-purple-500 transition">
                         <ArrowRight className="w-5 h-5 text-black hover:text-white" />
                       </button>
                     </DialogTrigger>
