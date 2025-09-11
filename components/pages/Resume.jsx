@@ -231,8 +231,8 @@ const Resume = () => {
                     <li key={index}>
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-full group h-[150px] bg-[#232329] rounded-xl flex justify-center items-center">
-                            <div className="text-white text-6xl group-hover:primary-text-color transition-all duration-300">
+                          <TooltipTrigger className="w-full group xl:h-[150px] h-[100px] bg-[#232329] rounded-xl flex justify-center items-center">
+                            <div className="text-white xl:text-6xl text-5xl group-hover:primary-text-color transition-all duration-300">
                               <Icon />
                             </div>
                           </TooltipTrigger>
