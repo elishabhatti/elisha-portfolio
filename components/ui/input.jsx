@@ -8,7 +8,7 @@ function Input({ className, type, ...props }) {
       type={type}
       data-slot="input"
       className={cn(
-        "flex h-[48px] text-white rounded-md border-2 border-white/30 focus:border-[#a238ff] font-light bg-black px-4 py-5 text-base placeholder:text-white/60 outline-none",
+        "flex  text-white rounded-md border-2 border-white/30 focus:border-[#a238ff] font-light bg-black xl:px-4 xl:py-3 px-3 py-2 text-base placeholder:text-white/60 outline-none",
         className
       )}
       {...props}

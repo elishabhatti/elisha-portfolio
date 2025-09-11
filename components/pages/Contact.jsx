@@ -104,10 +104,10 @@ const Contact = () => {
               onSubmit={handleSubmit}
               className="flex flex-col border-2 border-white/30 gap-6 p-8 md:p-10 bg-black rounded-2xl shadow-lg"
             >
-              <h3 className="text-3xl md:text-4xl font-semibold primary-text-color text-center">
+              <h3 className="text-2xl xl:text-4xl font-semibold primary-text-color">
                 Let's work together
               </h3>
-              <p className="text-white/60 text-sm md:text-base leading-relaxed text-center">
+              <p className="text-white/60 text-sm md:text-base leading-relaxed ">
                 Feel free to reach out with your project details or inquiries.
                 I'll get back to you as soon as possible!
               </p>

@@ -24,7 +24,7 @@ function SelectTrigger({ className, size = "default", children, ...props }) {
       data-slot="select-trigger"
       data-size={size}
       className={cn(
-        "flex h-[48px] w-full items-center justify-between rounded-md border-2 border-white/30 bg-black px-4 py-5 text-base text-white placeholder:text-white/10 focus:border-[#a238ff] outline-none",
+        "flex xl:px-4 xl:py-3 px-3 py-2 w-full items-center justify-between rounded-md border-2 border-white/30 bg-black text-base text-white placeholder:text-white/10 focus:border-[#a238ff] outline-none",
         className
       )}
       {...props}
