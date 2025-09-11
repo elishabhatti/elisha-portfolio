@@ -26,7 +26,7 @@ const Home = () => {
       <div id="home" className="container ">
         <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center gap-6 pt-6 lg:gap-24 lg:pt-6 pb-14">
           {/* Text */}
-          <div className="text-center xl:text-left flex flex-col items-center xl:items-start order-2 xl:order-none max-w-2xl">
+          <div className="text-left flex flex-col p-5 items-center xl:items-start order-2 xl:order-none max-w-2xl">
             <motion.span
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1, delay: 0.2 }}
