@@ -24,12 +24,12 @@ export default function Pricing() {
           Pricing Plans
         </h2>
 
-        {/* Grid responsive banaya */}
+        {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 place-items-center w-full">
           {pricing.map((plan) => (
             <Card
               key={plan.num}
-              className="w-full max-w-[320px] bg-black text-white border border-gray-700 hover:shadow-xl transition-all duration-300 rounded-2xl"
+              className="w-full max-w-[320px] bg-[#0a0a0a] text-white border border-gray-700 hover:border-indigo-500 hover:shadow-indigo-500/30 transition-all duration-300 rounded-2xl"
             >
               <CardHeader>
                 <CardTitle className="text-lg sm:text-xl font-semibold">
@@ -39,8 +39,8 @@ export default function Pricing() {
               </CardHeader>
 
               <CardContent>
-                <p className="text-xl sm:text-2xl font-bold mb-4">
-                  {plan.price}
+                <p className="text-2xl font-bold mb-4 text-indigo-400">
+                  {plan.pkrPrice}
                 </p>
                 <ul className="space-y-2 mb-6">
                   {plan.features.map((feature, index) => (
@@ -48,7 +48,7 @@ export default function Pricing() {
                       key={index}
                       className="flex gap-2 sm:gap-3 leading-6 text-sm sm:text-base text-white/70"
                     >
-                      <Check className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
+                      <Check className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-indigo-400" />
                       {feature}
                     </li>
                   ))}

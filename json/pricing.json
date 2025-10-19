@@ -2,12 +2,11 @@
   {
     "num": "01",
     "title": "Web Development",
-    "description": "Modern, responsive websites simple to full-stack.",
-    "pkrPrice": "PKR 75,000",
-    "price": "$270",
+    "description": "Modern, responsive websites — from simple to full-stack solutions.",
+    "pkrPrice": "PKR 95,000",
     "features": [
       "Responsive Design",
-      "Frontend + Backend",
+      "Frontend + Backend Integration",
       "1 Month Free Support",
       "SEO Optimization"
     ]
@@ -15,9 +14,8 @@
   {
     "num": "02",
     "title": "UI/UX Design",
-    "description": "Clean, intuitive interfaces focusing on usability.",
-    "pkrPrice": "PKR 50,000",
-    "price": "$180",
+    "description": "Clean, intuitive interfaces focused on usability and engagement.",
+    "pkrPrice": "PKR 65,000",
     "features": [
       "Wireframes & Mockups",
       "High-Fidelity Design",
@@ -28,9 +26,8 @@
   {
     "num": "03",
     "title": "Logo Design",
-    "description": "Unique, memorable logos representing your brand.",
-    "pkrPrice": "PKR 20,000",
-    "price": "$72",
+    "description": "Unique, memorable logos that define your brand identity.",
+    "pkrPrice": "PKR 25,000",
     "features": [
       "3 Initial Concepts",
       "Unlimited Revisions",
@@ -41,9 +38,8 @@
   {
     "num": "04",
     "title": "SEO Services",
-    "description": "Boost your visibility with best-practice SEO.",
-    "pkrPrice": "PKR 40,000/month",
-    "price": "$145/month",
+    "description": "Boost visibility and grow organically with effective SEO strategies.",
+    "pkrPrice": "PKR 55,000 / month",
     "features": [
       "Keyword Research",
       "On-Page SEO",
