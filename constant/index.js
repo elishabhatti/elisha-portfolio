@@ -74,15 +74,4 @@ export const myProjects = [
     tags: ["React.js", "TailwindCSS", "Redux Toolkit"],
     href: "https://github.com/elishabhatti/redux-toolkit-todo.git",
   },
-  {
-    id: 5,
-    title: "Job Portal App",
-    description: "Created a Job Portal App.",
-    subDescription: [
-      `A full-stack job portal built with Next.js, TypeScript, Tailwind CSS, MySQL, and Drizzle ORM — designed for employers, admins, and recruiters to manage job listings efficiently.`,
-    ],
-    image: "/assets/work/photo-todo-horizon.png",
-    tags: ["Next.js", "TailwindCSS", "DrizzleORM", "Typescript", "MySql"],
-    href: "https://github.com/elishabhatti/job-portal-nextjs.git",
-  },
 ];
