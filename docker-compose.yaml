@@ -5,7 +5,8 @@ services:
     ports:
       - 3000:3000
     environment:
-      - MONGODB_URL=mongodb://batman:justice@mongo:27017/portfolio?authSource=admin
+      - MONGODB_URL=${MONGODB_URL}
+      - DASHBOARD_KEY=${DASHBOARD_KEY}
     depends_on:
       - mongo
     restart: always
