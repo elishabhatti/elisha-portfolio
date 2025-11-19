@@ -1,0 +1,25 @@
+services:
+  app:
+    container_name: portfolio
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+      - MONGODB_URL=mongodb://batman:justice@mongo:27017/portfolio?authSource=admin
+    depends_on:
+      - mongo
+    restart: always
+
+  mongo:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=batman
+      - MONGO_INITDB_ROOT_PASSWORD=justice
+    volumes:
+      - mongodb-portfolio:/data/db
+
+volumes:
+  mongodb-portfolio:
