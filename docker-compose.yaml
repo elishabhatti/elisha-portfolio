@@ -4,6 +4,8 @@ services:
     build: .
     ports:
       - 3000:3000
+    env_file:
+      - .env
     environment:
       - MONGODB_URL=${MONGODB_URL}
       - NEXT_PUBLIC_DASHBOARD_KEY=${DASHBOARD_KEY}
