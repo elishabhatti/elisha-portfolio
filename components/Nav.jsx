@@ -23,7 +23,7 @@ const Nav = () => {
         <Link
           key={index}
           href={link.path}
-          className="capitalize font-medium transition-all hover:text-accent"
+          className="capitalize font-medium"
         >
           {link.name}
         </Link>
