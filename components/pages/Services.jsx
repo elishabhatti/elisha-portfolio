@@ -50,14 +50,14 @@ const Services = () => {
                 {/* Dialog for full details */}
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button className="xl:w-[60px] xl:h-[60px] w-[40px] h-[40px] rounded-full bg-white group hover:bg-[#a238ff] transition-all duration-500 flex justify-center items-center hover:-rotate-45">
+                    <button className="xl:w-[60px] xl:h-[60px] w-[40px] h-[40px] rounded-full bg-white group hover:bg-[#725afe] transition-all duration-500 flex justify-center items-center hover:-rotate-45">
                       <BsArrowDownRight className="text-primary transition-all xl:text-3xl text-2xl group-hover:text-white" />
                     </button>
                   </DialogTrigger>
 
                   <DialogContent
                     showCloseButton={false}
-                    className="max-w-lg bg-black"
+                    className="max-w-lg bg-black border border-gray-700"
                   >
                     <DialogHeader>
                       <DialogTitle className="xl:text-xl text-white text-lg font-bold">

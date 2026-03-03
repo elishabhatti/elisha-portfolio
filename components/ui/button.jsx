@@ -11,7 +11,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-[#a238ff] text-white",
         primary: "bg-[#a238ff] text-white",
-        outline: "border border-access bg-transparent primary-text-color",
+        outline: "border bg-transparent text-white border-gray-700",
       },
       size: {
         default: "h-[44px] px-6 ",
@@ -23,7 +23,7 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  }
+  },
 );
 
 function Button({ className, variant, size, asChild = false, ...props }) {
