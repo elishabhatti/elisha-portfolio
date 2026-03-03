@@ -1,103 +1,81 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown } from "lucide-react";
 
 const Home = () => {
   return (
-    <section className="relative w-full min-h-screen bg-black text-white overflow-hidden">
-
-      {/* Background Waves */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/images/waves.png"
-          alt="waves background"
-          className="w-full h-full object-cover opacity-40"
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-white overflow-hidden bg-[#000000]">
+      <div className="absolute bottom-0 left-0 w-full h-[55vh] pointer-events-none">
+        {/* The Base Purple Gradient */}
+        <div
+          className="absolute inset-0 opacity-100"
+          style={{
+            background:
+              "linear-gradient(to top, #5e35b1 0%, #4527a0 20%, transparent 100%)",
+            filter: "blur(90px)",
+          }}
+        />
+        {/* The Brighter Horizontal Core */}
+        <div
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[110%] h-[40%] opacity-80"
+          style={{
+            background:
+              "radial-gradient(50% 100% at 50% 100%, #7c4dff 0%, transparent 100%)",
+            filter: "blur(60px)",
+          }}
         />
       </div>
 
-      {/* Left Accent Line */}
-      <div className="absolute left-10 top-1/3 h-32 w-px bg-white/20 z-10" />
-
-      {/* Main Content */}
-      <div className="relative z-10 flex flex-col justify-center h-screen px-8 md:px-20">
-
-        {/* CREATIVE */}
+      {/* CONTENT LAYER */}
+      <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-6xl">
+        {/* Main Heading: Matched to the large, clean scale in the photo */}
         <motion.h1
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-[12vw] leading-none font-extrabold tracking-tight"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-[7vw] leading-[1.1]  font-medium tracking-tight mb-8"
         >
-          CREATIVE
+          Creative & <br />
+          Experienced Web <br />
+          Developer
         </motion.h1>
 
-        {/* DEVELOPER + Name */}
-        <div className="relative inline-block">
-          <motion.h1
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9 }}
-            className="text-[12vw] leading-none font-extrabold tracking-tight text-white/15"
-          >
-            DEVELOPER
-          </motion.h1>
-
-          {/* Name aligned perfectly to R */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
-            className="absolute -bottom-5 right-0 text-xs tracking-widest text-white/60"
-          >
-            Elisha Jameel / Web Developer
-          </motion.p>
-        </div>
-
-        {/* Divider */}
-        <div className="w-full max-w-4xl h-px bg-white/10 my-12" />
-
-        {/* Small Label */}
+        {/* Subtext: Wide, small, and slightly dimmed */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="text-white/50 text-xs tracking-widest uppercase mb-4"
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="text-gray-400 text-xs md:text-[15px] max-w-3xl leading-relaxed mb-12 px-10 opacity-60 font-light"
         >
-          // SCALABLE WEB SOLUTIONS
+          Experience the synergy of innovation and expertise with our web
+          development team. From intuitive interfaces to robust backend systems,
+          we are committed to delivering unmatched results for your digital
+          projects.
         </motion.p>
 
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9 }}
-          className="max-w-xl text-white/60 text-sm leading-relaxed"
-        >
-          Full-stack developer and creative thinker driven by passion for
-          building modern, scalable, and high-performance web applications.
-        </motion.p>
-
-        {/* Explore Section */}
+        {/* Buttons: Clean, pill-shaped, translucent */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="flex items-center gap-3 mt-8 text-sm text-white/70 cursor-pointer hover:text-white transition-all duration-300"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          className="flex flex-row items-center justify-center gap-5"
         >
-          <span className="tracking-widest uppercase">
-            Explore My Work
-          </span>
-          <ArrowDown size={16} />
+          <button className="px-10 py-2.5 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 transition-all backdrop-blur-md text-[13px] font-medium">
+            Explore
+          </button>
+          <button className="px-10 py-2.5 rounded-full text-gray-300 hover:text-white transition-colors text-[13px] font-medium">
+            Contact Now
+          </button>
         </motion.div>
-
       </div>
+
+      {/* Subtle top-down fade to keep the top half pitch black */}
+      <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-[#020109] to-transparent pointer-events-none" />
     </section>
   );
 };
 
 export default Home;
-
 // <motion.section
 //   initial={{ opacity: 0, y: 50 }}
 //   whileInView={{ opacity: 1, y: 0 }}

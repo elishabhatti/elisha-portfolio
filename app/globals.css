@@ -4,16 +4,16 @@
 @custom-variant dark (&:is(.dark *));
 
 body {
-  font-family: var(--font-jetbrainsMono);
+  font-family: var(--font-urbanist);
   background-color: var(--color-primary);
 }
 
 :root {
   --color-primary: black;
-  --color-accent-hover: #00e18f;
+  --color-accent-hover: #030014;
 }
 .primary-text-color {
-  color: #4f4f4f;
+  color: #0a0622;
 }
 
 html {

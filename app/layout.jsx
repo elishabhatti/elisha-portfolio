@@ -1,12 +1,14 @@
-import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { Toaster } from "@/components/ui/sonner";
+import { Urbanist } from "next/font/google";
 
-const Jetbrains_mono = JetBrains_Mono({
-  variable: "--font-jetbrainsMono",
+// Font for body/paragraphs
+const urbanist = Urbanist({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-urbanist",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -20,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body
         cz-shortcut-listen="true"
-        className={`${Jetbrains_mono.variable} antialiased`}
+        className={` ${urbanist.variable} font-sans antialiased`}
       >
         <Header />
         <Toaster position="top-center" />
