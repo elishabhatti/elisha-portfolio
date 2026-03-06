@@ -97,7 +97,7 @@ const Resume = () => {
                   </p>
 
                   {/* Dialog Button */}
-                  <Dialog>
+                  <Dialog className="">
                     <DialogTrigger asChild>
                       <button className="xl:w-10 h-10 w-full flex items-center justify-center rounded-full bg-white hover:bg-purple-500 transition">
                         <ArrowRight className="w-5 h-5 text-black hover:text-white" />
@@ -106,10 +106,12 @@ const Resume = () => {
 
                     <DialogContent
                       showCloseButton={false}
-                      className="max-w-lg bg-black"
+                      className="max-w-lg bg-black border border-gray-900"
                     >
                       <DialogHeader>
-                        <DialogTitle>{experience.title}</DialogTitle>
+                        <DialogTitle className="text-white">
+                          {experience.title}
+                        </DialogTitle>
                         <DialogDescription className="text-md leading-7 mt-3">
                           {experience.description}
                         </DialogDescription>
@@ -172,10 +174,12 @@ const Resume = () => {
 
                     <DialogContent
                       showCloseButton={false}
-                      className="max-w-lg bg-black text-white"
+                      className="max-w-lg bg-black border border-gray-900"
                     >
                       <DialogHeader>
-                        <DialogTitle>{education.title}</DialogTitle>
+                        <DialogTitle className="text-white">
+                          {education.title}
+                        </DialogTitle>
                         <DialogDescription className="text-md leading-7 mt-3 text-white/80">
                           {education.description}
                         </DialogDescription>
