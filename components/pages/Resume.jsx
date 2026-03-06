@@ -65,7 +65,7 @@ const Resume = () => {
       <div className="container mx-auto">
         <h2
           id="resume"
-          className="text-white text-3xl md:text-4xl font-bold text-center mb-12"
+          className="text-white text-3xl md:text-4xl font-bold text-center"
         >
           Resume
         </h2>
@@ -81,7 +81,7 @@ const Resume = () => {
           </TabsList>
 
           {/* content */}
-          <div className="min-h-[70vh] w-full">
+          <div className="min-h-[60vh] w-full">
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-7.5 text-center xl:text-left">
