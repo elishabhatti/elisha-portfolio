@@ -65,15 +65,15 @@ const Resume = () => {
       <div className="container mx-auto">
         <h2
           id="resume"
-        className="text-white text-3xl md:text-4xl font-bold text-center mb-12"
+          className="text-white text-3xl md:text-4xl font-bold text-center mb-12"
         >
           Resume
         </h2>
         <Tabs
           defaultValue="experience"
-          className="flex flex-col xl:flex-row gap-[30px]"
+          className="flex flex-col xl:flex-row gap-7.5"
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 ">
+          <TabsList className="flex flex-col w-full max-w-95 mx-auto xl:mx-0 gap-6 ">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -84,13 +84,13 @@ const Resume = () => {
           <div className="min-h-[70vh] w-full">
             {/* experience */}
             <TabsContent value="experience" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+              <div className="flex flex-col gap-7.5 text-center xl:text-left">
                 <h3 className="text-white text-4xl font-bold">
                   {experience.title}
                 </h3>
                 {/* Short description + Dialog trigger */}
                 <div className="flex flex-wrap items-start gap-4">
-                  <p className="max-w-[600px] text-white/60 xl:mx-0">
+                  <p className="max-w-150 text-white/60 xl:mx-0">
                     {experience.description.length >= 100
                       ? experience.description.slice(0, 120) + "..."
                       : experience.description}
@@ -122,23 +122,23 @@ const Resume = () => {
                     </DialogContent>
                   </Dialog>
                 </div>
-                <ScrollArea className="h-[350px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <ScrollArea className="h-87.5">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-7.5">
                     {experience.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-45 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="primary-text-color">
                             {item.duration}
                           </span>
-                          <h3 className="text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-white text-xl max-w-65 min-h-15 text-center lg:text-left">
                             {" "}
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-[#a238ff]"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#a238ff]"></span>
                             <p className="text-white/60">{item.company}</p>
                           </div>
                         </li>
@@ -150,13 +150,13 @@ const Resume = () => {
             </TabsContent>
             {/* education */}
             <TabsContent value="education" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+              <div className="flex flex-col gap-7.5 text-center xl:text-left">
                 <h3 className="text-4xl font-bold text-white">
                   {education.title}
                 </h3>
                 {/* Short description + Dialog trigger */}
                 <div className="flex flex-wrap items-start gap-4">
-                  <p className="max-w-[600px] text-white/60 xl:mx-0">
+                  <p className="max-w-150 text-white/60 xl:mx-0">
                     {education.description.length >= 100
                       ? education.description.slice(0, 120) + "..."
                       : education.description}
@@ -188,23 +188,23 @@ const Resume = () => {
                     </DialogContent>
                   </Dialog>
                 </div>
-                <ScrollArea className="h-[350px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                <ScrollArea className="h-87.5">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-7.5">
                     {education.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[180px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-45 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="primary-text-color">
                             {item.duration}
                           </span>
-                          <h3 className="text-white text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-white text-xl max-w-65 min-h-15 text-center lg:text-left">
                             {" "}
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-[#a238ff]"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#a238ff]"></span>
                             <p className="text-white/60">{item.institution}</p>
                           </div>
                         </li>
@@ -216,11 +216,11 @@ const Resume = () => {
             </TabsContent>
             {/* skills */}
             <TabsContent value="skills" className="w-full h-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+              <div className="flex flex-col gap-7.5 text-center xl:text-left">
                 <h3 className="text-4xl font-bold text-white">
                   {skills.title}
                 </h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="max-w-150 text-white/60 mx-auto xl:mx-0">
                   {skills.description}
                 </p>
               </div>
@@ -231,7 +231,7 @@ const Resume = () => {
                     <li key={index}>
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
-                          <TooltipTrigger className="w-full group xl:h-[150px] h-[100px] bg-[#232329] rounded-xl flex justify-center items-center">
+                          <TooltipTrigger className="w-full group xl:h-37.5 h-25 bg-[#232329] rounded-xl flex justify-center items-center">
                             <div className="text-white xl:text-6xl text-5xl group-hover:primary-text-color transition-all duration-300">
                               <Icon />
                             </div>
@@ -251,11 +251,11 @@ const Resume = () => {
               value="about"
               className="w-full text-center xl:text-left"
             >
-              <div className="flex flex-col gap-[30px]">
+              <div className="flex flex-col gap-7.5">
                 <h3 className="text-4xl font-bold text-white">{about.title}</h3>
                 {/* Short description + Dialog trigger */}
                 <div className="flex flex-wrap items-start gap-4">
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="max-w-150 text-white/60 mx-auto xl:mx-0">
                     {about.description.length >= 100
                       ? about.description.slice(0, 120) + "..."
                       : about.description}
@@ -305,7 +305,7 @@ const Resume = () => {
                     </DialogContent>
                   </Dialog>
                 </div>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-3 xl:gap-y-6 xl:gap-x-16 xl:w-[820px] w-full mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-3 xl:gap-y-6 xl:gap-x-16 xl:w-205 w-full mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li
@@ -315,7 +315,9 @@ const Resume = () => {
                         <span className="text-white/60">
                           {item.fieldName}:{" "}
                         </span>
-                        <span className="text-lg text-white">{item.fieldValue}</span>
+                        <span className="text-lg text-white">
+                          {item.fieldValue}
+                        </span>
                       </li>
                     );
                   })}
