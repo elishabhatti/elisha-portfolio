@@ -3,6 +3,8 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "./ui/sheet";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
+import { motion } from "framer-motion";
+import { InteractiveHoverButton } from "./magicui/interactive-hover-button";
 
 const links = [
   { name: "home", path: "#home" },
@@ -36,14 +38,22 @@ const MobileNav = () => {
             <Link
               href={link.path}
               className={`${
-                link.path === pathname &&
-                "border-b-2 border-[#a238ff]"
+                link.path === pathname && "border-b-2 border-[#a238ff]"
               } text-md text-white capitalize transition-all`}
               key={index}
             >
               {link.name}
             </Link>
           ))}
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1, delay: 0.2 }}
+            transition={{ duration: 0.69 }}
+          >
+            <InteractiveHoverButton className="text-black hover:border-2 hover:border-white">
+              Hire me
+            </InteractiveHoverButton>
+          </motion.div>
         </nav>
       </SheetContent>
     </Sheet>
