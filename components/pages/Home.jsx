@@ -8,10 +8,9 @@ import Social from "../Social";
 import { FlipWords } from "../ui/flip-words";
 
 const words = [
-  "Web Developer",
-  "Web Designer",
-  "Logo Designer",
-  "SEO Assistant",
+  "MERN Stack Developer",
+  "Next.js Developer",
+  "UI Enthusiast",
 ];
 
 const Home = () => {
