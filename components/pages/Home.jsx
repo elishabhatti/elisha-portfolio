@@ -7,11 +7,7 @@ import Stats from "../Stats";
 import Social from "../Social";
 import { FlipWords } from "../ui/flip-words";
 
-const words = [
-  "MERN Stack Developer",
-  "Next.js Developer",
-  "UI Enthusiast",
-];
+const words = ["MERN Stack Developer", "Next.js Developer", "UI Enthusiast"];
 
 const Home = () => {
   return (
@@ -45,7 +41,7 @@ const Home = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-[7vw] leading-[1.05] font-medium tracking-tight mb-6"
         >
-          Creative & Experienced
+          Hi I'm Elisha
           <br />
           <motion.span
             initial={{ x: -100, opacity: 0 }}
