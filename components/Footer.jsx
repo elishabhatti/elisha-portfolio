@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 const Footer = () => {
   const [time, setTime] = useState("");
 
+  const year = new Date().getFullYear();
+
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
@@ -21,7 +23,7 @@ const Footer = () => {
 
         {/* Center */}
         <div className="text-center text-zinc-400">
-          ©2026 Usergency All <br />
+          ©{year} Usergency All <br />
           rights reserved.
         </div>
 
