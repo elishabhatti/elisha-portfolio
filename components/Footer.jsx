@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
 
         {/* Right */}
-        <div className="text-right text-zinc-400">
+        <div className="text-right text-zinc-200">
           <div>{time}</div>
           <div>Karachi</div>
         </div>

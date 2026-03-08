@@ -8,7 +8,7 @@ import { InteractiveHoverButton } from "./magicui/interactive-hover-button";
 
 const Header = () => {
   return (
-    <header className="bg-black z-50 fixed w-full px-6 py-4 xl:px-24 text-white">
+    <header className="bg-black z-50 fixed w-full px-6 py-4 xl:px-24 text-white border-b border-gray-900">
       <div className="mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
