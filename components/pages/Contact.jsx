@@ -168,7 +168,7 @@ const Contact = () => {
               {/* textarea */}
               <Textarea
                 name="message"
-                className="h-[180px] md:h-[200px]"
+                className="h-45 md:h-50"
                 placeholder="Type your message here..."
                 value={formData.message}
                 onChange={handleChange}
@@ -188,7 +188,7 @@ const Contact = () => {
               {info.map((item, index) => (
                 <li key={index} className="flex  gap-5">
                   {/* icon */}
-                  <div className="text-lg w-[45px] h-[45px] border-2 border-white/50 p-3 rounded-lg primary-text-color">
+                  <div className="text-lg w-11.45 h-11.25 border-2 border-white/50 p-3 rounded-lg primary-text-color">
                     {item.icon}
                   </div>
                   {/* text */}
