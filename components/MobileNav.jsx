@@ -8,6 +8,7 @@ import { InteractiveHoverButton } from "./magicui/interactive-hover-button";
 
 const links = [
   { name: "home", path: "#home" },
+  { name: "about", path: "#about" },
   { name: "services", path: "#services" },
   { name: "project", path: "#project" },
   { name: "resume", path: "#resume" },
