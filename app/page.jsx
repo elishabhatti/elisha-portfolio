@@ -1,6 +1,7 @@
 "use client";
 
 import Footer from "@/components/Footer";
+import About from "@/components/pages/About";
 import Contact from "@/components/pages/Contact";
 import Home from "@/components/pages/Home";
 import Pricing from "@/components/pages/Pricing";
@@ -13,6 +14,9 @@ const page = () => {
     <section className="pt-25 max-w-8xl">
       <section>
         <Home />
+      </section>
+      <section>
+        <About />
       </section>
       <section>
         <Services />
