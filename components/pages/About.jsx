@@ -132,19 +132,35 @@ const About = () => {
               {/* SOCIAL */}
               <CardFooter className="py-2">
                 <div className="flex gap-3 w-full text-lg items-center justify-center">
-                  <a className="p-3 rounded-full bg-zinc-900 hover:bg-[#725afe] hover:text-white transition-all cursor-pointer">
+                  <a
+                    href="https://github.com/elishabhatti"
+                    target="_blank"
+                    className="p-3 rounded-full bg-zinc-900 hover:bg-[#725afe] hover:text-white transition-all cursor-pointer"
+                  >
                     <BsGithub />
                   </a>
 
-                  <a className="p-3 rounded-full bg-zinc-900 hover:bg-[#725afe] hover:text-white transition-all cursor-pointer">
+                  <a
+                    href="https://www.linkedin.com/in/elisha-jameel/"
+                    target="_blank"
+                    className="p-3 rounded-full bg-zinc-900 hover:bg-[#725afe] hover:text-white transition-all cursor-pointer"
+                  >
                     <BsLinkedin />
                   </a>
 
-                  <a className="p-3 rounded-full bg-zinc-900 hover:bg-[#725afe] hover:text-white transition-all cursor-pointer">
+                  <a
+                    href="https://www.instagram.com/elishajameel270/"
+                    target="_blank"
+                    className="p-3 rounded-full bg-zinc-900 hover:bg-[#725afe] hover:text-white transition-all cursor-pointer"
+                  >
                     <BsInstagram />
                   </a>
 
-                  <a className="p-3 rounded-full bg-zinc-900 hover:bg-[#725afe] hover:text-white transition-all cursor-pointer">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61576620950743"
+                    target="_blank"
+                    className="p-3 rounded-full bg-zinc-900 hover:bg-[#725afe] hover:text-white transition-all cursor-pointer"
+                  >
                     <BsFacebook />
                   </a>
                 </div>
