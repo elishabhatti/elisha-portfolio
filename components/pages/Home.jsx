@@ -2,9 +2,7 @@
 
 import { motion } from "framer-motion";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
-import { FiDownload } from "react-icons/fi";
 import Stats from "../Stats";
-import Social from "../Social";
 import { FlipWords } from "../ui/flip-words";
 
 const words = ["MERN Stack Developer", "Next.js Developer", "UI Enthusiast"];
