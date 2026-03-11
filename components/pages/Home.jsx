@@ -74,16 +74,6 @@ const Home = () => {
           className="flex items-center gap-5"
         >
           <div>
-            <a href="/Elisha-Jameel.docx" download>
-              <InteractiveHoverButton>
-                <span className="text-black group-hover:text-white">
-                  Download CV
-                </span>
-                <FiDownload className="transition-all duration-300 group-hover:text-white text-xl ml-2 inline" />
-              </InteractiveHoverButton>
-            </a>
-          </div>
-          <div>
             <Social
               containerStyles="flex gap-6"
               iconStyles="w-13 h-13 text-xl border-2 border-white rounded-full transition-all duration-300 flex justify-center items-center text-white hover:bg-[#725afe] text-base hover:text-white"
