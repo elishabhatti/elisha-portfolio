@@ -1,12 +1,21 @@
 import { CircleHelpIcon } from "lucide-react";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 import { FiDownload } from "react-icons/fi";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardAction,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen text-white bg-black w-full flex flex-wrap justify-center items-center">
       {/* Left Side */}
-      <div>
+      <div className="">
         <h1>
           <CircleHelpIcon /> About Me
         </h1>
@@ -29,7 +38,23 @@ const About = () => {
       </div>
 
       {/* Right Side */}
-      <div></div>
+      <div>
+        <Card className="relative mx-auto w-full max-w-sm pt-0 bg-black text-white">
+          <div className="absolute inset-0 z-30 aspect-video bg-black" />
+          <img
+            src="https://avatar.vercel.sh/shadcn1"
+            alt="Event cover"
+            className="relative z-20 aspect-video w-full object-cover brightness-60 grayscale dark:brightness-40"
+          />
+          <CardHeader>
+            <CardTitle>Elisha Jameel</CardTitle>
+            <CardDescription>MERN STACK, Next.js Developer</CardDescription>
+          </CardHeader>
+          <CardFooter>
+            <Button className="w-full bg-[#725afe]">View Event</Button>
+          </CardFooter>
+        </Card>
+      </div>
     </div>
   );
 };
