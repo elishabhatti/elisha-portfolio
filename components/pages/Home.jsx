@@ -67,36 +67,27 @@ const Home = () => {
         </motion.p>
 
         {/* Button + Social */}
-        <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.69 }}
-          className="flex items-center gap-5"
-        >
-          <div>
-            <a href="/Elisha-Jameel.docx" download>
-              <InteractiveHoverButton>
-                <span className="text-black group-hover:text-white">
-                  Download CV
-                </span>
-                <FiDownload className="transition-all duration-300 group-hover:text-white text-xl ml-2 inline" />
-              </InteractiveHoverButton>
-            </a>
-          </div>
-          <div>
-            <Social
-              containerStyles="flex gap-6"
-              iconStyles="w-13 h-13 text-xl border-2 border-white rounded-full transition-all duration-300 flex justify-center items-center text-white hover:bg-[#725afe] text-base hover:text-white"
-            />
-          </div>
-        </motion.div>
+        <div className="flex items-center gap-5">
+          <a href="#project">
+            <InteractiveHoverButton className="text-black">
+              View Projects
+            </InteractiveHoverButton>
+          </a>
+
+          <a href="#contact">
+            <InteractiveHoverButton className="text-black">
+              {" "}
+              Contact Me
+            </InteractiveHoverButton>
+          </a>
+        </div>
       </div>
 
       {/* Top Fade */}
       <div className="absolute top-0 left-0 w-full h-40 bg-linear-to-b from-[#020109] to-transparent pointer-events-none" />
 
       {/* Stats */}
-      <div className="absolute bottom-40 w-full flex justify-center">
+      <div className="absolute bottom-50 w-full flex justify-center">
         <Stats />
       </div>
     </section>
