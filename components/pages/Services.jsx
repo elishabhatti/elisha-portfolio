@@ -1,99 +1,129 @@
 "use client";
 
-import { BsArrowDownRight } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { BsArrowUpRight } from "react-icons/bs";
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-  DialogTrigger,
-  DialogFooter,
-} from "@/components/ui/dialog";
-import { DialogClose } from "@radix-ui/react-dialog";
-import { Button } from "@/components/ui/button";
-import services from "../../json/services.json";
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiTailwindcss,
+} from "react-icons/si";
+
+const services = [
+  {
+    num: "01",
+    title: "Full-Stack Web Development",
+    description:
+      "I build fast, scalable web applications using modern technologies like MERN stack and Next.js. My focus is clean architecture, performance, and production-ready code.",
+    icons: [SiReact, SiNextdotjs, SiNodedotjs],
+  },
+  {
+    num: "02",
+    title: "Modern UI Engineering",
+    description:
+      "I design and develop beautiful, interactive user interfaces with smooth animations, responsive layouts, and pixel-perfect attention to detail.",
+    icons: [SiReact, SiTailwindcss],
+  },
+  {
+    num: "03",
+    title: "Performance Optimization",
+    description:
+      "I optimize websites for speed, accessibility, and SEO fundamentals using best practices like code splitting, caching strategies, and modern frameworks.",
+    icons: [SiNextdotjs, SiTailwindcss],
+  },
+];
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: "easeOut" },
+  },
+};
 
 const Services = () => {
   return (
-    <section className="flex flex-col justify-center xl:p-15 p-5">
-      <h2
-        id="services"
-        className="text-white text-3xl md:text-4xl font-bold text-center mb-12"
+    <section
+      id="services"
+      className="relative w-full py-32 px-6 bg-black text-white overflow-hidden"
+    >
+      {/* Background Glow */}
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[65vw] h-[40vh]"
+        style={{
+          background: "radial-gradient(circle, #725afe33, transparent 70%)",
+          filter: "blur(120px)",
+        }}
+      />
+
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="relative z-10 max-w-7xl mx-auto"
       >
-        Services
-      </h2>
-      <div className="container mx-auto">
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-[50px]"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
+        {/* Title */}
+        <motion.h2
+          variants={item}
+          className="text-center text-4xl md:text-5xl font-bold mb-24"
         >
+          Services
+        </motion.h2>
+
+        {/* Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14">
           {services.map((service, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true, amount: 0.3 }}
               key={index}
-              className="flex-1 flex flex-col justify-center gap-6"
+              variants={item}
+              whileHover={{ y: -6 }}
+              className="group relative border border-white/10 rounded-xl p-10 transition-all duration-500 hover:border-[#725afe] hover:bg-white/[0.03]"
             >
-              {/* top row */}
-              <div className="w-full flex justify-between items-center">
-                <div className="xl:text-5xl text-4xl font-extrabold text-outline text-transparent transition-all duration-500">
-                  {service.num}
-                </div>
+              {/* Number */}
+              <span className="text-6xl font-extrabold text-white/10 group-hover:text-[#725afe] transition duration-500">
+                {service.num}
+              </span>
 
-                {/* Dialog for full details */}
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <button className="xl:w-[60px] xl:h-[60px] w-[40px] h-[40px] rounded-full bg-white group hover:bg-[#725afe] transition-all duration-500 flex justify-center items-center hover:-rotate-45">
-                      <BsArrowDownRight className="text-primary transition-all xl:text-3xl text-2xl group-hover:text-white" />
-                    </button>
-                  </DialogTrigger>
+              {/* Title */}
+              <h3 className="text-2xl font-bold mt-6 mb-4">{service.title}</h3>
 
-                  <DialogContent
-                    showCloseButton={false}
-                    className="max-w-lg bg-black border border-gray-700"
-                  >
-                    <DialogHeader>
-                      <DialogTitle className="xl:text-xl text-white text-lg font-bold">
-                        {service.title}
-                      </DialogTitle>
-                      <DialogDescription className="xl:text-lg text-md text-base xl:leading-7 leading-6 text-white/80">
-                        {service.description}
-                      </DialogDescription>
-                    </DialogHeader>
-                    <DialogFooter>
-                      <DialogClose asChild>
-                        <Button variant="outline">Cancel</Button>
-                      </DialogClose>
-                    </DialogFooter>
-                  </DialogContent>
-                </Dialog>
-              </div>
-
-              {/* heading */}
-              <h2 className="xl:text-[32px] text-[22px] font-bold leading-none text-white hover:primary-text-color transition-all duration-500">
-                {service.title}
-              </h2>
-
-              {/* short description */}
-              <p className="text-white/60 xl:text-lg text-md leading-7">
-                {service.description.length >= 100
-                  ? service.description.slice(0, 100) + "..."
-                  : service.description}
+              {/* Description */}
+              <p className="text-white/60 leading-relaxed text-sm mb-8">
+                {service.description}
               </p>
 
-              {/* border */}
-              <div className="border-b border-white/20 w-full"></div>
+              {/* Tech Icons */}
+              <div className="flex gap-5 mb-10 text-xl text-white/60">
+                {service.icons.map((Icon, i) => (
+                  <Icon
+                    key={i}
+                    className="transition duration-300 group-hover:text-[#725afe] group-hover:scale-110"
+                  />
+                ))}
+              </div>
+
+              {/* Arrow */}
+              <a
+                href="#contact"
+                className="absolute bottom-8 right-8 w-11 h-11 rounded-full bg-white text-black flex items-center justify-center transition-all duration-500 group-hover:bg-[#725afe] group-hover:text-white group-hover:rotate-45"
+              >
+                <BsArrowUpRight />
+              </a>
             </motion.div>
           ))}
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
