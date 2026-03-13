@@ -1,133 +1,159 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useMotionTemplate, useSpring, useTransform } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
 import {
-  SiReact,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiTailwindcss,
-  SiExpress,
-  SiMongodb,
-  SiMysql,
-  SiFigma,
+  SiReact, SiNextdotjs, SiNodedotjs, SiTailwindcss,
+  SiExpress, SiMongodb, SiFigma,
 } from "react-icons/si";
 
 const services = [
   {
     num: "01",
     title: "Full-Stack Web Development",
-    description:
-      "I build fast, scalable web applications using modern technologies like MERN stack and Next.js. My focus is clean architecture, performance, and production-ready code.",
-    icons: [SiMongodb, SiReact, SiNodedotjs, SiExpress, SiNextdotjs, SiMysql],
+    description: "I build fast, scalable web applications using modern technologies like MERN and Next.js. Clean architecture meets production-ready performance.",
+    icons: [SiMongodb, SiReact, SiNodedotjs, SiExpress, SiNextdotjs],
   },
   {
     num: "02",
     title: "Modern UI Engineering",
-    description:
-      "I design and develop beautiful, interactive user interfaces with smooth animations, responsive layouts, and pixel-perfect attention to detail.",
+    description: "Designing interactive user interfaces with smooth animations and pixel-perfect attention to detail. Beauty meets functionality.",
     icons: [SiReact, SiTailwindcss, SiFigma],
   },
   {
     num: "03",
     title: "Performance Optimization",
-    description:
-      "I optimize websites for speed, accessibility, and SEO fundamentals using best practices like code splitting, caching strategies, and modern frameworks.",
+    description: "Speed is a feature. I optimize for Core Web Vitals, SEO, and accessibility using advanced caching and code-splitting.",
     icons: [SiNextdotjs, SiTailwindcss],
   },
 ];
 
-const container = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.18,
-    },
-  },
-};
+const ServiceCard = ({ service, index }) => {
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
 
-const item = {
-  hidden: { opacity: 0, y: 40 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: "easeOut" },
-  },
+  const mouseXSpring = useSpring(mouseX);
+  const mouseYSpring = useSpring(mouseY);
+
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"]);
+
+  function onMouseMove(e) {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const xPct = (e.clientX - rect.left) / rect.width - 0.5;
+    const yPct = (e.clientY - rect.top) / rect.height - 0.5;
+    mouseX.set(xPct);
+    mouseY.set(yPct);
+  }
+
+  function onMouseLeave() {
+    mouseX.set(0);
+    mouseY.set(0);
+  }
+
+  const background = useMotionTemplate`
+    radial-gradient(
+      350px circle at ${useTransform(mouseXSpring, [-0.5, 0.5], ["0%", "100%"])} ${useTransform(mouseYSpring, [-0.5, 0.5], ["0%", "100%"])},
+      rgba(114, 90, 254, 0.25),
+      transparent 80%
+    )
+  `;
+
+  return (
+    <motion.div
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="group relative rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-md p-8 overflow-hidden cursor-pointer"
+    >
+      <motion.div
+        className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition duration-500 group-hover:opacity-100"
+        style={{ background }}
+      />
+
+      <div style={{ transform: "translateZ(50px)" }} className="relative z-10 flex flex-col h-full">
+        <div className="flex justify-between items-center">
+          <span className="text-5xl font-black text-white/10 group-hover:text-[#725afe]/40 transition-all duration-500">
+            {service.num}
+          </span>
+          <div className="p-3 rounded-full bg-white/10 border border-white/20 group-hover:bg-[#725afe] group-hover:text-white transition-all duration-500 group-hover:rotate-45 shadow-lg">
+            <BsArrowUpRight className="text-lg" />
+          </div>
+        </div>
+
+        <h3 className="text-2xl font-bold mt-6 text-white group-hover:text-[#725afe] transition-colors tracking-tight">
+          {service.title}
+        </h3>
+        
+        <p className="mt-3 text-white/90 leading-relaxed text-sm">
+          {service.description}
+        </p>
+
+        <div className="mt-8 flex gap-5">
+          {service.icons.map((Icon, i) => (
+            <Icon key={i} className="text-xl text-white/60 group-hover:text-white group-hover:scale-125 transition-all duration-300" />
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
 };
 
 const Services = () => {
   return (
-    <section
-      id="services"
-      className="relative w-full py-32 px-6 bg-black text-white overflow-hidden"
+    <section 
+      id="services" 
+      className="relative w-full min-h-screen flex items-center py-24 px-6 bg-[#030303] overflow-hidden"
     >
-      {/* Background Glow */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[65vw] h-[40vh]"
-        style={{
-          background: "radial-gradient(circle, #725afe33, transparent 70%)",
-          filter: "blur(120px)",
-        }}
-      />
+      {/* Background Decor */}
+      <div className="absolute inset-0 bg-[radial-gradient(#ffffff10_1px,transparent_1px)] [background-size:30px_30px]" />
+      <div className="absolute top-1/4 -left-10 w-[400px] h-[400px] bg-[#725afe]/15 blur-[120px] rounded-full" />
+      <div className="absolute bottom-1/4 -right-10 w-[400px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full" />
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        className="relative z-10 max-w-7xl mx-auto"
-      >
-        {/* Title */}
-        <motion.h2
-          variants={item}
-          className="text-center text-4xl md:text-5xl font-bold mb-24"
-        >
-          Services
-        </motion.h2>
-
-        {/* Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-14">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              variants={item}
-              whileHover={{ y: -6 }}
-              className="group relative border border-white/10 rounded-xl p-10 transition-all duration-500 hover:border-[#725afe] hover:bg-white/[0.03]"
+      <div className="max-w-7xl mx-auto relative z-10 w-full">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+          <div className="max-w-2xl">
+            {/* Header Block */}
+            <motion.h2 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="text-white text-lg font-mono tracking-[0.3em] uppercase mb-4"
             >
-              {/* Number */}
-              <span className="text-6xl font-extrabold text-white/30 group-hover:text-[#725afe] transition duration-500">
-                {service.num}
-              </span>
+              Services
+            </motion.h2>
+            
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[1.1]"
+            >
+              Digital <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#725afe] to-blue-400">Excellence.</span>
+            </motion.h3>
+          </div>
+          
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="md:max-w-xs"
+          >
+            <p className="text-white/80 text-sm md:text-base border-l-2 border-[#725afe] pl-6 py-2 leading-relaxed">
+              Clean code, immersive UI, and high-performance logic—all in one place.
+            </p>
+          </motion.div>
+        </div>
 
-              {/* Title */}
-              <h3 className="text-2xl font-bold mt-6 mb-4">{service.title}</h3>
-
-              {/* Description */}
-              <p className="text-white/60 leading-relaxed text-sm mb-8">
-                {service.description}
-              </p>
-
-              {/* Tech Icons */}
-              <div className="flex gap-5 mb-10 text-xl text-white/60">
-                {service.icons.map((Icon, i) => (
-                  <Icon
-                    key={i}
-                    className="transition duration-300 group-hover:text-[#725afe] group-hover:scale-110"
-                  />
-                ))}
-              </div>
-
-              {/* Arrow */}
-              <a
-                href="#contact"
-                className="absolute bottom-8 right-8 w-11 h-11 rounded-full bg-white text-black flex items-center justify-center transition-all duration-500 group-hover:bg-[#725afe] group-hover:text-white group-hover:rotate-45"
-              >
-                <BsArrowUpRight />
-              </a>
-            </motion.div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <ServiceCard key={index} service={service} index={index} />
           ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
