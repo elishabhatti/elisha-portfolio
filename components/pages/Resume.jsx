@@ -1,337 +1,153 @@
 "use client";
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaNodeJs,
+
+import { motion } from "framer-motion";
+import { 
+  FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs 
 } from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";
-import {
-  SiTailwindcss,
-  SiNextdotjs,
-  SiMongodb,
-  SiTypescript,
+import { 
+  SiTailwindcss, SiNextdotjs, SiMongodb, SiTypescript 
 } from "react-icons/si";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-  DialogTrigger,
-  DialogFooter,
-  DialogClose,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import about from "../../json/about.json";
+
 import experience from "../../json/experience.json";
 import education from "../../json/education.json";
 import skills from "../../json/skills.json";
 
 const icons = {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiMongodb,
-  SiTypescript,
-  FiFigma,
+  FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs,
+  SiNextdotjs, SiTailwindcss, SiMongodb, SiTypescript, FiFigma,
 };
 
 const Resume = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.2 }}
-      className="flex items-center justify-center xl:p-15 p-5"
-    >
-      <div className="container mx-auto">
-        <h2
-          id="resume"
-          className="text-white text-3xl md:text-4xl font-bold text-center"
-        >
+    <section id="resume" className="relative w-full py-24 px-6 md:px-24 bg-[#050505] overflow-hidden">
+      
+      {/* 1. MAIN HEADING (Matches Contact/Project Headers) */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="relative z-10 mb-24 text-center"
+      >
+        <h2 className="text-white text-4xl md:text-5xl font-bold tracking-tight uppercase">
           Resume
         </h2>
-        <Tabs
-          defaultValue="experience"
-          className="flex flex-col xl:flex-row gap-7.5"
-        >
-          <TabsList className="flex flex-col w-full max-w-95 mx-auto xl:mx-0 gap-6 ">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About Me</TabsTrigger>
-          </TabsList>
+        <div className="h-1 w-12 bg-[#725afe] mx-auto mt-4 rounded-full" />
+      </motion.div>
 
-          {/* content */}
-          <div className="min-h-[60vh] w-full">
-            {/* experience */}
-            <TabsContent value="experience" className="w-full">
-              <div className="flex flex-col gap-7.5 text-center xl:text-left">
-                <h3 className="text-white text-4xl font-bold">
-                  {experience.title}
-                </h3>
-                {/* Short description + Dialog trigger */}
-                <div className="flex flex-wrap items-start gap-4">
-                  <p className="max-w-150 text-white/60 xl:mx-0">
-                    {experience.description.length >= 100
-                      ? experience.description.slice(0, 120) + "..."
-                      : experience.description}
-                  </p>
+      {/* BACKGROUND TEXTURE */}
+      <div className="absolute inset-0 bg-[radial-gradient(#ffffff01_1px,transparent_1px)] [background-size:40px_40px] pointer-events-none" />
 
-                  {/* Dialog Button */}
-                  <Dialog className="">
-                    <DialogTrigger asChild>
-                      <button className="xl:w-10 h-10 w-full flex items-center justify-center rounded-full bg-white hover:bg-purple-500 transition">
-                        <ArrowRight className="w-5 h-5 text-black hover:text-white" />
-                      </button>
-                    </DialogTrigger>
-
-                    <DialogContent
-                      showCloseButton={false}
-                      className="max-w-lg bg-black border border-gray-900"
-                    >
-                      <DialogHeader>
-                        <DialogTitle className="text-white">
-                          {experience.title}
-                        </DialogTitle>
-                        <DialogDescription className="text-md leading-7 mt-3">
-                          {experience.description}
-                        </DialogDescription>
-                      </DialogHeader>
-                      <DialogFooter>
-                        <DialogClose asChild>
-                          <Button variant="outline">Cancel</Button>
-                        </DialogClose>
-                      </DialogFooter>
-                    </DialogContent>
-                  </Dialog>
-                </div>
-                <ScrollArea className="h-87.5">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-7.5">
-                    {experience.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-45 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className="primary-text-color">
-                            {item.duration}
-                          </span>
-                          <h3 className="text-white text-xl max-w-65 min-h-15 text-center lg:text-left">
-                            {" "}
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#a238ff]"></span>
-                            <p className="text-white/60">{item.company}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
-              </div>
-            </TabsContent>
-            {/* education */}
-            <TabsContent value="education" className="w-full">
-              <div className="flex flex-col gap-7.5 text-center xl:text-left">
-                <h3 className="text-4xl font-bold text-white">
-                  {education.title}
-                </h3>
-                {/* Short description + Dialog trigger */}
-                <div className="flex flex-wrap items-start gap-4">
-                  <p className="max-w-150 text-white/60 xl:mx-0">
-                    {education.description.length >= 100
-                      ? education.description.slice(0, 120) + "..."
-                      : education.description}
-                  </p>
-
-                  {/* Dialog Button */}
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <button className="xl:w-10 h-10 w-full flex items-center justify-center rounded-full bg-white hover:bg-purple-500 transition">
-                        <ArrowRight className="w-5 h-5 text-black hover:text-white" />
-                      </button>
-                    </DialogTrigger>
-
-                    <DialogContent
-                      showCloseButton={false}
-                      className="max-w-lg bg-black border border-gray-900"
-                    >
-                      <DialogHeader>
-                        <DialogTitle className="text-white">
-                          {education.title}
-                        </DialogTitle>
-                        <DialogDescription className="text-md leading-7 mt-3 text-white/80">
-                          {education.description}
-                        </DialogDescription>
-                      </DialogHeader>
-                      <DialogFooter>
-                        <DialogClose asChild>
-                          <Button variant="outline">Close</Button>
-                        </DialogClose>
-                      </DialogFooter>
-                    </DialogContent>
-                  </Dialog>
-                </div>
-                <ScrollArea className="h-87.5">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-7.5">
-                    {education.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-45 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
-                        >
-                          <span className="primary-text-color">
-                            {item.duration}
-                          </span>
-                          <h3 className="text-white text-xl max-w-65 min-h-15 text-center lg:text-left">
-                            {" "}
-                            {item.position}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#a238ff]"></span>
-                            <p className="text-white/60">{item.institution}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
-              </div>
-            </TabsContent>
-            {/* skills */}
-            <TabsContent value="skills" className="w-full h-full">
-              <div className="flex flex-col gap-7.5 text-center xl:text-left">
-                <h3 className="text-4xl font-bold text-white">
-                  {skills.title}
-                </h3>
-                <p className="max-w-150 text-white/60 mx-auto xl:mx-0">
-                  {skills.description}
-                </p>
-              </div>
-              <ul className="grid mt-5 gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:gap-4">
-                {skills.skillList.map((skill, index) => {
-                  const Icon = icons[skill.icon];
-                  return (
-                    <li key={index}>
-                      <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-                          <TooltipTrigger className="w-full group xl:h-37.5 h-25 bg-[#232329] rounded-xl flex justify-center items-center">
-                            <div className="text-white xl:text-6xl text-5xl group-hover:primary-text-color transition-all duration-300">
-                              <Icon />
-                            </div>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p className="capitalize">{skill.name}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </li>
-                  );
-                })}
-              </ul>
-            </TabsContent>
-            {/* about */}
-            <TabsContent
-              value="about"
-              className="w-full text-center xl:text-left"
-            >
-              <div className="flex flex-col gap-7.5">
-                <h3 className="text-4xl font-bold text-white">{about.title}</h3>
-                {/* Short description + Dialog trigger */}
-                <div className="flex flex-wrap items-start gap-4">
-                  <p className="max-w-150 text-white/60 mx-auto xl:mx-0">
-                    {about.description.length >= 100
-                      ? about.description.slice(0, 120) + "..."
-                      : about.description}
-                  </p>
-
-                  {/* Dialog Button */}
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <button className="xl:w-10 h-10 w-full flex items-center justify-center rounded-full bg-white hover:bg-purple-500 transition">
-                        <ArrowRight className="w-5 h-5 text-black hover:text-white" />
-                      </button>
-                    </DialogTrigger>
-
-                    <DialogContent
-                      showCloseButton={false}
-                      className="max-w-lg bg-black text-white"
-                    >
-                      <DialogHeader>
-                        <DialogTitle>{about.title}</DialogTitle>
-                        <DialogDescription className="text-md leading-7 mt-3 text-white/80">
-                          {about.description}
-                        </DialogDescription>
-                      </DialogHeader>
-
-                      {/* Show info fields */}
-                      <div className="mt-6 space-y-2">
-                        {about.info.map((item, index) => (
-                          <div
-                            key={index}
-                            className="flex justify-between text-sm"
-                          >
-                            <span className="text-white/60">
-                              {item.fieldName}:
-                            </span>
-                            <span className="font-medium text-white">
-                              {item.fieldValue}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-
-                      <DialogFooter className="mt-4">
-                        <DialogClose asChild>
-                          <Button variant="outline">Close</Button>
-                        </DialogClose>
-                      </DialogFooter>
-                    </DialogContent>
-                  </Dialog>
-                </div>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-3 xl:gap-y-6 xl:gap-x-16 xl:w-205 w-full mx-auto xl:mx-0">
-                  {about.info.map((item, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className="flex items-center xl:justify-start gap-3"
-                      >
-                        <span className="text-white/60">
-                          {item.fieldName}:{" "}
-                        </span>
-                        <span className="text-lg text-white">
-                          {item.fieldValue}
-                        </span>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </TabsContent>
+      <div className="max-w-5xl mx-auto relative z-10">
+        
+        {/* --- EXPERIENCE SECTION --- */}
+        <div className="mb-32">
+          <div className="flex items-center gap-4 mb-12">
+            <p className="text-[#725afe] font-mono text-[10px] tracking-[0.4em] uppercase font-bold">01.</p>
+            <h3 className="text-white text-2xl md:text-3xl font-semibold tracking-tight uppercase">Experience</h3>
+            <div className="h-[1px] flex-1 bg-white/5" />
           </div>
-        </Tabs>
+          
+          <div className="space-y-4">
+            {experience.items.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="group p-8 border border-white/5 bg-white/[0.01] rounded-[2rem] hover:border-[#725afe]/30 transition-all duration-500"
+              >
+                <div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
+                  <div>
+                    <h3 className="text-xl font-medium text-white group-hover:text-[#725afe] transition-colors tracking-tight">
+                      {item.position}
+                    </h3>
+                    <p className="text-zinc-500 font-mono text-[11px] uppercase tracking-[0.2em] mt-1">
+                      {item.company}
+                    </p>
+                  </div>
+                  <div className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[9px] font-mono text-zinc-400 tracking-widest uppercase">
+                    {item.duration}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* --- EDUCATION SECTION --- */}
+        <div className="mb-32">
+          <div className="flex items-center gap-4 mb-12">
+            <p className="text-[#725afe] font-mono text-[10px] tracking-[0.4em] uppercase font-bold">02.</p>
+            <h3 className="text-white text-2xl md:text-3xl font-semibold tracking-tight uppercase">Education</h3>
+            <div className="h-[1px] flex-1 bg-white/5" />
+          </div>
+          
+          <div className="space-y-4">
+            {education.items.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="group p-8 border border-white/5 bg-white/[0.01] rounded-[2rem] hover:border-[#725afe]/30 transition-all duration-500"
+              >
+                <div className="flex flex-col md:flex-row justify-between md:items-center gap-4">
+                  <div>
+                    <h3 className="text-xl font-medium text-white group-hover:text-[#725afe] transition-colors tracking-tight">
+                      {item.degree || item.position}
+                    </h3>
+                    <p className="text-zinc-500 font-mono text-[11px] uppercase tracking-[0.2em] mt-1">
+                      {item.institution}
+                    </p>
+                  </div>
+                  <div className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-[9px] font-mono text-zinc-400 tracking-widest uppercase">
+                    {item.duration}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* --- SKILLS SECTION --- */}
+        <div>
+          <div className="flex items-center gap-4 mb-12">
+            <p className="text-[#725afe] font-mono text-[10px] tracking-[0.4em] uppercase font-bold">03.</p>
+            <h3 className="text-white text-2xl md:text-3xl font-semibold tracking-tight uppercase">Skills</h3>
+            <div className="h-[1px] flex-1 bg-white/5" />
+          </div>
+          
+          <TooltipProvider delayDuration={100}>
+            <ul className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4">
+              {skills.skillList.map((skill, index) => {
+                const Icon = icons[skill.icon];
+                return (
+                  <li key={index}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-full h-24 bg-white/[0.02] border border-white/5 rounded-2xl flex justify-center items-center group hover:border-[#725afe]/30 transition-all">
+                        <div className="text-3xl text-zinc-500 group-hover:text-white transition-all duration-300">
+                          {Icon && <Icon />}
+                        </div>
+                      </TooltipTrigger>
+                      <TooltipContent className="bg-[#0f0f0f] border-white/10 text-white font-mono text-[10px] tracking-widest uppercase">
+                        {skill.name}
+                      </TooltipContent>
+                    </Tooltip>
+                  </li>
+                );
+              })}
+            </ul>
+          </TooltipProvider>
+        </div>
+
       </div>
-    </motion.div>
+    </section>
   );
 };
 
