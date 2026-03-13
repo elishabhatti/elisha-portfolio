@@ -89,7 +89,7 @@ const ServiceCard = ({ service, index }) => {
           {service.title}
         </h3>
         
-        <p className="mt-3 text-white/90 leading-relaxed text-sm">
+        <p className="mt-3 text-white/90 leading-relaxed text-sm font-normal">
           {service.description}
         </p>
 
@@ -107,25 +107,28 @@ const Services = () => {
   return (
     <section 
       id="services" 
-      className="relative w-full min-h-screen flex items-center py-24 px-6 bg-[#030303] overflow-hidden"
+      className="relative w-full min-h-screen flex flex-col items-center py-24 px-6 bg-[#030303] overflow-hidden"
     >
-      {/* Background Decor */}
-      <div className="absolute inset-0 bg-[radial-gradient(#ffffff10_1px,transparent_1px)] [background-size:30px_30px]" />
-      <div className="absolute top-1/4 -left-10 w-[400px] h-[400px] bg-[#725afe]/15 blur-[120px] rounded-full" />
-      <div className="absolute bottom-1/4 -right-10 w-[400px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full" />
+      {/* --- TOP HEADING ANCHOR --- */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="relative z-10 mb-20 text-center"
+      >
+        <h2 className="text-white text-4xl md:text-5xl font-bold tracking-tight">
+          Services
+        </h2>
+        <div className="h-1 w-12 bg-[#725afe] mx-auto mt-4 rounded-full" />
+      </motion.div>
 
-      <div className="max-w-7xl mx-auto relative z-10 w-full">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+      {/* Background Decor */}
+      <div className="absolute inset-0 bg-[radial-gradient(#ffffff10_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />
+      <div className="absolute top-1/4 -left-10 w-[400px] h-[400px] bg-[#725afe]/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-1/4 -right-10 w-[400px] h-[400px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto relative z-10 w-full my-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <div className="max-w-2xl">
-            {/* Header Block */}
-            <motion.h2 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="text-white text-lg font-mono tracking-[0.3em] uppercase mb-4"
-            >
-              Services
-            </motion.h2>
-            
             <motion.h3 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
