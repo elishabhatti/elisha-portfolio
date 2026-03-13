@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
 import { motion } from "framer-motion";
@@ -8,33 +7,29 @@ import { InteractiveHoverButton } from "./magicui/interactive-hover-button";
 
 const Header = () => {
   return (
-    <header className="bg-black z-50 fixed w-full px-6 py-4 xl:px-24 text-white border-b border-gray-900">
-      <div className="mx-auto flex justify-between items-center">
+    <header className="fixed top-0 w-full z-[100] border-b border-white/5 bg-[#050505]/80 backdrop-blur-md px-6 py-5 xl:px-24">
+      <div className="max-w-[1440px] mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link href="/">
-          <h1 className="xl:text-3xl text-xl font-semibold">
-            Elisha<span className="primary-text-color">.</span>
+        <Link href="/" className="group">
+          <h1 className="text-2xl font-bold tracking-tighter text-white">
+            Elisha
+            <span className="text-[#725afe] group-hover:pl-1 transition-all">
+              .
+            </span>
           </h1>
         </Link>
-        {/* desktop nav */}
-        <div className="hidden xl:flex items-center gap-8">
+
+        {/* Desktop Nav & Button */}
+        <div className="hidden xl:flex items-center gap-12">
           <Nav />
-        </div>
-        <div className="hidden xl:flex items-center gap-8">
           <Link
             href="https://mail.google.com/mail/?view=cm&fs=1&to=elishajameel270@gmail.com"
             target="_blank"
-            rel="noopener noreferrer"
+            className="relative"
           >
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1, delay: 0.2 }}
-              transition={{ duration: 0.69 }}
-            >
-              <InteractiveHoverButton className="text-black hover:border-2 hover:border-white">
-                Hire me
-              </InteractiveHoverButton>
-            </motion.div>
+            <InteractiveHoverButton className="h-10 px-6 text-xs uppercase tracking-widest font-bold">
+              Hire me
+            </InteractiveHoverButton>
           </Link>
         </div>
 

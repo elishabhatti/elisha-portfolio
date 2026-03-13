@@ -65,7 +65,7 @@ const About = () => {
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-7xl md:text-9xl font-black tracking-tighter leading-[0.85]"
+            className="text-6xl md:text-8xl font-black tracking-tighter leading-[0.85]"
           >
             I Code <br /> 
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/50 to-zinc-700">The Future</span>

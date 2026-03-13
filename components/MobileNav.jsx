@@ -1,9 +1,8 @@
 "use client";
+
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "./ui/sheet";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
-import { motion } from "framer-motion";
 import { InteractiveHoverButton } from "./magicui/interactive-hover-button";
 
 const links = [
@@ -17,44 +16,38 @@ const links = [
 ];
 
 const MobileNav = () => {
-  const pathname = usePathname();
   return (
     <Sheet>
       <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="xl:text-[32px] text-xl text-white" />
+        <CiMenuFries className="text-2xl text-white" />
       </SheetTrigger>
-      <SheetContent className="flex flex-col p-5">
-        {/* Required for accessibility */}
-        <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
+      <SheetContent className="flex flex-col bg-[#050505] border-white/10 p-10">
+        <SheetTitle className="sr-only">Navigation</SheetTitle>
 
-        <div className="mt-32 text-center text-2xl">
+        <div className="mt-20 mb-20 text-center">
           <Link href="/">
-            <h1 className="text-white">
-              Elisha<span className="text-[#a238ff] text-2xl">.</span>
+            <h1 className="text-3xl font-bold text-white tracking-tighter">
+              Elisha<span className="text-[#725afe]">.</span>
             </h1>
           </Link>
         </div>
-        <nav className="flex flex-col justify-center items-center gap-4">
+
+        <nav className="flex flex-col gap-8 items-center">
           {links.map((link, index) => (
             <Link
-              href={link.path}
-              className={`${
-                link.path === pathname && "border-b-2 border-[#a238ff]"
-              } text-md text-white capitalize transition-all`}
               key={index}
+              href={link.path}
+              className="text-md tracking-widest text-zinc-300 hover:text-white capitalize transition-all"
             >
               {link.name}
             </Link>
           ))}
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1, delay: 0.2 }}
-            transition={{ duration: 0.69 }}
-          >
-            <InteractiveHoverButton className="text-black hover:border-2 hover:border-white">
+          
+          <div className="mt-10 w-full">
+            <InteractiveHoverButton className="w-full h-12">
               Hire me
             </InteractiveHoverButton>
-          </motion.div>
+          </div>
         </nav>
       </SheetContent>
     </Sheet>

@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+
 import Link from "next/link";
 
 const links = [
@@ -14,22 +14,18 @@ const links = [
 
 const Nav = () => {
   return (
-    <motion.nav
-      initial={{ x: -100, opacity: 0 }}
-      animate={{ x: 0, opacity: 1, delay: 0.2 }}
-      transition={{ duration: 0.69 }}
-      className="flex gap-4"
-    >
+    <nav className="flex gap-8">
       {links.map((link, index) => (
         <Link
           key={index}
           href={link.path}
-          className="capitalize font-medium"
+          className="capitalize text-[12px] tracking-[0.2em] text-zinc-300 hover:text-[#725afe] transition-all duration-300 relative group"
         >
           {link.name}
+          <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#725afe] transition-all duration-300 group-hover:w-full" />
         </Link>
       ))}
-    </motion.nav>
+    </nav>
   );
 };
 
