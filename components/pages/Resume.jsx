@@ -1,13 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaDocker,
+} from "react-icons/fa";
 import { FiFigma } from "react-icons/fi";
 import {
   SiTailwindcss,
   SiNextdotjs,
   SiMongodb,
   SiTypescript,
+  SiExpress,
 } from "react-icons/si";
 import {
   Tooltip,
@@ -28,6 +36,8 @@ const icons = {
   FaNodeJs,
   SiNextdotjs,
   SiTailwindcss,
+  SiExpress,
+  FaDocker,
   SiMongodb,
   SiTypescript,
   FiFigma,
@@ -54,7 +64,7 @@ const Resume = () => {
       {/* BACKGROUND TEXTURE */}
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff01_1px,transparent_1px)] [background-size:40px_40px] pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* --- EXPERIENCE SECTION --- */}
         <div className="mb-32">
           <div className="flex items-center gap-4 mb-12">
@@ -159,7 +169,7 @@ const Resume = () => {
           </div>
 
           <TooltipProvider delayDuration={100}>
-            <ul className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4">
+            <ul className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
               {skills.skillList.map((skill, index) => {
                 const Icon = icons[skill.icon];
                 return (
