@@ -7,6 +7,10 @@ import {
   SiNextdotjs,
   SiNodedotjs,
   SiTailwindcss,
+  SiExpress,
+  SiMongodb,
+  SiMysql,
+  SiFigma,
 } from "react-icons/si";
 
 const services = [
@@ -15,14 +19,14 @@ const services = [
     title: "Full-Stack Web Development",
     description:
       "I build fast, scalable web applications using modern technologies like MERN stack and Next.js. My focus is clean architecture, performance, and production-ready code.",
-    icons: [SiReact, SiNextdotjs, SiNodedotjs],
+    icons: [SiMongodb, SiReact, SiNodedotjs, SiExpress, SiNextdotjs, SiMysql],
   },
   {
     num: "02",
     title: "Modern UI Engineering",
     description:
       "I design and develop beautiful, interactive user interfaces with smooth animations, responsive layouts, and pixel-perfect attention to detail.",
-    icons: [SiReact, SiTailwindcss],
+    icons: [SiReact, SiTailwindcss, SiFigma],
   },
   {
     num: "03",
@@ -91,7 +95,7 @@ const Services = () => {
               className="group relative border border-white/10 rounded-xl p-10 transition-all duration-500 hover:border-[#725afe] hover:bg-white/[0.03]"
             >
               {/* Number */}
-              <span className="text-6xl font-extrabold text-white/10 group-hover:text-[#725afe] transition duration-500">
+              <span className="text-6xl font-extrabold text-white/30 group-hover:text-[#725afe] transition duration-500">
                 {service.num}
               </span>
 
