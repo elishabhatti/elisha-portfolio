@@ -179,7 +179,7 @@ const Home = () => {
         {/* Stats Section with visible Background */}
         <motion.div
           variants={item}
-          className="w-full bg-white/[0.02] border border-white/5 backdrop-blur-md rounded-[2rem] py-10 px-6"
+          className="w-full bg-white/2 border border-white/5 backdrop-blur-md rounded-2xl py-5 px-6"
         >
           <Stats />
         </motion.div>

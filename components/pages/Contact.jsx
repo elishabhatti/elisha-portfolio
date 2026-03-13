@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -34,7 +33,7 @@ const info = [
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "KDA TP-2 Mehmoodabad No.2 Karachi Street 7",
+    description: "KDA TP-2 Mehmoodabad, Karachi",
   },
 ];
 
@@ -48,23 +47,16 @@ const Contact = () => {
     message: "",
   });
 
-  // handle change for text/textarea inputs
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  // handle submit
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await axios.post("/api/submit", formData);
-
       if (response.data.status === 201) {
-        toast.success(response.data.message);
-        // reset form
+        toast.success("Message sent successfully!");
         setFormData({
           firstName: "",
           lastName: "",
@@ -73,138 +65,165 @@ const Contact = () => {
           service: "",
           message: "",
         });
-      } else {
-        toast.error("Something went wrong. Please try again later.");
       }
     } catch (error) {
-      console.error("Submit failed:", error);
       toast.error("Failed to send message.");
     }
   };
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.2 }}
-      className="xl:p-15 p-5"
+    <section
+      id="contact"
+      className="relative w-full min-h-screen py-32 px-6 md:px-24 bg-[#050505] overflow-hidden"
     >
-      <h2
-        id="contact"
-        className="text-white text-3xl md:text-4xl font-bold text-center mb-12"
+      {/* 1. Header Anchor (Bright White) */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="relative z-10 mb-24 text-center"
       >
-        Contact
-      </h2>
-      <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-14 items-start">
-          {/* form */}
-          <div className="w-full lg:w-2/3">
+        <h2 className="text-white text-4xl md:text-5xl font-bold tracking-tight">
+          Contact
+        </h2>
+        <div className="h-1 w-12 bg-[#725afe] mx-auto mt-4 rounded-full" />
+      </motion.div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* --- REFINED SUB-HEADER --- */}
+        <div className="mb-20 flex flex-col md:flex-row justify-between items-end border-b border-white/10 pb-12">
+          <div className="space-y-2">
+            <p className="text-[#725afe] font-mono text-[11px] tracking-[0.4em] uppercase font-bold">
+              Inquiry
+            </p>
+            <h3 className="text-white text-3xl md:text-5xl font-semibold tracking-tight">
+              Let's{" "}
+              <span className="italic font-mono text-[#725afe]">Connect.</span>
+            </h3>
+          </div>
+          <p className="text-zinc-400 font-mono text-[10px] uppercase tracking-[0.3em] mt-4 md:mt-0">
+            Available 2026 // Worldwide
+          </p>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-16 xl:gap-24">
+          {/* --- FORM SIDE (With Light Border) --- */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="flex-1"
+          >
+            {/* Added a subtle border and slightly brighter background for the form container */}
             <form
               onSubmit={handleSubmit}
-              className="flex flex-col border-2 border-white/30 gap-6 p-8 md:p-10 bg-black rounded-2xl shadow-lg"
+              className="flex flex-col gap-10 p-8 md:p-12 border border-white/10 bg-white/[0.02] rounded-[2rem]"
             >
-              <h3 className="text-2xl xl:text-4xl font-semibold primary-text-color">
-                Let's work together
-              </h3>
-              <p className="text-white/60 text-sm md:text-base leading-relaxed ">
-                Feel free to reach out with your project details or inquiries.
-                I'll get back to you as soon as possible!
-              </p>
-
-              {/* inputs */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
+                {/* Placeholder color changed to zinc-500 for better visibility */}
                 <Input
-                  type="text"
                   name="firstName"
-                  placeholder="First name"
+                  placeholder="First Name"
                   value={formData.firstName}
                   onChange={handleChange}
+                  className="bg-transparent border-b border-white/20 border-x-0 border-t-0 rounded-none h-10 focus-visible:ring-0 focus:border-[#725afe] text-white text-sm px-0 transition-all placeholder:text-zinc-500"
                 />
                 <Input
-                  type="text"
                   name="lastName"
-                  placeholder="Last name"
+                  placeholder="Last Name"
                   value={formData.lastName}
                   onChange={handleChange}
+                  className="bg-transparent border-b border-white/20 border-x-0 border-t-0 rounded-none h-10 focus-visible:ring-0 focus:border-[#725afe] text-white text-sm px-0 transition-all placeholder:text-zinc-500"
                 />
                 <Input
                   type="email"
                   name="email"
-                  placeholder="Email address"
+                  placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
+                  className="bg-transparent border-b border-white/20 border-x-0 border-t-0 rounded-none h-10 focus-visible:ring-0 focus:border-[#725afe] text-white text-sm px-0 transition-all placeholder:text-zinc-500"
                 />
                 <Input
                   type="tel"
                   name="phone"
-                  placeholder="Phone number"
+                  placeholder="Phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  className="bg-transparent border-b border-white/20 border-x-0 border-t-0 rounded-none h-10 focus-visible:ring-0 focus:border-[#725afe] text-white text-sm px-0 transition-all placeholder:text-zinc-500"
                 />
               </div>
 
-              {/* select */}
               <Select
                 value={formData.service}
                 onValueChange={(val) =>
                   setFormData({ ...formData, service: val })
                 }
               >
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
+                <SelectTrigger className="bg-transparent border-b border-white/20 border-x-0 border-t-0 rounded-none h-10 text-white text-xs px-0 focus:ring-0 uppercase tracking-widest">
+                  <SelectValue placeholder="Project Type" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="bg-[#0f0f0f] border-white/10 text-white">
                   <SelectGroup>
-                    <SelectLabel>Services</SelectLabel>
                     <SelectItem value="web">Web Development</SelectItem>
                     <SelectItem value="uiux">UI/UX Design</SelectItem>
-                    <SelectItem value="logo">Logo Design</SelectItem>
-                    <SelectItem value="seo">SEO</SelectItem>
+                    <SelectItem value="seo">Optimization</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
 
-              {/* textarea */}
               <Textarea
                 name="message"
-                className="h-45 md:h-50"
-                placeholder="Type your message here..."
+                className="bg-white/[0.03] border border-white/20 rounded-xl min-h-[150px] p-6 focus-visible:ring-0 focus:border-[#725afe] text-white text-sm transition-all placeholder:text-zinc-500"
+                placeholder="How can I help you?"
                 value={formData.message}
                 onChange={handleChange}
               />
 
-              {/* button */}
-              <div className="flex justify-start">
-                <InteractiveHoverButton type="submit">
+              <div className="pt-2">
+                <InteractiveHoverButton
+                  type="submit"
+                  className="w-full md:w-auto px-10 h-12 text-xs uppercase tracking-widest font-bold"
+                >
                   Send Message
                 </InteractiveHoverButton>
               </div>
             </form>
-          </div>
-          {/* info   */}
-          <div className="w-full xl:w-1/3">
-            <ul className="flex flex-col gap-3">
+          </motion.div>
+
+          {/* --- INFO SIDE (Higher Contrast) --- */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="w-full lg:w-[320px] flex flex-col gap-12 pt-8"
+          >
+            <div className="space-y-12">
               {info.map((item, index) => (
-                <li key={index} className="flex  gap-5">
-                  {/* icon */}
-                  <div className="text-lg w-11.45 h-11.25 border-2 border-white/50 p-3 rounded-lg primary-text-color">
-                    {item.icon}
-                  </div>
-                  {/* text */}
-                  <div className="flex flex-col">
-                    <p className="text-md text-white/70">{item.title}</p>
-                    <h3 className="xl:text-lg text-sm font-bold text-white">
-                      {item.description}
-                    </h3>
-                  </div>
-                </li>
+                <div key={index} className="group">
+                  <p className="text-[#725afe] font-mono text-[10px] uppercase tracking-[0.4em] mb-3 font-bold">
+                    {item.title}
+                  </p>
+                  <h3 className="text-zinc-200 text-lg font-normal group-hover:text-white transition-colors duration-500 leading-relaxed">
+                    {item.description}
+                  </h3>
+                </div>
               ))}
-            </ul>
-          </div>
+            </div>
+
+            {/* Availability Box */}
+            <div className="mt-4 p-8 border border-white/10 bg-white/[0.01] rounded-3xl">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
+                <span className="text-[10px] font-mono text-zinc-300 uppercase tracking-widest">
+                  Available for Work
+                </span>
+              </div>
+              <p className="text-zinc-400 text-xs leading-relaxed">
+                Looking for a reliable developer? Let's turn your ideas into a
+                high-performance reality.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

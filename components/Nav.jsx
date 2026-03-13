@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const links = [
   { name: "home", path: "#home" },
-  { name: "services", path: "#services" },
   { name: "about", path: "#about" },
+  { name: "services", path: "#services" },
   { name: "project", path: "#project" },
   { name: "resume", path: "#resume" },
   { name: "pricing", path: "#pricing" },
