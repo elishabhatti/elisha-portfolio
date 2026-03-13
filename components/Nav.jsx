@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 
 const links = [
@@ -13,15 +12,16 @@ const links = [
 
 const Nav = () => {
   return (
-    <nav className="flex gap-8">
+    <nav className="flex gap-10">
       {links.map((link, index) => (
         <Link
           key={index}
           href={link.path}
-          className="capitalize text-[12px] tracking-[0.2em] text-zinc-300 hover:text-[#725afe] transition-all duration-300 relative group"
+          className="capitalize text-[13px] font-medium tracking-wide text-zinc-300 hover:text-white transition-all duration-300 relative group"
         >
           {link.name}
-          <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#725afe] transition-all duration-300 group-hover:w-full" />
+          {/* Animated Underline */}
+          <span className="absolute -bottom-1.5 left-0 w-0 h-[1.5px] bg-[#725afe] transition-all duration-300 group-hover:w-full" />
         </Link>
       ))}
     </nav>

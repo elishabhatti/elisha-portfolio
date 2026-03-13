@@ -4,7 +4,7 @@ import stats from "../json/stats.json";
 
 const Stats = () => {
   return (
-    <section className="pt-2 pb-6 xl:pt-10 xl:pb-0">
+    <section className="xl:py-3">
       <div className="container mx-auto">
         <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 xl:gap-16 max-w-[80vw]">
           {stats.map((item, index) => {

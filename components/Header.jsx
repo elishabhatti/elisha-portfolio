@@ -27,7 +27,7 @@ const Header = () => {
             target="_blank"
             className="relative"
           >
-            <InteractiveHoverButton className="h-10 px-6 text-xs uppercase tracking-widest font-bold">
+            <InteractiveHoverButton className="h-10 px-6 text-xs ">
               Hire me
             </InteractiveHoverButton>
           </Link>
