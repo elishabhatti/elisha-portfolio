@@ -1,23 +1,40 @@
 {
-  "icon": "./assets/resume/badge.svg",
-  "title": "My Experience",
-  "description": "I have worked on freelance and academic projects, specializing in web development and UI/UX design. My focus has been on creating responsive websites, intuitive interfaces, and scalable applications while continuously improving my skills in modern web technologies.",
-
   "items": [
     {
-      "company": "Rhombix Technologies.",
+      "company": "Aptech Learning",
+      "position": "Next.js Stack Developer",
+      "project_name": "Job Portal Ecosystem",
+      "duration": "2025 - 2026"
+    },
+    {
+      "company": "Rhombix Technologies",
       "position": "Frontend Developer Intern",
+      "project_name": "Task Management Engine",
       "duration": "2024 - 2025"
     },
     {
-      "company": "Aptech",
-      "position": "Backend Developer php",
-      "duration": "2023"
+      "company": "Aptech Vision",
+      "position": "MERN Stack Lead",
+      "project_name": "Full-Scale E-Commerce Store",
+      "duration": "2025"
     },
     {
-      "company": "E-commerce Startup",
-      "position": "Web Developer",
-      "duration": "2024 - 2025"
+      "company": "Self-Directed",
+      "position": "Full Stack Developer",
+      "project_name": "Real-time Chat (Socket.io)",
+      "duration": "2025"
+    },
+    {
+      "company": "Aptech (Academic)",
+      "position": "ASP.NET Developer",
+      "project_name": "Lab Assistant Management System",
+      "duration": "2025"
+    },
+    {
+      "company": "Freelance Project",
+      "position": "Backend Developer",
+      "project_name": "URL Analytics & Shortener",
+      "duration": "2025"
     }
   ]
 }

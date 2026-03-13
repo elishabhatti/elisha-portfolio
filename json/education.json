@@ -1,22 +1,28 @@
 {
-  "icon": "./assets/resume/cap.svg",
-  "title": "My Education",
-  "description": "Completed my Bachelor's in Computer Science, where I built a strong foundation in programming, web development, and software engineering. I also worked on academic projects that strengthened my problem-solving and teamwork skills.",
   "items": [
     {
-      "institution": "St Mary's English High School.",
-      "position": "Student",
-      "duration": "2021 - 2023 "
+      "institution": "Aptech Learning DHA",
+      "degree": "Advanced Diploma in Software Engineering",
+      "duration": "2023 - 2026",
+      "description": "Specializing in MERN Stack, cloud architecture, and enterprise application development."
     },
     {
-      "institution": "Aptech DHA.",
-      "position": "Student",
-      "duration": "2023 - 2026 "
+      "institution": "Rhombix Technologies",
+      "degree": "Full Stack Development Intern",
+      "duration": "2024 - 2025",
+      "description": "Collaborated on real-world projects, focusing on React.js components and backend API integration."
     },
     {
-      "institution": "Rhombix Technologies.",
-      "position": "Intern",
-      "duration": "2024 - 2025"
+      "institution": "Aptech DHA (Higher Secondary)",
+      "degree": "Intermediate in Computer Science",
+      "duration": "2023 - 2025",
+      "description": "Foundational studies in computer logic, database management, and programming basics."
+    },
+    {
+      "institution": "St. Mary's English High School",
+      "degree": "Secondary School Certification",
+      "duration": "2021 - 2023",
+      "description": "Initial technical exposure with a focus on science and analytical thinking."
     }
   ]
 }
