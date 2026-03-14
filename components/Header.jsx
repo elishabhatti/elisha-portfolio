@@ -18,13 +18,15 @@ const Header = () => {
   }, []);
 
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-500 px-6 xl:px-24 
-      ${isScrolled 
-        ? "py-4 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5" 
-        : "bg-transparent py-8"}`}
+    <header
+      className={`fixed top-0 left-0 w-full z-1000 transition-all duration-500 px-6 xl:px-24 
+      ${
+        isScrolled
+          ? "py-4 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5"
+          : "bg-transparent py-4"
+      }`}
     >
-      <div className="max-w-[1440px] mx-auto flex justify-between items-center">
+      <div className="max-w-360 mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="group">
           <h1 className="text-2xl font-black tracking-tighter text-white uppercase italic">

@@ -43,7 +43,7 @@ const item = {
 
 const Home = () => {
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-white overflow-hidden bg-[#050505] px-6">
+    <section className="relative w-full min-h-screen flex flex-col justify-center items-center text-white overflow-hidden pt-30 bg-[#050505] px-6">
       {/* --- 1. VISIBLE BACKGROUND TEXT (Filling the mid-section) --- */}
       <div className="absolute inset-0 flex flex-col justify-center items-center pointer-events-none select-none overflow-hidden">
         <h1 className="text-[20vw] font-black uppercase text-white/[0.03] leading-none tracking-tighter">

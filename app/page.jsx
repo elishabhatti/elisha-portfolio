@@ -10,7 +10,7 @@ import Services from "@/components/pages/Services";
 
 const page = () => {
   return (
-    <section className="pt-25 max-w-8xl">
+    <section>
       <section>
         <Home />
       </section>
