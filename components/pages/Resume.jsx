@@ -47,7 +47,7 @@ const Resume = () => {
   return (
     <section
       id="resume"
-      className="relative w-full py-24 px-6 md:px-24 bg-[#050505] overflow-hidden"
+      className="relative z-[100] w-full py-24 px-6 md:px-24 bg-[#050505] overflow-hidden"
     >
       {/* 1. MAIN HEADING (Matches Contact/Project Headers) */}
       <motion.div
