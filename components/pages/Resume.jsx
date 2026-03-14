@@ -168,19 +168,33 @@ const Resume = () => {
             <div className="h-[1px] flex-1 bg-white/5" />
           </div>
 
-          <TooltipProvider delayDuration={100}>
+          <TooltipProvider delayDuration={10}>
+            {" "}
+            {/* Delay 0 taake instant feel ho */}
             <ul className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
               {skills.skillList.map((skill, index) => {
                 const Icon = icons[skill.icon];
                 return (
                   <li key={index}>
                     <Tooltip>
-                      <TooltipTrigger className="w-full h-24 bg-white/[0.02] border border-white/5 rounded-2xl flex justify-center items-center group hover:border-[#725afe]/30 transition-all">
-                        <div className="text-3xl text-zinc-500 group-hover:text-white transition-all duration-300">
-                          {Icon && <Icon />}
-                        </div>
+                      {/* asChild is the secret for smooth cursor interactions */}
+                      <TooltipTrigger asChild>
+                        <motion.div
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="w-full h-24 bg-white/[0.02] border border-white/5 rounded-2xl flex justify-center items-center group hover:border-[#725afe]/40 hover:bg-[#725afe]/5 transition-all duration-300 cursor-pointer outline-none"
+                        >
+                          <div className="text-3xl text-zinc-600 group-hover:text-white transition-all duration-300">
+                            {Icon && <Icon />}
+                          </div>
+                        </motion.div>
                       </TooltipTrigger>
-                      <TooltipContent className="bg-[#0f0f0f] border-white/10 text-white font-mono text-[10px] tracking-widest uppercase">
+
+                      <TooltipContent
+                        side="top"
+                        sideOffset={10}
+                        className="z-[1000] bg-[#0f0f0f] border border-white/10 text-white text-[10px] tracking-[0.2em] uppercase px-4 py-2 shadow-2xl backdrop-blur-md animate-in fade-in zoom-in duration-200"
+                      >
                         {skill.name}
                       </TooltipContent>
                     </Tooltip>

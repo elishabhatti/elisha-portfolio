@@ -74,7 +74,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen py-32 px-6 md:px-24 bg-[#050505] overflow-hidden"
+      className="relative w-full min-h-screen py-16 px-6 md:px-24 bg-[#050505] overflow-hidden"
     >
       {/* 1. Header Anchor (Bright White) */}
       <motion.div
@@ -88,7 +88,7 @@ const Contact = () => {
         <div className="h-1 w-12 bg-[#725afe] mx-auto mt-4 rounded-full" />
       </motion.div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* --- REFINED SUB-HEADER --- */}
         <div className="mb-20 flex flex-col md:flex-row justify-between items-end border-b border-white/10 pb-12">
           <div className="space-y-2">

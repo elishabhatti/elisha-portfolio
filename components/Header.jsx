@@ -1,33 +1,43 @@
 "use client";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
-import { motion } from "framer-motion";
 import { InteractiveHoverButton } from "./magicui/interactive-hover-button";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // 20px se zyada scroll hote hi background change hoga
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 w-full z-[100] border-b border-white/5 bg-[#050505]/80 backdrop-blur-md px-6 py-5 xl:px-24">
+    <header 
+      className={`fixed top-0 left-0 w-full z-[1000] transition-all duration-500 px-6 xl:px-24 
+      ${isScrolled 
+        ? "py-4 bg-[#050505]/80 backdrop-blur-xl border-b border-white/5" 
+        : "bg-transparent py-8"}`}
+    >
       <div className="max-w-[1440px] mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="group">
-          <h1 className="text-2xl font-bold tracking-tighter text-white">
-            Elisha
-            <span className="text-[#725afe] group-hover:pl-1 transition-all">
-              .
-            </span>
+          <h1 className="text-2xl font-black tracking-tighter text-white uppercase italic">
+            Elisha<span className="text-[#725afe]">.</span>
           </h1>
         </Link>
 
-        {/* Desktop Nav & Button */}
-        <div className="hidden xl:flex items-center gap-12">
+        {/* Desktop Nav */}
+        <div className="hidden xl:flex items-center gap-10">
           <Nav />
-          <Link
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=elishajameel270@gmail.com"
-            target="_blank"
-            className="relative"
-          >
-            <InteractiveHoverButton className="h-10 px-6 text-xs ">
+          <div className="h-5 w-[1px] bg-white/10" />
+          <Link href="#contact">
+            <InteractiveHoverButton className="h-9 px-6 text-[10px] uppercase font-bold tracking-widest">
               Hire me
             </InteractiveHoverButton>
           </Link>

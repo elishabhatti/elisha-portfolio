@@ -15,9 +15,26 @@ body {
 .primary-text-color {
   color: #725afe;
 }
-
+/* globals.css */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
+  /* Navbar ki height (80px) + thoda gap (20px) = 100px */
+  scroll-padding-top: 100px;
+}
+
+/* Custom scrollbar for that premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #725afe;
 }
 
 @theme inline {
