@@ -90,7 +90,7 @@ const Contact = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* --- REFINED SUB-HEADER --- */}
-        <div className="mb-20 flex flex-col md:flex-row justify-between items-end border-b border-white/10 pb-12">
+        <div className="mb-20 flex flex-col md:flex-row justify-between items-start border-b border-white/10 pb-12">
           <div className="space-y-2">
             <p className="text-[#725afe] font-mono text-[11px] tracking-[0.4em] uppercase font-bold">
               Inquiry

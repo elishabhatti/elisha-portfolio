@@ -133,7 +133,7 @@ const Home = () => {
         {/* Heading */}
         <motion.h1
           variants={item}
-          className="text-6xl md:text-8xl font-extrabold tracking-tighter leading-none mb-8"
+          className="text-5xl md:text-8xl font-extrabold tracking-tighter leading-none mb-8"
         >
           <span className="text-zinc-500 text-2xl font-normal block mb-2 font-mono uppercase tracking-[0.3em]">
             Hello, I am
